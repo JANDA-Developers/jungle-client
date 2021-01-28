@@ -1,0 +1,228 @@
+@import "./system/variables";
+@import "~@janda-com/front/src/scss/all.scss";
+@import "./components/Components";
+@import "./atom/Atom.scss";
+@import "./components/WebPageModal";
+@import "./layout/viewlayout";
+@import "./components/JungleWeb";
+@import "./View.scss";
+
+.JDhorizen {
+    height: 1px;
+    width: 100%;
+    background-color: $grey-level1;
+}
+
+.flag-select  * {
+    box-sizing: border-box;
+}
+
+.webpageCard {
+    &__qrcode {
+        border: 1px solid $outborder-color;
+        border-radius: $br1;
+        padding: space(1.5);
+        width:  80px!important;
+        height:  80px!important;
+	}
+	
+	
+}
+
+.qrcode {
+	position: relative;
+
+	&__downloadIcon {
+		position: absolute;
+		left: -1 * space(1);
+		bottom: -1 * space(1);;
+		background-color: white;
+		border-radius: 50%;
+		padding: space(1);
+		border: 1px solid $outborder-color;
+	}
+}
+
+.JDpagination {
+	display: flex;
+	justify-content: inherit;
+
+
+	a {
+		outline: none;
+	}
+
+	// ⭐ Modifiers ️
+	&-wrap {
+		&--text-large {
+			font-size: $typho-huge;
+		}
+
+		&--align-center {
+			justify-content: center;
+		}
+
+		&--prev-hidden {
+			.JDpagination__btn-prev {
+				display: none;
+			}
+		}
+	}
+
+	&__btn {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		height: $pagination-li-height;
+	}
+
+	&__li {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: $pagination-li-width;
+		height: $pagination-li-height;
+		border: 1px solid $grey-level4;
+		border-radius: $br1;
+		cursor: pointer;
+
+		margin: 0 space(.5);
+
+		&:hover {
+			background-color: $pagination-li-hover !important;
+
+			a {
+				color: white;
+			}
+		}
+
+		a {
+			height: 100%;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+
+		&--active {
+			background-color: $pagination-active-bg !important;
+
+			a {
+				outline: none;
+				color: white !important;
+			}
+		}
+	}
+
+	&__a {
+		color: $html-color;
+
+		&--active {
+			opacity: 1;
+		}
+	}
+
+}
+
+.JDpagination__ellipsis-a {
+	display: none;
+}
+
+.JDpagination {
+	[aria-disabled=true] {
+		color: $disabled-color;
+
+		&:hover {
+
+			cursor: auto;
+		}
+
+	}
+
+	.JDpagination__btn-prev,
+	.JDpagination__btn-next {
+		background-color: transparent !important;
+		color: $html-color;
+
+    }
+
+    .JDstandard-small-space {
+        margin: 0px!important;
+    }
+    
+
+	&__btn-prev a {
+		background-color: transparent !important;
+		display: flex !important;
+		align-items: center;
+		margin-right: space(1);
+	}
+
+	&__btn-next a {
+		background-color: transparent !important;
+		display: flex !important;
+		align-items: center;
+		margin-left: space(1);
+	}
+
+	.JDpagination__btn-txt,
+	.JDpagination__arrowicon {
+		margin: 0px!important;
+	}
+}
+
+.iconWrapper {
+    &--circleBorder {
+		border-radius: 50%;
+        border: 1px solid $outborder-color;
+		padding: space(.5);
+		background-color: white;
+		color: $html-color;
+    }
+}
+.fr-element {
+	outline: none!important;
+}
+
+
+
+.JDtagInput__tag {
+	display: flex;
+	align-items: center;
+}
+
+.JDtagInput {
+	min-height: $standard-line-height;
+	height:auto;
+}
+
+.JDtagInput__tag {
+	margin: 2px;
+	font-size: $typho-small;
+	height: 1.4rem;
+}
+
+.JDtagInput__tags {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.exception__input  {
+	font-size: 1rem;;
+}
+
+.counter__btn  {
+	&:first-child {
+		border-radius:  $br1 0px 0px $br1 ;
+	}
+	
+	&:last-child {
+		border-radius:  0px $br1   $br1  0px;
+	}
+}
+
+.counter__count {
+	background-color: white!important;
+	border: 1px solid $outborder-color;
+	border-radius: 0px!important;
+}

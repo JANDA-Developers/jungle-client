@@ -1,0 +1,312 @@
+
+@mixin reset {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin bgimg {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.aiWrap {
+    position: relative;
+    overflow:hidden;
+    font-size: 20px;
+    color:#333;
+    word-break: keep-all;
+
+    .aiHeader {
+        width:100%; 
+        height:350px;
+        display: flex; 
+        justify-content: space-between;
+        background:rgba(0,0,0,0.5) url(../img/header_img.jpg);
+        background-size: cover;
+        @include bgimg;
+        padding: 20px 10%;
+        box-sizing: border-box;
+    
+        &__btn {
+            width:180px;
+            height: 45px;
+            border: 2px solid #fff;
+            color: #fff;
+            text-align: center;
+            line-height: 45px;
+            border-radius: 30px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        &__lang {
+            background: url(../img/share_icon.png);
+            margin-right: 1rem;
+        }
+    
+        &__share {
+            background: url(../img/share_icon.png);
+            @include bgimg;
+            background-position-x: 40px;
+            background-size: 11%;
+            text-indent: 20px;
+        }
+    }
+    
+    .aiName {
+        padding: 0 10%;
+        position: relative;
+        top:-125px;
+    
+        &__img {
+            width:250px;
+            height:250px;
+            background:url(../img/home.jpg);
+            @include bgimg;
+            background-size: cover;
+            border-radius: 50%;
+            margin:0 auto;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+    
+        &__info {
+            text-align: center; 
+            font-size: 20px;
+        }
+    
+        &__title {
+            margin-top: 0;
+            @include reset;
+            padding: 15px;
+        }
+    
+        &__sub {
+            @include reset;
+        }
+    
+    }
+    
+    .aiSection {
+        padding: 0 10%; 
+        max-width: 1500px;
+        margin:0 auto;
+        position: relative;
+        top:-125px;
+        line-height: 1.5;
+    
+        .detail {
+    
+            &__title {
+                font-size: 24px;
+                margin-top:50px;
+            }
+    
+            &__listWrap {
+                @include reset;
+            }
+    
+            &__list {
+                list-style: none;
+                position: relative;
+                padding: 6px 0;
+    
+                &> strong {
+                    font-size: 20px;
+                    margin: 0 10px;
+                }
+    
+                &:before {
+                    content: '';
+                    width: 100%;
+                    border-top: 1px dashed #bdbdbd;
+                    height: 1px;
+                    position: absolute;
+                    left: 7px;
+                    bottom: 0;
+                }
+            }
+    
+            &__link {
+                display: inline-block;
+                border: 1px solid #333;
+                color:#333;
+                padding: 5px 25px;
+                border-radius: 15px;
+                font-size: 15px;
+                line-height: 1;
+                float: right;
+                clear: both;
+                font-weight: 600;
+                text-decoration: none;
+            }
+    
+            &__txt {
+    
+                margin:0;
+                line-height: 1.5;
+                padding: 0 15px;
+    
+                &:before{
+                    content:"- ";
+                    margin-left: -12px;
+                }
+            }
+        }
+    }
+    
+    .tour {
+    
+        &__listWrap {
+            padding:10px 5px; 
+            display:flex; 
+            justify-content: space-between;
+            list-style-type: none;
+        }
+
+        &__list {
+            width: 49%;
+            height: auto;
+            text-align: center;
+
+            &:before {
+                border: none !important;
+            }
+        }
+
+        &__img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        &__title {
+            padding: 10px;
+            margin: 0;
+            font-size: 22px;
+        }
+
+        &__txt {
+            @include reset;
+        }
+    }
+
+    .aiFooter {
+        text-align: center;
+        background:#c9c9c9;
+        padding:10px;
+        color:#797979;
+        
+        &__img {
+            width: 50px;
+            vertical-align: baseline;
+            margin-right: 5px;
+        }
+
+        &__txt {
+            font-size: 16px;
+            display: inline-block;
+            @include reset;
+        }
+    }
+}
+
+// Break Point
+$mob-l-width: 768px;
+$mob-s-width: 385px;
+
+// 모바일 large
+@mixin mob-large {
+	@media screen and (max-width: #{$mob-l-width}) {
+		@content;
+	}
+}
+// 모바일 small
+@mixin mob-small {
+	@media screen and (max-width: #{$mob-s-width}) {
+		@content;
+	}
+}
+
+// scss
+
+@include mob-large{
+    
+    .aiWrap {
+
+        .aiHeader {
+            padding: 20px 5%;
+    
+            &__btn {
+                font-size: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+
+            &__talk {
+                background:url(../img/talk_icon.png); 
+                @include bgimg;
+            }
+
+            &__share {
+                background:url(../img/share_icon.png); 
+                background-size: 42%;
+                @include bgimg;
+            }
+        }
+
+        .aiSection {
+            padding: 0 5%;
+
+            .detail {
+                padding: 30px 0;
+    
+                &__title {
+                text-align: center;
+                font-size: 32px;
+                }
+    
+                &__link {
+                    display: none;
+                }
+
+                &__txt {
+                    text-align: center;
+                }
+            }
+        }
+        
+        .tour {
+
+            &__listWrap {
+                display: block;
+            }
+
+            &__list {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            &__title {
+                @include reset;
+            }
+
+            &__txt {
+                @include reset;
+            }
+        }
+
+        .aiFooter {
+        }
+    }
+}
+
+@include mob-small{
+    .aiWrap {
+        font-size: 16px;
+        min-width: 365px;
+    }
+}

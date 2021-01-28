@@ -1,0 +1,7 @@
+$flex-grid--column-margin: 0.8%;
+
+.WebPageModal {
+    .flex-grid {
+        @include grid-system-all();
+      }
+}

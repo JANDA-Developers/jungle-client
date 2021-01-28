@@ -1,0 +1,74 @@
+*[contenteditable="true"]{
+    line-height: normal;
+    min-width: 8px;
+    min-height: 1rem;
+    outline: 1px dashed;
+    display: block;
+}
+
+span[contenteditable="true"] {
+    display: inline-block;
+}
+
+*[contenteditable="true"]:focus{
+    outline: 1px solid;
+}
+
+
+.imgEdit {
+    position: absolute;
+    left: 0;
+    top:0;
+    right:0;
+    bottom:0;
+    cursor: pointer;
+    background-color: rgba(0,0,0,.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+[data-edit="bg"] { 
+    position: relative;
+    .imgEdit{
+        display: flex;
+    }
+}
+
+
+.aiName__img {
+    position: relative;
+    overflow: hidden;
+}
+
+
+.editMode {
+    [data-edit="array"] {
+        position: relative!important;
+        &:after {
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            content: "편집하기 +";
+            outline: 1px solid;
+            position: relative;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-color: rgba(0,0,0,.5);
+        }
+    }
+
+    [data-edit="img"] {
+        position: relative;
+    }
+
+    .imgEdit{
+        display: flex;
+    }
+}

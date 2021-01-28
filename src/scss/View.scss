@@ -1,0 +1,24 @@
+@import "./components/EditBtn";
+@import "./system/editMode";
+@import "./layout/viewlayout";
+@import "./components/Loading";
+
+.flag-select__btn  {
+    background-color: white;
+}
+
+.JDicon--tiny {
+    width: 0.6rem!important;
+    height: 0.6rem!important;
+}
+
+.JDicon--edit {
+    border: 1px solid $grey-level1;
+    padding: 2px;
+    background-color: white;
+    border-radius: 50%;
+
+    &:hover {
+        background-color: $grey-level1;
+    }
+}

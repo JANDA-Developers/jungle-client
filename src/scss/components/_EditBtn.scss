@@ -1,0 +1,28 @@
+
+.pageEditBtn {
+    position: fixed;
+    display: inline-block;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 30px;
+    text-align: center;
+    background-color: #2196F3;
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 2px 2px 4px #00000040;
+    &:hover {
+        background-color: #0a85e7;
+    }
+    i {
+        display: inline-block;
+        width: 14px;
+        height: 14px;
+        margin-right:3px;
+        vertical-align: text-top;
+    }
+}
+
