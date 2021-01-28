@@ -4,7 +4,10 @@ import profileInfo from "./info/profile";
 import housemanualInfo from "./info/housemanual";
 import itsGuideInfo from "./info/itsGuide";
 import sampleInfo from "./info/sampleInfo";
+import testInfo from "./info/test";
 import SampleTemplate from "../template/source/SampleTemplate";
+import TestTemplate from "../template/source/test/test";
+
 import HouseManual from "./source/housemanual/HouseManual";
 import Profile from "./source/profile/Profile";
 import { TElements } from "@janda-com/front/dist/types/interface";
@@ -14,6 +17,7 @@ import ItsGuide from "./source/itsGuid/ItsGuide";
 
 
 export enum TemplateKey {
+    "test" = "test",
     "Its" = "Its",
     "Profile" = "Profile",
     "HM" = "HM",
@@ -81,6 +85,17 @@ export const TEMPLATES: ITempalte[] = [
         key: TemplateKey.Foo,
         value: sampleInfo,
         View: SampleTemplate
+    },
+    {
+        title: "테스트",
+        describe: <div>
+            <JDbadge mb thema="grey4">갤러리</JDbadge>
+            갤러리 형태의 페이지 사진 위주의 페이지를 생성 및 전시 가능
+        </div>,
+        img: "/assets/img/gall_thumb.jpg",
+        key: TemplateKey.test,
+        value: testInfo,
+        View: TestTemplate
     }
 ]
 
