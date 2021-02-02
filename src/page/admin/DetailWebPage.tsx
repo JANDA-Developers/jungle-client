@@ -52,6 +52,8 @@ export const DetailWebPage: React.FC<IProp> = ({ }) => {
                 <JDbadge thema="primary" mb>{codeToName(lang)}</JDbadge>
                 <JDpageInputRender onSubmit={handlePageUpdate} lang={lang} data={page} />
             </JDcard>
+
+            asdasdasdasd
         </JDcontainer>
     </div>;
 };

@@ -1,0 +1,37 @@
+@mixin bgImg {
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+#hotel_1 {
+    
+    a {
+        color:inherit;
+        text-decoration: none;
+    }
+
+    .mainSection {
+        margin:0 auto;
+        width:100%; max-width:1200px;
+    }
+
+    @media screen and (min-width:1024px) {
+        $section_padding:0px; 
+    }
+
+    @media screen and (min-width:1680px) {
+
+        .mainSection {
+            margin:0 auto;
+            width:100%; max-width:1400px;
+        }
+
+    }
+
+
+    @import './section1.scss';
+
+    
+}
+

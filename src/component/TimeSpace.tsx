@@ -17,7 +17,7 @@ export const TimeSpace: React.FC<IProp> = ({ infoKey }) => {
     }, [size.width, size.height])
 
     const ref = useRef<HTMLIFrameElement>(null);
-    const sampleSrc = "http://localhost:3001/?sgc=L6MPRO&sc=PKT0QF&mode=mini/#/예시 상품1."
+    // const sampleSrc = "http://localhost:3001/?sgc=L6MPRO&sc=PKT0QF&mode=mini/#/예시 상품1."
 
     useEffect(() => {
         window.onmessage = (e: MessageEvent) => {
@@ -30,9 +30,9 @@ export const TimeSpace: React.FC<IProp> = ({ infoKey }) => {
 
     if (!page[infoKey]) return null;
     const link = page[infoKey][lang];
-    return !editMode ? <iframe style={{
+    
+    return <iframe style={{
         width: "100%",
         height
-    }} ref={ref} src={sampleSrc} /> :
-        <InputText label="타임스페이스 링크" />
+    }} ref={ref} src={link} />
 };

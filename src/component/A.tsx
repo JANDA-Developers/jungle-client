@@ -20,6 +20,7 @@ export const LinkEditor: React.FC<ILinkEditorProp> = ({ link: defaultLink, onSub
 
     return <span style={{ position: "absolute", top: "-4px", right: "-4px" }}>
         <JDicon size="tiny" tooltip="링크설정" hover mode="circleBorder" icon="link" onClick={handleEdit} />
+
         {modalHook.openModal &&
             <JDmodal foot={
                 <JDbutton thema="primary" mode="flat" onClick={() => { onSubmit(linkHook.value); modalHook.closeModal() }}
@@ -39,5 +40,8 @@ export interface ILinkEditProps extends React.HtmlHTMLAttributes<HTMLAnchorEleme
 }
 
 export const A: React.FC<ILinkEditProps> = ({ children, link, editLink, editable, ...props }) => {
-    return <a style={{ zIndex: 10, position: "relative" }}  {...props} href={editable ? undefined : link} >{children}{editable ? <LinkEditor link={link} onSubmit={editLink} /> : ""}</a>;
+
+    return <a style={{ zIndex: 10, position: "relative" }}  {...props} href={editable ? undefined : link} >{children}
+    {editable ? <LinkEditor link={link} onSubmit={editLink} /> : ""}
+    </a>;
 };

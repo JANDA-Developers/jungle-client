@@ -1,7 +1,7 @@
 import { JDinputType } from "src/component/inputRender/InputComponent"
 import { SHARED_INFO } from "./shared"
 
-export const TEST_INFO = {
+export const HOTEL_INFO = {
     ...SHARED_INFO,
     titleasdasdas: {
         description: "hello world",
@@ -65,4 +65,4 @@ export const TEST_INFO = {
     }
 }
 
-export default TEST_INFO
+export default HOTEL_INFO

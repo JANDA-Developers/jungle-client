@@ -24,10 +24,14 @@ export const ViewContext = React.createContext<IViewContext | null>(null);
 
 // @ts-ignore
 const browserLn = window.navigator.userLanguage || window.navigator.language;
+
 export const View: React.FC = () => {
     const { code: paramCode } = useParams<{ code?: string }>();
+
     const code = paramCode || getFromUrl("code") || localManager.get("lastAccessCode");
+
     const ln = getFromUrl("ln") || "KR" || browserLn;
+
     const editTools = usePageEdit(code, ln);
     const context = { ...editTools, originPage: editTools.item };
 
@@ -43,10 +47,13 @@ export const View: React.FC = () => {
     if (editTools.loading) return <PageLoading />
     if (editTools.pageFindFail) return <Page404 />
     if (isEmpty(editTools.page)) return <PageLoading />
+
     return <ViewContext.Provider value={context as any}>
         <Loading />
         <ViewModeLayout >
+
             <View {...context} template={editTools.target} />
+
         </ViewModeLayout>
     </ViewContext.Provider>
 };
