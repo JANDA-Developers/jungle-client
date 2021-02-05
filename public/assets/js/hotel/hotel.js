@@ -1,4 +1,4 @@
 
 
-    console.log(' Function Out');
+    console.log(' :::::: Hotel script loaded :::::: ');
 

@@ -21,13 +21,17 @@ interface IProp extends IViewContext<INFO> {
 const Hotel: React.FC<IProp> = ({ 
     setLang, edit, linkEdit, template, arrAddKit, page, arrayEditModalKit, editObjArr, addArray, editArray, removeArray, editMode, bg, imgKit, src, originPage, lang, l
 }) => {
+
+    const displaySection3PC = () => {
+
+    }
+
     return (
         <>
             <Helmet>
                 <title>JANDA | 숙박 템플릿</title>
                 <link rel="stylesheet" href={"/assets/css/normalize.css"} />
                 <link rel="stylesheet" href={"/assets/css/swiper.css"} />
-                <link rel="stylesheet" href={"/assets/css/main_hotel.css"} />
                 <script type="text/javascript" src={"/assets/loadcheck.js"} />
                 <script type="text/javascript" src={"/assets/js/swiper.js"} />
                 <script type="text/javascript" src={"/assets/js/hotel/hotel.js"} defer />
@@ -92,7 +96,9 @@ const Hotel: React.FC<IProp> = ({
                             <h2 className="mainSe2__title" {...edit("section2_text1")}></h2>
                             <p className="mainSe2__subTitle" {...edit("section2_text2")}></p>
                             <p className="mainSe2__text" {...edit("section2_text3")}></p>
-                            <A {...linkEdit("sampleLink")} className="mainSe2__btn" style={{background: '#C19B76'}} >
+                            <A {...linkEdit("sampleLink")} 
+                                className="mainSe2__btn" 
+                                style={{background: '#C19B76'}} >
                                 <span {...edit("section2_btn_text")}></span>
                             </A>
                         </section>
@@ -111,8 +117,8 @@ const Hotel: React.FC<IProp> = ({
                             <p className="mainSe3__subtitle" {...edit("section3_subtitle")}></p>
                         </section>
                         <section className="mainSe3__roomWrap">
-                            {/* <div className="roomSpecial">
-                                <BG  className="roomSpecial__img" {...imgKit("section3_room1_img")}></BG>
+                            <div className="roomSpecial">
+                                <BG className="roomSpecial__img" {...imgKit("section3_room1_img")}></BG>
                                 <h3 className="roomSpecial__title" {...edit("section3_room1_name")}></h3>
                                 <p className="roomSpecial__text" {...edit("section3_room1_desc")}></p>
                                 <A {...linkEdit("section3_room1_link")} 
@@ -123,44 +129,150 @@ const Hotel: React.FC<IProp> = ({
                             </div>
                             <div className="mainSe3__roomListWrap">
                                 <div className="mainSe3__roomBlock">
-                                    <BG  className="roomSpecial__img" {...imgKit("section3_room2_img")}>
+                                    <BG className="mainSe3__roomList" {...imgKit("section3_room2_img")}>
                                         <div className="roomText">
                                             <div className="roomText__name" {...edit("section3_room2_name")}></div>
-                                            <a className="roomText__btn" {...edit("section3_btnName")}></a>
+                                            <A {...linkEdit("section3_room2_link")} 
+                                                className="roomText__btn">
+                                                <span {...edit("section3_btnName")}></span>
+                                            </A>
                                         </div>
                                     </BG>
-                                    <div className="mainSe3__roomList" style={{backgroundImage: 'url(./img/living_room.jpg)'}}>
+                                    <BG className="mainSe3__roomList" {...imgKit("section3_room3_img")}>
                                         <div className="roomText">
-                                        <div className="roomText__name">Standard Double A</div>
-                                        <a className="roomText__btn">More Detail</a>
+                                            <div className="roomText__name" {...edit("section3_room3_name")}></div>
+                                            <A {...linkEdit("section3_room3_link")} 
+                                                className="roomText__btn">
+                                                <span {...edit("section3_btnName")}></span>
+                                            </A>
                                         </div>
-                                    </div>
-                                    <div className="mainSe3__roomList" style={{backgroundImage: 'url(./img/mee00685.jpg)'}}>
-                                        <div className="roomText">
-                                        <div className="roomText__name">Standard Double A</div>
-                                        <a className="roomText__btn">More Detail</a>
-                                        </div>
-                                    </div>
+                                    </BG>
                                 </div>
                                 <div className="mainSe3__roomBlock mt">
-                                <div className="mainSe3__roomList" style={{backgroundImage: 'url(./img/pc002250323.jpg)'}}>
-                                    <div className="roomText">
-                                    <div className="roomText__name">Standard Double A</div>
-                                    <a className="roomText__btn">More Detail</a>
-                                    </div>
+                                    <BG className="mainSe3__roomList" {...imgKit("section3_room4_img")}>
+                                        <div className="roomText">
+                                            <div className="roomText__name" {...edit("section3_room4_name")}></div>
+                                            <A {...linkEdit("section3_room4_link")} 
+                                                className="roomText__btn">
+                                                <span {...edit("section3_btnName")}></span>
+                                            </A>
+                                        </div>
+                                    </BG>
+                                    <BG className="mainSe3__roomList" {...imgKit("section3_room5_img")}>
+                                        <div className="roomText">
+                                            <div className="roomText__name" {...edit("section3_room5_name")}></div>
+                                            <A {...linkEdit("section3_room5_link")} 
+                                                className="roomText__btn">
+                                                <span {...edit("section3_btnName")}></span>
+                                            </A>
+                                        </div>
+                                    </BG>
                                 </div>
-                                <div className="mainSe3__roomList" style={{backgroundImage: 'url(./img/pc003257767.jpg)'}}>
-                                    <div className="roomText">
-                                    <div className="roomText__name">Standard Double A</div>
-                                    <a className="roomText__btn">More Detail</a>
-                                    </div>
-                                </div>
-                                </div>
-                            </div> */}
+                            </div>
                         </section>
                     </div>
                 </div>
 
+                {/* ::::::::::: Section 4 ::::::::::: */}
+                <div className="mainSe4">
+                    <div className="mainSe4__imgWrap">
+                        <BG className="mainSe4__img" {...imgKit("section4_img")}>
+                        </BG>
+                    </div>
+                    <div className="mainSe4__textWrap">
+                        <div className="mainSe4__innerWrap">
+                        <h2 className="mainSe4__title" {...edit("section4_text1")}></h2>
+                        <h3 className="mainSe4__subtitle" style={{color: '#C19B76'}}
+                            {...edit("section4_text2")}>
+                        </h3>
+                        <p className="mainSe4__content" {...edit("section4_text3")}>
+                        </p>
+                        <A {...linkEdit("section4_btnLink")} 
+                            className="mainSe4__btn">
+                            <span {...edit("section4_btnText")}></span>
+                        </A>
+                        </div>
+                    </div>
+                </div>
+
+                {/* ::::::::::: Section 5 ::::::::::: */}
+
+                <div className="mainSe5">
+                    <div className="mainSection">
+                        <section className="mainSe5__entry">
+                        <h2 className="mainSe5__title" {...edit("section5_title")}></h2>
+                        </section>
+                        <section className="mainSe5__facility">
+                            <div className="mainSe5__facilityBlock">
+                                <BG className="mainSe5__facilityImg" 
+                                    {...imgKit("section5_block1_img")}>
+                                </BG>
+                                <div className="mainSe5__facilityText facility">
+                                    <h3 className="facility__title" 
+                                        {...edit("section5_block1_text1")}>
+                                    </h3>
+                                    <p className="facility__subTitle"
+                                        {...edit("section5_block1_text2")}>
+                                    </p>
+                                    <p className="facility__text"
+                                        {...edit("section5_block1_text3")}>
+                                    </p>
+                                    <A {...linkEdit("section5_block1_link")} 
+                                        className="facility__btn"
+                                        style={{border: '2px solid #C19B76', color: '#C19B76'}}
+                                    >
+                                        <span {...edit("section5_btnText")}></span>
+                                    </A>
+                                </div>
+                            </div>
+                            <div className="mainSe5__facilityBlock">
+                                <div className="mainSe5__facilityText facility">
+                                    <h3 className="facility__title" 
+                                        {...edit("section5_block2_text1")}>
+                                    </h3>
+                                    <p className="facility__subTitle"
+                                        {...edit("section5_block2_text2")}>
+                                    </p>
+                                    <p className="facility__text"
+                                        {...edit("section5_block2_text3")}>
+                                    </p>
+                                    <A {...linkEdit("section5_block2_link")} 
+                                        className="facility__btn"
+                                        style={{border: '2px solid #C19B76', color: '#C19B76'}}
+                                    >
+                                        <span {...edit("section5_btnText")}></span>
+                                    </A>
+                                </div>
+                                <BG className="mainSe5__facilityImg" 
+                                    {...imgKit("section5_block2_img")}>
+                                </BG>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+
+                {/* ::::::::::: Section 6 ::::::::::: */}
+
+                <div className="mainSe6">
+                    <div className="mainSe6__container">
+                        <BG className="mainSe6__img" 
+                            {...imgKit("section6_img")}>
+                        </BG>
+                        <section className="mainSe6__textWrap">
+                            <h2 className="mainSe6__title"
+                                {...edit("section6_text1")}>
+                            </h2>
+                            <p className="mainSe6__desc"
+                                 {...edit("section6_text2")}>
+                            </p>
+                        </section>
+                    </div>
+                </div>
+
+                <footer className="footer">
+                    <div className="footer__inner"></div>
+                </footer>
 
             </div>
         

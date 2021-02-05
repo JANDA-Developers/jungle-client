@@ -115,7 +115,7 @@ export const HOTEL_INFO = {
 
     section3_room1_img : {
         description: "섹션 3 방 1 - 이미지",
-        value: "/assets/img/hotel/section2/living_room2.jp",
+        value: "/assets/img/hotel/section3/living_room.jpg",
     },
 
     section3_room1_name : {
@@ -137,7 +137,7 @@ export const HOTEL_INFO = {
 
     section3_room2_img : {
         description: "섹션 3 방 2 - 이미지",
-        value: "/assets/img/hotel/section2/living_room2.jp",
+        value: "/assets/img/hotel/section3/pc002250323.jpg",
     },
     
     section3_room2_name : {
@@ -156,15 +156,202 @@ export const HOTEL_INFO = {
         description: "섹션 3 방 2 - 링크",
         value: "/",
     },
+    
+    section3_room3_img : {
+        description: "섹션 3 방 3 - 이미지",
+        value: "/assets/img/hotel/section3/pc003257767.jpg",
+    },
+    
+    section3_room3_name : {
+        description: "섹션 3 방 3 - 이름",
+        KR: "스탠다드 더블 룸",
+        GB: "Stadard Double Room"
+    },
+    
+    section3_room3_desc : {
+        description: "섹션 3 방 3 - 설명",
+        KR: "자연과 함께하는 공간,프라이빗 패밀리 룸은 프라이빗한 테라스와 큰 창으로 자연 풍경을 만끽하며, 가족들과 함께 편안한 휴식을 즐길 수 있습니다.",
+        GB: "Eng 자연과 함께하는 공간,프라이빗 패밀리 룸은 프라이빗한 테라스와 큰 창으로 자연 풍경을 만끽하며, 가족들과 함께 편안한 휴식을 즐길 수 있습니다."
+    },
+    
+    section3_room3_link : {
+        description: "섹션 3 방 3 - 링크",
+        value: "/",
+    },
 
+    section3_room4_img : {
+        description: "섹션 3 방 4 - 이미지",
+        value: "/assets/img/hotel/section3/facility.jpg",
+    },
+    
+    section3_room4_name : {
+        description: "섹션 3 방 4 - 이름",
+        KR: "럭셔리 더블룸 A",
+        GB: "Luxury Double Room A"
+    },
+    
+    section3_room4_desc : {
+        description: "섹션 3 방 4 - 설명",
+        KR: "자연과 함께하는 공간,프라이빗 패밀리 룸은 프라이빗한 테라스와 큰 창으로 자연 풍경을 만끽하며, 가족들과 함께 편안한 휴식을 즐길 수 있습니다.",
+        GB: "Eng 자연과 함께하는 공간,프라이빗 패밀리 룸은 프라이빗한 테라스와 큰 창으로 자연 풍경을 만끽하며, 가족들과 함께 편안한 휴식을 즐길 수 있습니다."
+    },
+    
+    section3_room4_link : {
+        description: "섹션 3 방 4 - 링크",
+        value: "/",
+    },
+
+    
+    section3_room5_img : {
+        description: "섹션 3 방 5 - 이미지",
+        value: "/assets/img/hotel/section3/cb107018752.jpg",
+    },
+    
+    section3_room5_name : {
+        description: "섹션 3 방 5 - 이름",
+        KR: "럭셔리 더블룸 B",
+        GB: "Luxury Double Room B"
+    },
+    
+    section3_room5_desc : {
+        description: "섹션 3 방 5 - 설명",
+        KR: "자연과 함께하는 공간,프라이빗 패밀리 룸은 프라이빗한 테라스와 큰 창으로 자연 풍경을 만끽하며, 가족들과 함께 편안한 휴식을 즐길 수 있습니다.",
+        GB: "Eng 자연과 함께하는 공간,프라이빗 패밀리 룸은 프라이빗한 테라스와 큰 창으로 자연 풍경을 만끽하며, 가족들과 함께 편안한 휴식을 즐길 수 있습니다."
+    },
+    
+    section3_room5_link : {
+        description: "섹션 3 방 5 - 링크",
+        value: "/",
+    },
 
 
     /* :::::::::::: Section 4 :::::::::::: */
 
+    section4_img : {
+        description: "섹션 4 - 이미지",
+        value: "/assets/img/hotel/section4/pc003272645.jpg",
+    },
+    
+    section4_text1 : {
+        description: "섹션 4 - 텍스트 1",
+        KR: "LUXURY HOTEL & BEST RESORT",
+        GB: "LUXURY HOTEL & BEST RESORT"
+    },
+
+    section4_text2 : {
+        description: "섹션 4 - 텍스트 2",
+        KR: "space with nature",
+        GB: "space with nature"
+    },
+
+    section4_text3 : {
+        description: "섹션 4 - 텍스트 3",
+        KR: "Janda Stay는 아름다운 오션뷰와 따뜻한 포레스트 뷰를 누릴 수 있는 공간입니다. 자연과 함께하는 여행지에서의 최고의 추억을 위해 언제나 최상의 서비스를 제공합니다.",
+        GB: "Eng Janda Stay는 아름다운 오션뷰와 따뜻한 포레스트 뷰를 누릴 수 있는 공간입니다. 자연과 함께하는 여행지에서의 최고의 추억을 위해 언제나 최상의 서비스를 제공합니다."
+    },
+
+    section4_btnLink : {
+        description: "섹션 4 - 버튼 링크",
+        value: "/",
+    },
+
+    section4_btnText : {
+        description: "섹션 4 - 버튼 텍스트",
+        KR: "More Details",
+        GB: "More Details"
+    },
 
 
     /* :::::::::::: Section 5 :::::::::::: */
 
+    section5_title : {
+        description: "섹션 5 - 타이틀",
+        KR: "소중한 사람과 함께 할 수 있는 곳 <br> 자연이 살아 숨쉬는 공간, Janda Stay로 여러분을 초대합니다",
+        GB: "Eng 소중한 사람과 함께 할 수 있는 곳 <br> 자연이 살아 숨쉬는 공간, Janda Stay로 여러분을 초대합니다"
+    },
+
+    section5_btnText : {
+        description: "섹션 5 - 버튼 텍스트",
+        KR: "Detail",
+        GB: "Detail",
+    },
+
+    section5_block1_img : {
+        description: "섹션 5 - 블록1 - 이미지",
+        value: "/assets/img/hotel/section4/pc003272645.jpg",
+    },
+
+    section5_block1_text1 : {
+        description: "섹션 5 - 블록1 - 텍스트 1",
+        KR: "JANDA STAY",
+        GB: "JANDA STAY",
+    },
+
+    section5_block1_text2 : {
+        description: "섹션 5 - 블록1 - 텍스트 2",
+        KR: "럭셔리한 풀빌라",
+        GB: "럭셔리한 풀빌라",
+    },
+
+    section5_block1_text3 : {
+        description: "섹션 5 - 블록1 - 텍스트 3",
+        KR: "바다와 맞닿아 있는 풀빌라는, 외국에 있는듯한 여유로운 시간을 선사합니다. 풀 사이드에 준비된 베드에서 낮잠을 즐겨보세요.",
+        GB: "바다와 맞닿아 있는 풀빌라는, 외국에 있는듯한 여유로운 시간을 선사합니다. 풀 사이드에 준비된 베드에서 낮잠을 즐겨보세요.",
+    },
+
+    section5_block1_link : {
+        description: "섹션 5 - 블록1 - 링크",
+        value: "/",
+    },
+
+    section5_block2_img : {
+        description: "섹션 5 - 블록2 - 이미지",
+        value: "/assets/img/hotel/section4/pc003272645.jpg",
+    },
+    
+    section5_block2_text1 : {
+        description: "섹션 5 - 블록2 - 텍스트 1",
+        KR: "JANDA STAY",
+        GB: "JANDA STAY",
+    },
+    
+    section5_block2_text2 : {
+        description: "섹션 5 - 블록2 - 텍스트 2",
+        KR: "탁 트인 전망",
+        GB: "탁 트인 전망",
+    },
+    
+    section5_block2_text3 : {
+        description: "섹션 5 - 블록2 - 텍스트 3",
+        KR: "Janda Stay 최상층에는 탁 트인 전망을 볼 수 있는 라운지가 위치하고 있습니다. 바다를 내려다보며 여행지의 설렘과 여유로움을 만끽해보세요.",
+        GB: "Janda Stay 최상층에는 탁 트인 전망을 볼 수 있는 라운지가 위치하고 있습니다. 바다를 내려다보며 여행지의 설렘과 여유로움을 만끽해보세요.",
+    },
+    
+    section5_block2_link : {
+        description: "섹션 5 - 블록2 - 링크",
+        value: "/",
+    },
+
+    
+
+    /* :::::::::::: Section 6 :::::::::::: */
+
+    section6_img : {
+        description: "섹션 6 - 이미지",
+        value: "/assets/img/hotel/section2/living_room.jpg",
+    },
+
+    section6_text1 : {
+        description: "섹션 6 - 텍스트 1",
+        KR: "소중한 사람들과 함께 하는곳<br>JANDA STAY",
+        GB: "Eng 소중한 사람들과 함께 하는곳<br>JANDA STAY",
+    },
+
+    section6_text2 : {
+        description: "섹션 6 - 텍스트 2",
+        KR: "LUXURY HOTEL & BEST RESORT",
+        GB: "LUXURY HOTEL & BEST RESORT",
+    },
 
 
 
