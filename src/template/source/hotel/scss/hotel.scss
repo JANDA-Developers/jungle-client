@@ -4,7 +4,36 @@
     background-repeat:no-repeat;
 }
 
+@font-face { 
+    font-family: 'NEXON Lv1 Gothic'; 
+    font-weight: normal; 
+    font-style: normal; 
+    src: url('/assets/fonts/NEXONLv1GothicRegular.woff') format('woff'),
+          url('/assets/fonts/NEXONLv1GothicRegular.ttf') format('truetype');
+}
+
+html, body, #root {
+    overflow-x:visible;
+}
+
+* {
+    margin:0; 
+    box-sizing: border-box;
+}
+
+P {
+    margin:0;
+}
+
+
+
+
+$section_padding:0 15px; 
+
+
 #hotel_1 {
+
+    font-family: 'NEXON Lv1 Gothic', 'Noto Sans KR', sans-serif;
     
     a {
         color:inherit;
@@ -30,8 +59,25 @@
     }
 
 
-    @import './section1.scss';
-
+    // @import './section1.scss';
+    // @import './section2.scss';
+    
     
 }
 
+
+
+
+@keyframes scrollBar {
+    0% {
+        opacity:1;
+        top:10px;
+    }
+    70% {
+        opacity:0;
+        top:30px;
+    }
+    100% {
+        opacity:0;
+    }
+}
