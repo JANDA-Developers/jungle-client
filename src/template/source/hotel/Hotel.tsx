@@ -28,19 +28,14 @@ const Hotel: React.FC<IProp> = ({
     const [bgFilter, setBgFilter] = useState(false);
     const [reservationOn, setReservationOn] = useState(false);
 
-
     const handelReservation = (state:boolean) => {
         setBgFilter(state);
         setReservationOn(state);
     }
 
-
-    const displaySection3PC = () => {
-
-    }
-
-
     const editModalHook = useModal();
+
+
     return (
         <>
             <Helmet>
@@ -220,26 +215,6 @@ const Hotel: React.FC<IProp> = ({
                     <InfoSubmitModal {...arrayEditModalKit("section4_array", editModalHook)}/>
 
                     <Add {...arrAddKit("section4_array", editModalHook)} />
-
-                    {/* <div className="mainSe4__imgWrap">
-                        <BG className="mainSe4__img" {...imgKit("section4_img")}>
-                        </BG>
-                    </div>
-                    <div className="mainSe4__textWrap">
-                        <div className="mainSe4__innerWrap">
-                        <h2 className="mainSe4__title" {...edit("section4_text1")}></h2>
-                        <h3 className="mainSe4__subtitle" style={{color: '#C19B76'}}
-                            {...edit("section4_text2")}>
-                        </h3>
-                        <p className="mainSe4__content" {...edit("section4_text3")}>
-                        </p>
-                        <A {...linkEdit("section4_btnLink")} 
-                            className="mainSe4__btn">
-                            <span {...edit("section4_btnText")}></span>
-                        </A>
-                        </div>
-                    </div> */}
-
 
                 </div>
 

@@ -20,7 +20,7 @@ interface IProp extends CardProps, JDatomExtentionSet {
 }
 
 export const WebPageCard: React.FC<IProp> = ({ webPage, onEdit: handleEdit, onDetailEdit: handleAdditionInfo, onDomainChange: handleDomainChange, onDelete: handleDelete, ...props }) => {
-    const url = process.env.REACT_APP_CLIENT_URI! + "/#/" + webPage.key;
+    const url = location.protocol + "//" + location.host + "/#/" + webPage.key;
     const history = useHistory();
 
     const handleCopy = () => {

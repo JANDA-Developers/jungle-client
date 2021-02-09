@@ -17,7 +17,8 @@ export interface IUsePageEdit<Page> extends IGetEditUtilsResult<Page> {
 }
 
 export const usePageEdit = <Page>(code?:string,ln?:Langs) => {
-    const { item, loading, error,data } = useWebPageFindByKey(code);
+    const findKey = code ? code : location.host;
+    const { item, loading, error,data } = useWebPageFindByKey(findKey);
     const pageFindFail = data?.WebPageFindByKey.ok && isEmpty(data.WebPageFindByKey.data);
     const target = TEMPLATES.find(t => t.key === item?.templateKey)!
     const [lang, setLang] = useState(ln);
