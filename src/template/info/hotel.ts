@@ -13,6 +13,7 @@ export const HOTEL_INFO = {
     /* :::::::::::: Section 1 :::::::::::: */
 
     section1_img1: {
+        type: JDinputType.img,
         description: "섹션 1 이미지 1",
         value:"/assets/img/hotel/section1/mee00685.jpg",
     },
@@ -28,6 +29,7 @@ export const HOTEL_INFO = {
     },
 
     section1_img2: {
+        type: JDinputType.img,
         description: "섹션 1 이미지 2",
         value:"/assets/img/hotel/section1/facility.jpg",
     },
@@ -43,6 +45,7 @@ export const HOTEL_INFO = {
     },
     
     section1_img3: {
+        type: JDinputType.img,
         description: "섹션 1 이미지 2",
         value:"/assets/img/hotel/section1/living_room.jpg",
     },
@@ -84,11 +87,13 @@ export const HOTEL_INFO = {
     },
 
     section2_img1 : {
+        type: JDinputType.img,
         description: "섹션 2 이미지 1",
         value:"/assets/img/hotel/section2/living_room.jpg"
     },
        
     section2_img2 : {
+        type: JDinputType.img,
         description: "섹션 2 이미지 2",
         value:"/assets/img/hotel/section2/pc001010632.jpg"
     },
@@ -114,6 +119,7 @@ export const HOTEL_INFO = {
     },
 
     section3_room1_img : {
+        type: JDinputType.img,
         description: "섹션 3 방 1 - 이미지",
         value: "/assets/img/hotel/section3/living_room.jpg",
     },
@@ -130,12 +136,13 @@ export const HOTEL_INFO = {
         GB: "Eng 자연과 함께하는 공간,프라이빗 패밀리 룸은 프라이빗한 테라스와 큰 창으로 자연 풍경을 만끽하며, 가족들과 함께 편안한 휴식을 즐길 수 있습니다."
     },
 
-    section3_room1_link : {
-        description: "섹션 3 방 1 - 링크",
-        value: "/",
-    },
+    // section3_room1_link : {
+    //     description: "섹션 3 방 1 - 링크",
+    //     value: "/",
+    // },
 
     section3_room2_img : {
+        type: JDinputType.img,
         description: "섹션 3 방 2 - 이미지",
         value: "/assets/img/hotel/section3/pc002250323.jpg",
     },
@@ -152,12 +159,13 @@ export const HOTEL_INFO = {
         GB: "Eng 자연과 함께하는 공간,프라이빗 패밀리 룸은 프라이빗한 테라스와 큰 창으로 자연 풍경을 만끽하며, 가족들과 함께 편안한 휴식을 즐길 수 있습니다."
     },
     
-    section3_room2_link : {
-        description: "섹션 3 방 2 - 링크",
-        value: "/",
-    },
+    // section3_room2_link : {
+    //     description: "섹션 3 방 2 - 링크",
+    //     value: "/",
+    // },
     
     section3_room3_img : {
+        type: JDinputType.img,
         description: "섹션 3 방 3 - 이미지",
         value: "/assets/img/hotel/section3/pc003257767.jpg",
     },
@@ -174,12 +182,13 @@ export const HOTEL_INFO = {
         GB: "Eng 자연과 함께하는 공간,프라이빗 패밀리 룸은 프라이빗한 테라스와 큰 창으로 자연 풍경을 만끽하며, 가족들과 함께 편안한 휴식을 즐길 수 있습니다."
     },
     
-    section3_room3_link : {
-        description: "섹션 3 방 3 - 링크",
-        value: "/",
-    },
+    // section3_room3_link : {
+    //     description: "섹션 3 방 3 - 링크",
+    //     value: "/",
+    // },
 
     section3_room4_img : {
+        type: JDinputType.img,
         description: "섹션 3 방 4 - 이미지",
         value: "/assets/img/hotel/section3/facility.jpg",
     },
@@ -196,13 +205,14 @@ export const HOTEL_INFO = {
         GB: "Eng 자연과 함께하는 공간,프라이빗 패밀리 룸은 프라이빗한 테라스와 큰 창으로 자연 풍경을 만끽하며, 가족들과 함께 편안한 휴식을 즐길 수 있습니다."
     },
     
-    section3_room4_link : {
-        description: "섹션 3 방 4 - 링크",
-        value: "/",
-    },
+    // section3_room4_link : {
+    //     description: "섹션 3 방 4 - 링크",
+    //     value: "/",
+    // },
 
     
     section3_room5_img : {
+        type: JDinputType.img,
         description: "섹션 3 방 5 - 이미지",
         value: "/assets/img/hotel/section3/cb107018752.jpg",
     },
@@ -219,15 +229,119 @@ export const HOTEL_INFO = {
         GB: "Eng 자연과 함께하는 공간,프라이빗 패밀리 룸은 프라이빗한 테라스와 큰 창으로 자연 풍경을 만끽하며, 가족들과 함께 편안한 휴식을 즐길 수 있습니다."
     },
     
-    section3_room5_link : {
-        description: "섹션 3 방 5 - 링크",
-        value: "/",
-    },
+    // section3_room5_link : {
+    //     description: "섹션 3 방 5 - 링크",
+    //     value: "/",
+    // },
 
 
     /* :::::::::::: Section 4 :::::::::::: */
 
+    section4_name : {
+        description: "섹션 4 - 숙소명",
+        KR: "LUXURY HOTEL & BEST RESORT",
+        GB: "LUXURY HOTEL & BEST RESORT"
+    },
+
+    section4_btn : {
+        description: "섹션 4 - 버튼명",
+        KR: "More Details",
+        GB: "More Details"
+    },
+
+    section4_bookLink : {
+        description: "섹션 4 - 버튼 링크",
+        KR: "/a",
+        GB: "/a"
+    },
+
+    section4_array: {
+        description: "Section 4 방 목록",
+        type: JDinputType.array,
+        META: {
+            img: {
+                description: "방 이미지",
+                type: JDinputType.img,
+                default: ""
+            },
+            title: {
+                description: "숙소 이름",
+                default: ""
+            },
+            name: {
+                description: "숙소 방이름",
+                default: ""
+            },
+            desc: {
+                description: "방 설명",
+                default: ""
+            },
+            btn: {
+                description: "버튼명",
+                default: ""
+            },
+            link: {
+                description: "링크",
+                default: ""
+            },
+          
+        },
+        KR: [
+                {
+                    img: "/assets/img/hotel/section3/pc003257767.jpg",
+                    title:"LUXURY HOTEL & BEST RESORT",
+                    name: "프라이빗 패밀리 룸 1",
+                    desc: "1 Janda Stay는 아름다운 오션뷰와 따뜻한 포레스트 뷰를 누릴 수 있는 공간입니다. 자연과 함께하는 여행지에서의 최고의 추억을 위해 언제나 최상의 서비스를 제공합니다.",
+                    btn:"More Details",
+                    link:"",
+                },
+                {
+                    img: "/assets/img/hotel/section3/cb107018752.jpg",
+                    title:"LUXURY HOTEL & BEST RESORT",
+                    name: "프라이빗 패밀리 룸 2",
+                    desc: "2 Janda Stay는 아름다운 오션뷰와 따뜻한 포레스트 뷰를 누릴 수 있는 공간입니다. 자연과 함께하는 여행지에서의 최고의 추억을 위해 언제나 최상의 서비스를 제공합니다.",
+                    btn:"More Details",
+                    link:"",
+                },
+                {
+                    img: "/assets/img/hotel/section3/pc003257767.jpg",
+                    title:"LUXURY HOTEL & BEST RESORT",
+                    name: "프라이빗 패밀리 룸 3",
+                    desc: "3 Janda Stay는 아름다운 오션뷰와 따뜻한 포레스트 뷰를 누릴 수 있는 공간입니다. 자연과 함께하는 여행지에서의 최고의 추억을 위해 언제나 최상의 서비스를 제공합니다.",
+                    btn:"More Details",
+                    link:"",
+                }
+        ],
+        GB: [
+                {
+                    img: "/assets/img/hotel/section3/pc003257767.jpg",
+                    title:"LUXURY HOTEL & BEST RESORT",
+                    name: "En 프라이빗 패밀리 룸 1",
+                    desc: "1 Janda Stay는 아름다운 오션뷰와 따뜻한 포레스트 뷰를 누릴 수 있는 공간입니다. 자연과 함께하는 여행지에서의 최고의 추억을 위해 언제나 최상의 서비스를 제공합니다.",
+                    btn:"More Details",
+                    link:"",
+                },
+                {
+                    img: "/assets/img/hotel/section3/cb107018752.jpg",
+                    title:"LUXURY HOTEL & BEST RESORT",
+                    name: "En 프라이빗 패밀리 룸 2",
+                    desc: "2 Janda Stay는 아름다운 오션뷰와 따뜻한 포레스트 뷰를 누릴 수 있는 공간입니다. 자연과 함께하는 여행지에서의 최고의 추억을 위해 언제나 최상의 서비스를 제공합니다.",
+                    btn:"More Details",
+                    link:"",
+                },
+                {
+                    img: "/assets/img/hotel/section3/pc003257767.jpg",
+                    title:"LUXURY HOTEL & BEST RESORT",
+                    name: "En 프라이빗 패밀리 룸 3",
+                    desc: "3 Janda Stay는 아름다운 오션뷰와 따뜻한 포레스트 뷰를 누릴 수 있는 공간입니다. 자연과 함께하는 여행지에서의 최고의 추억을 위해 언제나 최상의 서비스를 제공합니다.",
+                    btn:"More Details",
+                    link:"",
+                }
+        ]
+    },
+
     section4_img : {
+        type: JDinputType.img,
         description: "섹션 4 - 이미지",
         value: "/assets/img/hotel/section4/pc003272645.jpg",
     },
@@ -277,6 +391,7 @@ export const HOTEL_INFO = {
     },
 
     section5_block1_img : {
+        type: JDinputType.img,
         description: "섹션 5 - 블록1 - 이미지",
         value: "/assets/img/hotel/section4/pc003272645.jpg",
     },
@@ -305,6 +420,7 @@ export const HOTEL_INFO = {
     },
 
     section5_block2_img : {
+        type: JDinputType.img,
         description: "섹션 5 - 블록2 - 이미지",
         value: "/assets/img/hotel/section4/pc003272645.jpg",
     },
@@ -337,6 +453,7 @@ export const HOTEL_INFO = {
     /* :::::::::::: Section 6 :::::::::::: */
 
     section6_img : {
+        type: JDinputType.img,
         description: "섹션 6 - 이미지",
         value: "/assets/img/hotel/section2/living_room.jpg",
     },
@@ -354,6 +471,75 @@ export const HOTEL_INFO = {
     },
 
 
+    /* :::::::::::: Section 7 :::::::::::: */
+
+    section7_block1_text1 : {
+        description: "섹션 7 - 블록 1 - Text 1",
+        KR: "AM 00:00 ~ PM 24:00",
+        GB: "Eng AM 00:00 ~ PM 24:00",
+    },
+
+    section7_block1_text2 : {
+        description: "섹션 7 - 블록 1 - Text 2",
+        KR: "상담시간",
+        GB: "Eng 상담시간",
+    },
+
+    section7_block2_text1 : {
+        description: "섹션 7 - 블록 2 - Text 1",
+        KR: "서울시 강남구 신사동 000",
+        GB: "Eng 서울시 강남구 신사동 000",
+    },
+
+    section7_block2_text2 : {
+        description: "섹션 7 - 블록 2 - Text 2",
+        KR: "주소",
+        GB: "Eng 주소",
+    },
+
+    section7_block3_text1 : {
+        description: "섹션 7 - 블록 3 - Text 1",
+        KR: "011-111-2222",
+        GB: "Eng 011-111-2222",
+    },
+
+    section7_block3_text2 : {
+        description: "섹션 7 - 블록 3 - Text 2",
+        KR: "예약 전화",
+        GB: "Eng 예약 전화",
+    },
+
+    section7_block4_icon1 : {
+        type: JDinputType.img,
+        description: "섹션 7 - 아이콘 1",
+        value: "/assets/img/hotel/instagram.png",
+    },
+
+    section7_block4_icon1_link : {
+        description: "섹션 7 - 아이콘 1",
+        value: "/assets/img/hotel/instagram.png",
+    },
+
+    section7_block4_text2 : {
+        description: "섹션 7 - 블록 4 - Text 2",
+        KR: "소셜미디어",
+        GB: "Eng 소셜미디어",
+    },
+
+
+    /* :::::::::::: Footer :::::::::::: */
+
+    footer_logo : {
+        description: "푸터 - 로고명",
+        KR: "JANDA",
+        GB: "Eng JANDA",
+    },
+
+    footer_copyright : {
+        description: "푸터 - Copyrights",
+        KR: "Copyrights © stayjanda.com All Rights Reserved",
+        GB: "Eng Copyrights © stayjanda.com All Rights Reserved",
+    },
 
 
     /* :::::::::::: Test :::::::::::: */

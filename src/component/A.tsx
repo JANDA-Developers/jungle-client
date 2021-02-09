@@ -44,4 +44,5 @@ export const A: React.FC<ILinkEditProps> = ({ children, link, editLink, editable
     return <a style={{ zIndex: 10, position: "relative" }}  {...props} href={editable ? undefined : link} >{children}
     {editable ? <LinkEditor link={link} onSubmit={editLink} /> : ""}
     </a>;
+    
 };

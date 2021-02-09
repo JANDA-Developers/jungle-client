@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { IViewContext } from '../../../page/View';
 import { HOTEL_INFO } from '../../info/hotel';
@@ -10,6 +10,9 @@ import { A } from 'src/component/A';
 import { LangChange } from 'src/component/LanguageChnager';
 import { Content } from 'src/component/Content';
 import { TimeSpace } from 'src/component/TimeSpace';
+import { useModal } from '@janda-com/front';
+import { InfoSubmitModal } from 'src/component/InfoSubmitModal';
+
 import './scss/hotel.scss';
 
 
@@ -22,10 +25,22 @@ const Hotel: React.FC<IProp> = ({
     setLang, edit, linkEdit, template, arrAddKit, page, arrayEditModalKit, editObjArr, addArray, editArray, removeArray, editMode, bg, imgKit, src, originPage, lang, l
 }) => {
 
+    const [bgFilter, setBgFilter] = useState(false);
+    const [reservationOn, setReservationOn] = useState(false);
+
+
+    const handelReservation = (state:boolean) => {
+        setBgFilter(state);
+        setReservationOn(state);
+    }
+
+
     const displaySection3PC = () => {
 
     }
 
+
+    const editModalHook = useModal();
     return (
         <>
             <Helmet>
@@ -39,6 +54,7 @@ const Hotel: React.FC<IProp> = ({
             <div id="hotel_1" className="page_main">
 
                 {/* ::::::::::: Section 1 ::::::::::: */}
+
                 <div className="mainSe1">
                     <Swiper className="mainSe1__slide"
                             spaceBetween={0}
@@ -90,6 +106,7 @@ const Hotel: React.FC<IProp> = ({
                 </div>
                 
                 {/* ::::::::::: Section 2 ::::::::::: */}
+
                 <div className="mainSe2">
                     <div className="mainSe2__wrap">
                         <section className="mainSe2__textWrap">
@@ -110,6 +127,7 @@ const Hotel: React.FC<IProp> = ({
                 </div>
 
                 {/* ::::::::::: Section 3 ::::::::::: */}
+
                 <div className="mainSe3">
                     <div className="mainSection mainSe3__wrapPC">
                         <section className="mainSe3__entry">
@@ -121,30 +139,20 @@ const Hotel: React.FC<IProp> = ({
                                 <BG className="roomSpecial__img" {...imgKit("section3_room1_img")}></BG>
                                 <h3 className="roomSpecial__title" {...edit("section3_room1_name")}></h3>
                                 <p className="roomSpecial__text" {...edit("section3_room1_desc")}></p>
-                                <A {...linkEdit("section3_room1_link")} 
-                                    className="roomSpecial__btn" 
-                                    style={{background: '#C19B76'}} >
-                                    <span {...edit("section3_btnName")}></span>
-                                </A>
+     
                             </div>
                             <div className="mainSe3__roomListWrap">
                                 <div className="mainSe3__roomBlock">
                                     <BG className="mainSe3__roomList" {...imgKit("section3_room2_img")}>
                                         <div className="roomText">
                                             <div className="roomText__name" {...edit("section3_room2_name")}></div>
-                                            <A {...linkEdit("section3_room2_link")} 
-                                                className="roomText__btn">
-                                                <span {...edit("section3_btnName")}></span>
-                                            </A>
+                
                                         </div>
                                     </BG>
                                     <BG className="mainSe3__roomList" {...imgKit("section3_room3_img")}>
                                         <div className="roomText">
                                             <div className="roomText__name" {...edit("section3_room3_name")}></div>
-                                            <A {...linkEdit("section3_room3_link")} 
-                                                className="roomText__btn">
-                                                <span {...edit("section3_btnName")}></span>
-                                            </A>
+                      
                                         </div>
                                     </BG>
                                 </div>
@@ -152,19 +160,13 @@ const Hotel: React.FC<IProp> = ({
                                     <BG className="mainSe3__roomList" {...imgKit("section3_room4_img")}>
                                         <div className="roomText">
                                             <div className="roomText__name" {...edit("section3_room4_name")}></div>
-                                            <A {...linkEdit("section3_room4_link")} 
-                                                className="roomText__btn">
-                                                <span {...edit("section3_btnName")}></span>
-                                            </A>
+                        
                                         </div>
                                     </BG>
                                     <BG className="mainSe3__roomList" {...imgKit("section3_room5_img")}>
                                         <div className="roomText">
                                             <div className="roomText__name" {...edit("section3_room5_name")}></div>
-                                            <A {...linkEdit("section3_room5_link")} 
-                                                className="roomText__btn">
-                                                <span {...edit("section3_btnName")}></span>
-                                            </A>
+                              
                                         </div>
                                     </BG>
                                 </div>
@@ -174,8 +176,52 @@ const Hotel: React.FC<IProp> = ({
                 </div>
 
                 {/* ::::::::::: Section 4 ::::::::::: */}
-                <div className="mainSe4">
-                    <div className="mainSe4__imgWrap">
+
+                <div className="main_section4">
+                    <Swiper className="mainSe4__slide"
+                        spaceBetween={0}
+                        speed={700}>
+                        {page.section4_array[lang].map((item,index) => 
+                            <SwiperSlide 
+                                {...editObjArr("section4_array", index, editModalHook)}
+                            >
+                                <div className="mainSe4">
+                                    <div className="mainSe4__imgWrap">
+                                        <div className="mainSe4__img" 
+                                        style={{backgroundImage: `url(${item.img})`}}
+                                        ></div>
+                                    </div>
+                                    <div className="mainSe4__textWrap">
+                                        <div className="mainSe4__innerWrap">
+                                            <h2 className="mainSe4__title">
+                                                {item.title}
+                                            </h2>
+                                            <h3 className="mainSe4__subtitle" style={{color: '#C19B76'}}>
+                                                {item.name}
+                                            </h3>
+                                            <p className="mainSe4__content">
+                                                {item.desc}
+                                            </p>
+                                            <a href={item.link} className="mainSe4__btn"
+                                               onClick={(e)=>{
+                                                   e.preventDefault();
+                                                   handelReservation(true)}
+                                                }
+                                            >
+                                                <span>{item.btn}</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        )}
+                    </Swiper>
+
+                    <InfoSubmitModal {...arrayEditModalKit("section4_array", editModalHook)}/>
+
+                    <Add {...arrAddKit("section4_array", editModalHook)} />
+
+                    {/* <div className="mainSe4__imgWrap">
                         <BG className="mainSe4__img" {...imgKit("section4_img")}>
                         </BG>
                     </div>
@@ -192,7 +238,9 @@ const Hotel: React.FC<IProp> = ({
                             <span {...edit("section4_btnText")}></span>
                         </A>
                         </div>
-                    </div>
+                    </div> */}
+
+
                 </div>
 
                 {/* ::::::::::: Section 5 ::::::::::: */}
@@ -251,7 +299,6 @@ const Hotel: React.FC<IProp> = ({
                     </div>
                 </div>
 
-
                 {/* ::::::::::: Section 6 ::::::::::: */}
 
                 <div className="mainSe6">
@@ -270,9 +317,79 @@ const Hotel: React.FC<IProp> = ({
                     </div>
                 </div>
 
+                {/* ::::::::::: Section 7 ::::::::::: */}
+
+                <div className="mainSe7">
+                    <div className="mainSe7__container">
+                        <div className="mainSe7__block">
+                            <p className="mainSe7__text1">
+                                <span {...edit("section7_block1_text1")}></span>
+                            </p>
+                            <p className="mainSe7__text2">
+                                <span {...edit("section7_block1_text2")}></span>
+                            </p>
+                        </div>
+                        <div className="mainSe7__block">
+                            <p className="mainSe7__text1">
+                                <span {...edit("section7_block2_text1")}></span>
+                            </p>
+                            <p className="mainSe7__text2">
+                                <span {...edit("section7_block2_text2")}></span>
+                            </p>
+                        </div>
+                        <div className="mainSe7__block">
+                            <p className="mainSe7__text1">
+                                <span {...edit("section7_block3_text1")}></span>
+                            </p>
+                            <p className="mainSe7__text2">
+                                <span {...edit("section7_block3_text2")}></span>
+                            </p>
+                        </div>
+                        <div className="mainSe7__block">
+                            <div className="mainSe7__text1 social">
+                                <A {...linkEdit("section7_block4_icon1_link")} 
+                                    className="mainSe7__icon"
+                                >
+                                    <Img {...imgKit("section7_block4_icon1")} 
+                                    />
+                                </A>
+                            </div>
+                            <p className="mainSe7__text2">
+                                <span {...edit("section7_block4_text2")}></span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                {/* ::::::::::: Footer ::::::::::: */}
+
                 <footer className="footer">
-                    <div className="footer__inner"></div>
+                    <div className="footer__inner">
+                        <h2 className="footer__logo">
+                            <span {...edit("footer_logo")}></span>
+                        </h2>
+                        <p className="footer__copyright" {...edit("footer_copyright")}>
+                        </p>
+                    </div>
                 </footer>
+
+
+                {/* ::::::::::: TimeSpace ::::::::::: */}
+                <div className={`reservation ${reservationOn && 'on'}`}>
+                    <div className="reservation__inner">
+                        <div className="reservation__cancelWrap">
+                            <img src={"/assets/img/common/cancel.png"} alt="팝업 닫기" 
+                                 className="reservation__cancel"
+                                 onClick={()=>{handelReservation(false)}}
+                            />
+                        </div>
+                        <TimeSpace infoKey="PKT0QF" />
+                    </div>
+                </div>
+                    
+
+                {/* ::::::::::: Background Fitler ::::::::::: */}
+                <div className={`bgFilter ${bgFilter && 'on'}`}></div>
 
             </div>
         

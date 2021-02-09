@@ -3,6 +3,14 @@
     position:relative;
     padding:50px 0;
     background:#F9F9F9;
+
+    /* ::::::::: Edit CSS ::::::::: */
+    
+    .imgEdit {
+        width: 40%;
+        height: 20%;
+    }
+
     
     &__wrapPC {
         display:none;
@@ -243,14 +251,14 @@
                 }
 
                 &__title {
-                    margin-top:20px;
+                    margin-top:40px;
                     font-size:40px;
                     font-weight:100;
                 }
 
                 &__text {
                     margin-top:30px;
-                    font-size:15px;
+                    font-size:17px;
                 }
 
                 &__btn {

@@ -33,9 +33,19 @@ $section_padding:0 15px;
 
 
 #hotel_1 {
-
     font-family: 'NEXON Lv1 Gothic', 'Noto Sans KR', sans-serif;
+
+    /* ::::::: Override ::::::: */
+    .imgEdit {
+        width: 40%;
+        height: 20%;   
+        white-space:nowrap;
+    }
+
+
     
+    /* ::::::: Common ::::::: */
+
     a {
         position:relative;
         color:inherit;
@@ -45,6 +55,22 @@ $section_padding:0 15px;
     .mainSection {
         margin:0 auto;
         width:100%; max-width:1200px;
+    }
+
+    .bgFilter {
+        display:none;
+        position:fixed; z-index:20;
+        top:0; left:0; right:0; bottom:0;
+        background:rgba(0,0,0,0.5);
+        &.on {
+            display:block;
+        }
+    }
+
+    @media screen and (min-width:768px) {
+
+        $section_padding:0px; 
+
     }
 
     @media screen and (min-width:1024px) {
@@ -62,13 +88,17 @@ $section_padding:0 15px;
 
     }
 
+    /* ::::::: Sections ::::::: */
+
     @import './section1.scss';
     @import './section2.scss';
     @import './section3.scss';
     @import './section4.scss';
     @import './section5.scss';
     @import './section6.scss';
-    
+    @import './section7.scss';
+    @import './footer.scss';
+    @import './reservation.scss'
     
 }
 
