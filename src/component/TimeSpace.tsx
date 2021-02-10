@@ -8,7 +8,7 @@ interface IProp {
 }
 
 export const TimeSpace: React.FC<IProp> = ({ infoKey }) => {
-    const { editMode, page, setPage, lang } = useContext(ViewContext)!;
+    const { editMode, page, setPage, lang, get } = useContext(ViewContext)!;
     const [height, setHeight] = useState(0);
     const size = useWindowSize()
 
@@ -29,7 +29,7 @@ export const TimeSpace: React.FC<IProp> = ({ infoKey }) => {
     }, [])
 
     if (!page[infoKey]) return null;
-    const link = page[infoKey][lang];
+    const link = get(infoKey);
     
     return <iframe style={{
         width: "100%",

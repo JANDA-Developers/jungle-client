@@ -1,13 +1,12 @@
 import { JDinputType } from "src/component/inputRender/InputComponent"
-import { SHARED_INFO } from "./shared"
+import { SHARED_INFO2 } from "./shared"
 
 export const HOTEL_INFO = {
-    ...SHARED_INFO,
+    ...SHARED_INFO2,
 
     timeSpace: {
         description: "타임스페이스 링크",
-        KR: "",
-        GB: ""
+        value: "https://storeuser.space.stayjanda.cloud/?sc=PKT0QF&sgc=L6MPRO#&mode=mini"
     },
 
     /* :::::::::::: Section 1 :::::::::::: */
@@ -84,6 +83,11 @@ export const HOTEL_INFO = {
         description: "섹션 2 버튼 텍스트",
         KR: "About",
         GB: "About"
+    },
+
+    section2_btn_link : {
+        description: "섹션 2 버튼 링크",
+        value:"https://www.instagram.com/",
     },
 
     section2_img1 : {
@@ -471,56 +475,56 @@ export const HOTEL_INFO = {
     },
 
 
-    /* :::::::::::: Section 7 :::::::::::: */
+    /* :::::::::::: Footer top :::::::::::: */
 
-    section7_block1_text1 : {
+    footerTop_block1_text1 : {
         description: "섹션 7 - 블록 1 - Text 1",
         KR: "AM 00:00 ~ PM 24:00",
         GB: "Eng AM 00:00 ~ PM 24:00",
     },
 
-    section7_block1_text2 : {
+    footerTop_block1_text2 : {
         description: "섹션 7 - 블록 1 - Text 2",
         KR: "상담시간",
         GB: "Eng 상담시간",
     },
 
-    section7_block2_text1 : {
+    footerTop_block2_text1 : {
         description: "섹션 7 - 블록 2 - Text 1",
         KR: "서울시 강남구 신사동 000",
         GB: "Eng 서울시 강남구 신사동 000",
     },
 
-    section7_block2_text2 : {
+    footerTop_block2_text2 : {
         description: "섹션 7 - 블록 2 - Text 2",
         KR: "주소",
         GB: "Eng 주소",
     },
 
-    section7_block3_text1 : {
+    footerTop_block3_text1 : {
         description: "섹션 7 - 블록 3 - Text 1",
         KR: "011-111-2222",
         GB: "Eng 011-111-2222",
     },
 
-    section7_block3_text2 : {
+    footerTop_block3_text2 : {
         description: "섹션 7 - 블록 3 - Text 2",
         KR: "예약 전화",
         GB: "Eng 예약 전화",
     },
 
-    section7_block4_icon1 : {
+    footerTop_block4_icon1 : {
         type: JDinputType.img,
         description: "섹션 7 - 아이콘 1",
         value: "/assets/img/hotel/instagram.png",
     },
 
-    section7_block4_icon1_link : {
+    footerTop_block4_icon1_link : {
         description: "섹션 7 - 아이콘 1",
-        value: "/assets/img/hotel/instagram.png",
+        value: "/",
     },
 
-    section7_block4_text2 : {
+    footerTop_block4_text2 : {
         description: "섹션 7 - 블록 4 - Text 2",
         KR: "소셜미디어",
         GB: "Eng 소셜미디어",
@@ -542,55 +546,19 @@ export const HOTEL_INFO = {
     },
 
 
-    /* :::::::::::: Test :::::::::::: */
-
-    editorContnet: {
-        KR: "안녕",
-        GB: ""
-    },
-    sampleLink: {
-        value: "http://naver.com"
-    },
-    tags: {
-        description: "태그",
-        type: JDinputType.tag,
-        KR: ["부산가이드","여성가이드","뚜벅이여행","꽃놀이","버스투어","운전가능","일본어","영어","중국어"],
-        GB: ["BusanGuid","WomanGuid","WalkTravel","Flower","Bus","DrivingAble","Japaneses","Chinese"]
-    },
-    sampleArray: {
-        description: "갤러리 목록",
-        type: JDinputType.array,
-        META: {
-            title: {
-                description: "갤러리 타이틀",
-                default: ""
-            },
-            img: {
-                description: "갤러리 이미지",
-                type: JDinputType.img,
-                default: ""
-            }
-        },
-        KR: [{
-            title: "asdasdasdzczxc",
-            img: "https://www.google.com/?&hl=ko",
-        },
-        {
-            title: "asdasdasd3",
-            img: "https://www.google.com/?&hl=ko"
-        },
-        {
-            title: "asdasdasd",
-            img: "https://www.google.com/?&hl=ko"
-        }],
-        GB: [
-            {
-                img: "https://www.google.com/?&hl=ko",
-                title: "asdasdasd"
-            }
-        ]
-    }
-
 }
 
 export default HOTEL_INFO
+
+
+// 첫번재
+// 서브 도메인(공짜) 
+// abb. error.message = 중복이다.
+
+// try {
+
+// } catch (e) {
+//     e.message == 주복이다.
+//     alert("중복입니다.")
+// }
+

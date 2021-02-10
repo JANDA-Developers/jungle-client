@@ -1,3 +1,4 @@
+//deprecated version 1.0.0 이하 때 생성한 템플릿들 공유중 
 export const SHARED_INFO = {
     shareLabel: {
         description: "공유하기 라벨",
@@ -100,6 +101,7 @@ export const SHARED_INFO = {
 }
 
 
+
 // tourList: {
 //     description: "포트폴리오 목록",
 //     type: JDinputType.array,
@@ -144,3 +146,57 @@ export const SHARED_INFO = {
 //         },
 //     ]
 // }
+
+
+
+// version 1.0.0 이후에 템플릿들 공유중
+export const SHARED_INFO2 = {
+    get: function(key: string, lang:string, index?:number):any {
+
+        if(index !== undefined) {
+            // @ts-ignore
+            if(this[key].value) {
+                // @ts-ignore
+                return this[key].value[index]
+            } else {
+                // @ts-ignore
+                return this[key][lang][index];
+            }            
+        }
+
+        // @ts-ignore
+        if(this[key].value) {
+            // @ts-ignore
+            return this[key].value
+        } else {
+            // @ts-ignore
+            return this[key][lang];
+        }
+    },
+    set: function(key:string,lang:string,value:any, index?:number):any {
+
+        if(index !== undefined) {
+            // @ts-ignore
+            if(this[key].value !== undefined) {
+                // @ts-ignore
+                this[key].value[index] = value
+            } else {
+                // @ts-ignore
+                return this[key][lang][index] = value;
+            }            
+        }
+        
+ 
+        if(index === undefined) { 
+            // @ts-ignore
+            if(this[key].value !== undefined) {
+                // @ts-ignore
+                this[key].value = value
+            } else {
+                // @ts-ignore
+                this[key][lang] = value;
+            }
+        }
+    }
+}
+

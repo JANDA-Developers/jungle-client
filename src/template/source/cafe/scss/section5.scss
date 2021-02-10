@@ -1,0 +1,260 @@
+
+
+
+.mainSe5 {
+    padding:0 15px;
+    &__menuTapWrap {
+        margin-top:30px;
+        text-align:center;
+    }
+
+    &__menuTap {
+        position:relative;
+        display:inline-block;
+        padding:5px 0;
+        margin:10px 20px;
+        font-size:17px;
+        font-weight:bold;
+        font-family: 'NEXON Lv1 Gothic', 'Noto Sans KR', sans-serif;
+        background:transparent;
+        border:none;
+        cursor:pointer; 
+        outline:none;
+        &:before {
+            content:"";
+            position:absolute;
+            bottom:0px; left:50%;
+            transform:translate(-50%, 0);
+            width:0%; height:2px;
+            background:black;
+            transition: width 300ms;
+        }
+        &.on {
+            &:before {
+                width:100%;
+            }
+        }
+    }
+
+    &__menuListWWrap {
+        display:none;
+        margin:70px auto 0 auto;
+        width:100%;
+        &.on {
+            display:block;
+            opacity:0;
+            transform:translateY(100px);
+            animation:menuList 1000ms forwards;
+        }
+    }
+
+    &__menuList {
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-top:40px;
+        &.frist {
+            margin-top:0;
+        }
+    }
+
+    &__menuInfo {
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__menuImgWrap {
+        flex: 0 0 auto;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:100px;
+        text-align:center;
+        overflow:hidden;
+    }
+
+    &__menuImg {
+        height:90px;
+    }
+
+    &__menuDetail {
+        padding-left:20px;
+    }
+
+    &__menuName {
+        font-size:25px;
+        font-weight:100;
+    }
+
+    &__menuDesc {
+        margin-top:5px;
+        font-size:15px;
+    }
+
+    &__menuPrice {
+        display:none;
+        font-size:15px;
+        font-weight:bold;
+        white-space: nowrap;
+    }
+
+}
+
+@media screen and (min-width:600px) {
+    
+    .mainSe5 {
+        padding:0 20px;
+    
+        &__menuName {
+            font-size:30px;
+        }
+
+        &__menuImgWrap {
+            width:150px;
+        }
+    
+        &__menuDesc {
+            font-size:17px;
+        }
+    
+        &__menuPrice {
+            display:inline-block;
+            padding-left:20px;
+        }
+    
+    }
+
+}
+
+
+@media screen and (min-width:1024px) {
+        
+    .mainSe5 {
+        padding:0;
+        &__menuTapWrap {
+            margin-top:30px;
+            text-align:center;
+        }
+
+        &__menuTap {
+            position:relative;
+            display:inline-block;
+            padding:5px 0px;
+            margin:10px 30px;
+            font-size:15px;
+            font-weight:bold;
+            text-align:center;
+            background:transparent;
+            border:none;
+            cursor:pointer; 
+            &:before {
+                content:"";
+                position:absolute;
+                bottom:0px; left:50%;
+                transform:translate(-50%, 0);
+                width:0%; height:2px;
+                background:black;
+                transition: width 300ms;
+            }
+            &:hover:before {
+                width:100%;
+            }
+        }
+
+        &__menuListWWrap {
+            margin:70px auto 0 auto;
+            width:100%; max-width:900px;
+        }
+
+        &__menuList {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top:40px;
+            align-items: center;
+            &.frist {
+                margin-top:0;
+            }
+        }
+
+        &__menuInfo {
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &__menuImgWrap {
+            width:200px;
+        }
+
+        &__menuImg {
+            height:150px;
+        }
+
+            
+        &__menuDetail {
+            padding-left:50px;
+        }
+
+
+        &__menuName {
+            font-size:30px;
+        }
+
+        &__menuDesc {
+            margin-top:5px;
+            font-size:15px;
+        }
+
+        &__menuPrice {
+            display:inline-block;
+            font-size:20px;
+            font-weight:bold;
+        }
+
+    }
+    
+}
+
+
+@media screen and (min-width:1680px) {
+    
+    .mainSe5 {
+
+        &__menuTap {
+            font-size:17px; 
+        }
+
+        &__menuListWWrap {
+            width:100%; max-width:1000px;
+        }
+
+        &__menuImgWrap {
+            width:250px;
+        }
+
+        &__menuImg {
+            height:170px;
+        }
+
+
+        &__menuDetail {
+            padding-left:70px;
+        }
+
+    }
+
+}
+
+@keyframes menuList {
+    from {
+        opacity:0;
+        transform:translateY(100px);
+    }
+    to {
+        opacity:1;
+        transform:translateY(0px);
+    }
+}

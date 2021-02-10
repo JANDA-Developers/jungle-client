@@ -29,7 +29,6 @@ export const WebPageModal: React.FC<IProp> = ({ modalHook, onCreate }) => {
     const describHook = useInput(page?.description || "")
     const tagsHook = useState<string[]>(page?.keyWards || [])
 
-
     const { createPage, loading: createLoading } = webpageCreate();
     const [pageUpdate, { loading: updateLoading }] = useWebPageUpdate(
         {
@@ -69,7 +68,7 @@ export const WebPageModal: React.FC<IProp> = ({ modalHook, onCreate }) => {
         description: describHook.value,
         keyWards: tagsHook[0],
         title: titleHook.value,
-        value: selectedTemplate!.value,
+        value: selectedTemplate?.value || "",
         templateKey,
         type: pageTypeHook.selectedOption?.value
     }
@@ -115,7 +114,7 @@ export const WebPageModal: React.FC<IProp> = ({ modalHook, onCreate }) => {
         <JDlabel txt="키워드" />
         <JDtagInput mb tags={tagsHook[0]} setTags={tagsHook[1]} />
         <JDlabel txt="템플릿 선택하기" />
-        <Grid >
+        <Grid className="templateListWrap">
             {TEMPLATES.map(temp =>
                 <Col key={temp.key} md={6} sm={12} full={3}>
                     <Tempalte mb style={{ minWidth: "200px", height: "420px" }} mr selected={temp.key === templateKey} onClick={handleTemplateClick(temp.key)} title={temp.title} describe={temp.describe} img={temp.img} />

@@ -1,0 +1,83 @@
+
+@mixin bgImg {
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+html, body, #root {
+    overflow-x:visible;
+}
+
+* {
+    margin:0; 
+    box-sizing: border-box;
+}
+
+p {
+    margin:0;
+}
+
+h1,h2,h3 {
+    letter-spacing:1px;
+}
+
+$section_padding:0 15px;
+
+#cafe_1 {
+    font-family: 'NEXON Lv1 Gothic', 'Noto Sans KR', sans-serif;
+
+    [data-edit="array"]:after {
+        width: 100%;
+        height: 15%;
+    }
+
+    .imgEdit {
+        width: 40%;
+        height: 20%;
+    }
+
+    a {
+        color:inherit;
+        text-decoration: none;
+    }
+
+    ul {
+        padding:0;
+        list-style: none;
+    }
+
+    @import './main_common.scss';
+
+    @import './section1.scss';
+
+    @import './section2.scss';
+
+    @import './section3.scss';
+
+    @import './section4.scss';
+
+    @import './section5.scss';
+
+    @import './section6.scss';
+
+    @import './section7.scss';
+
+    @import './footer.scss';
+
+}
+
+
+@keyframes scrollBar {
+    0% {
+        opacity:1;
+        top:10px;
+    }
+    70% {
+        opacity:0;
+        top:30px;
+    }
+    100% {
+        opacity:0;
+    }
+}

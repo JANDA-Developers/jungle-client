@@ -38,7 +38,7 @@ export const DomainModal: React.FC<IProp> = ({ modalHook }) => {
         </div>
     }} {...modalHook} >
         <div>
-            <JDswitch tooltip="유료도메인은 서비스 개발중 입니다." mb="large" checked={false} ltxt="무료도메인" rtxt="유료도메인" />
+            {/* <JDswitch tooltip="유료도메인은 서비스 개발중 입니다." mb="large" checked={false} ltxt="무료도메인" rtxt="유료도메인" /> */}
             <Flex vCenter>
                 <InputText mb="small" {...domainHook} Size="big" placeholder="도메인을 입력해주세요." />
                 <JDtypho mb="small" size="h6">.stayjanda.cloud</JDtypho>

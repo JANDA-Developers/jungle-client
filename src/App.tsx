@@ -5,6 +5,7 @@ import { useMeQuery } from './hook/useMeQuery';
 import { Fuser } from './type/api';
 import { PageLoading } from './component/PageLoading';
 import "./scss/Admin.scss"
+import "./scss/Override.scss"
 const View = React.lazy(() => import("./page/View"))
 const SignUp = React.lazy(() => import("./page/SignUp"))
 const SuperAdmin = React.lazy(() => import("./page/SuperAdmin"))

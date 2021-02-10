@@ -42,7 +42,7 @@ export const DetailWebPage: React.FC<IProp> = ({ }) => {
     if (isEmpty(page)) return <div />
     return <div className="editMode">
         <JDpageHeader title="디테일 페이지 수정" desc="페이지에 필요한 정보 입력하기 (페이지로 이동하여 수정도 가능합니다.)" />
-        <JDcontainer size={WindowSize.sm} verticalPadding >
+        <JDcontainer size={WindowSize.sm} verticalPadding className="adminEdit">
             <h1>{item.title}</h1>
             <BackStepBar mb go={Paths.ADMIN} label="리스트로 돌아가기" />
             <LangChange supports={item?.supportLanguage} onChange={setLang} lang={lang} >

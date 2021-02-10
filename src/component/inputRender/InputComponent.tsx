@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Flex, Grid, InputText, isLast, JDlabel, JDtagInput } from "@janda-com/front"
+import { Col, Flex, Grid, InputText, isLast, JDlabel, JDswitch, JDtagInput } from "@janda-com/front"
 import { ArrayController, ArrayControllerAdd } from "../pageInputRender.tsx/ArrayController"
 import { PhotoUpdater } from "../PhotoUpdater"
 import JDEditor from "../editor/Editor";
@@ -7,6 +7,8 @@ import JDEditor from "../editor/Editor";
 export enum JDinputType {
     text = "text",
     map = "map",
+    line = "line",
+    switch = "switch",
     img = "img",
     timespace = "timespace",
     channelTak = "channelTalk",
@@ -32,6 +34,17 @@ interface IInputComponentProps {
 export const InputComponent: React.FC<IInputComponentProps> = ({ onAddArray, KEY, label, type = JDinputType.text, value, onChange, onDeleteArray, arrayMeta }) => {
 
     switch (type) {
+        case JDinputType.line:
+            return <div className="adminEdit__newSection">
+                {label}
+            </div>
+        case JDinputType.switch:
+            return <div className="adminEdit__switch">
+                <JDlabel txt={label} className="mr" />
+                <JDswitch checked={value} onChange={()=> {
+                onChange(!value);
+            }} />
+            </div>
         case JDinputType.text:
             return <InputText mb label={label} value={value} onChange={onChange} />
         case JDinputType.editor:

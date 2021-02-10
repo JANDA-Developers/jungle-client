@@ -78,7 +78,7 @@ export const TestTemplate: React.FC<IProp> = ({
         {/* 에디터 처리 */}
         <Content infoKey="editorContnet" />
         {/* 타임스페이스 처리 */}
-        <TimeSpace  infoKey="timeSpace" />
+        <TimeSpace infoKey="timeSpace" />
         
     </div>
 };

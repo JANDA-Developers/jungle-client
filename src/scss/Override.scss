@@ -1,0 +1,53 @@
+
+
+.templateListWrap {
+    justify-content: flex-start !important;
+}
+
+
+.adminEdit {
+
+
+    .JDlabel  {
+        font-size:1rem;
+    }
+    
+    &__newSection {
+        padding:50px 0;
+        font-size:30px;
+        text-align:center;
+        background:#eeeeee;
+    }
+
+    &__switch {
+        display:flex;
+        margin:20px 0;
+        align-items: center;
+        .mr {
+            margin:0 10px 0 0 ;
+        }
+    }
+
+}
+
+
+
+@media screen and (min-width:768px) {
+
+
+}
+
+
+@media screen and (min-width:1024px) {
+
+
+}
+
+
+@media screen and (min-width:1680px) {
+
+
+}
+
+
+

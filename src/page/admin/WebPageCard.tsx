@@ -82,11 +82,11 @@ export const WebPageCard: React.FC<IProp> = ({ webPage, onEdit: handleEdit, onDe
                 <JDphotoFrame unStyle={false} isBgImg style={{ height: "80px", width: "80px" }} src={template.img} />
             </Col>
             <Col mb full={4} md={6}>
-                <Bold mb>QR코드</Bold>
+                {/* Original <Bold mb>QR코드</Bold>
                 <div className="qrcode">
                     <JDicon className="qrcode__downloadIcon" hover icon="camera" onClick={handleQrcode} />
                     <QrCode id={`canvas${webPage._id}`} className="webpageCard__qrcode" value={url} />
-                </div>
+                </div> */}
             </Col>
         </Grid>
         <JDsocialHead siteName="asdas" content="asdas" imgUrl="" title="aa" url={url} />

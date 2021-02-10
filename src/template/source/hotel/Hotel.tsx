@@ -1,8 +1,10 @@
 import React, {useState} from 'react'
+import { useModal } from '@janda-com/front';
+import SwiperCore, { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { IViewContext } from '../../../page/View';
 import { HOTEL_INFO } from '../../info/hotel';
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet';
 import { ITempalte } from 'src/template/templates';
 import { BG, Img } from 'src/component/Img';
 import { Add } from 'src/component/Add';
@@ -10,9 +12,7 @@ import { A } from 'src/component/A';
 import { LangChange } from 'src/component/LanguageChnager';
 import { Content } from 'src/component/Content';
 import { TimeSpace } from 'src/component/TimeSpace';
-import { useModal } from '@janda-com/front';
 import { InfoSubmitModal } from 'src/component/InfoSubmitModal';
-
 import './scss/hotel.scss';
 
 
@@ -21,29 +21,29 @@ interface IProp extends IViewContext<INFO> {
     template: ITempalte
 }
 
+SwiperCore.use([Autoplay]);
+
+
 const Hotel: React.FC<IProp> = ({ 
     setLang, edit, linkEdit, template, arrAddKit, page, arrayEditModalKit, editObjArr, addArray, editArray, removeArray, editMode, bg, imgKit, src, originPage, lang, l
 }) => {
 
     const [bgFilter, setBgFilter] = useState(false);
     const [reservationOn, setReservationOn] = useState(false);
-
     const handelReservation = (state:boolean) => {
         setBgFilter(state);
         setReservationOn(state);
-    }
-
+    };
     const editModalHook = useModal();
-
 
     return (
         <>
             <Helmet>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <title>JANDA | 숙박 템플릿</title>
                 <link rel="stylesheet" href={"/assets/css/normalize.css"} />
                 <link rel="stylesheet" href={"/assets/css/swiper.css"} />
                 <script type="text/javascript" src={"/assets/loadcheck.js"} />
-                <script type="text/javascript" src={"/assets/js/swiper.js"} />
                 <script type="text/javascript" src={"/assets/js/hotel/hotel.js"} defer />
             </Helmet>
             <div id="hotel_1" className="page_main">
@@ -54,6 +54,10 @@ const Hotel: React.FC<IProp> = ({
                     <Swiper className="mainSe1__slide"
                             spaceBetween={0}
                             speed={700}
+                            autoplay={{
+                                delay: 5000,
+                                disableOnInteraction: false
+                            }}
                     >
                         <SwiperSlide>
                             <BG className="mainSe1__slideImage" {...imgKit("section1_img1")} > 
@@ -108,7 +112,7 @@ const Hotel: React.FC<IProp> = ({
                             <h2 className="mainSe2__title" {...edit("section2_text1")}></h2>
                             <p className="mainSe2__subTitle" {...edit("section2_text2")}></p>
                             <p className="mainSe2__text" {...edit("section2_text3")}></p>
-                            <A {...linkEdit("sampleLink")} 
+                            <A {...linkEdit("section2_btn_link")} 
                                 className="mainSe2__btn" 
                                 style={{background: '#C19B76'}} >
                                 <span {...edit("section2_btn_text")}></span>
@@ -175,7 +179,12 @@ const Hotel: React.FC<IProp> = ({
                 <div className="main_section4">
                     <Swiper className="mainSe4__slide"
                         spaceBetween={0}
-                        speed={700}>
+                        speed={700}
+                        autoplay={{
+                            delay: 5000,
+                            disableOnInteraction: false
+                        }}
+                    >
                         {page.section4_array[lang].map((item,index) => 
                             <SwiperSlide 
                                 {...editObjArr("section4_array", index, editModalHook)}
@@ -292,45 +301,45 @@ const Hotel: React.FC<IProp> = ({
                     </div>
                 </div>
 
-                {/* ::::::::::: Section 7 ::::::::::: */}
+                {/* ::::::::::: footer top ::::::::::: */}
 
-                <div className="mainSe7">
-                    <div className="mainSe7__container">
-                        <div className="mainSe7__block">
-                            <p className="mainSe7__text1">
-                                <span {...edit("section7_block1_text1")}></span>
+                <div className="footerTop">
+                    <div className="footerTop__container">
+                        <div className="footerTop__block">
+                            <p className="footerTop__text1">
+                                <span {...edit("footerTop_block1_text1")}></span>
                             </p>
-                            <p className="mainSe7__text2">
-                                <span {...edit("section7_block1_text2")}></span>
-                            </p>
-                        </div>
-                        <div className="mainSe7__block">
-                            <p className="mainSe7__text1">
-                                <span {...edit("section7_block2_text1")}></span>
-                            </p>
-                            <p className="mainSe7__text2">
-                                <span {...edit("section7_block2_text2")}></span>
+                            <p className="footerTop__text2">
+                                <span {...edit("footerTop_block1_text2")}></span>
                             </p>
                         </div>
-                        <div className="mainSe7__block">
-                            <p className="mainSe7__text1">
-                                <span {...edit("section7_block3_text1")}></span>
+                        <div className="footerTop__block">
+                            <p className="footerTop__text1">
+                                <span {...edit("footerTop_block2_text1")}></span>
                             </p>
-                            <p className="mainSe7__text2">
-                                <span {...edit("section7_block3_text2")}></span>
+                            <p className="footerTop__text2">
+                                <span {...edit("footerTop_block2_text2")}></span>
                             </p>
                         </div>
-                        <div className="mainSe7__block">
-                            <div className="mainSe7__text1 social">
-                                <A {...linkEdit("section7_block4_icon1_link")} 
-                                    className="mainSe7__icon"
+                        <div className="footerTop__block">
+                            <p className="footerTop__text1">
+                                <span {...edit("footerTop_block3_text1")}></span>
+                            </p>
+                            <p className="footerTop__text2">
+                                <span {...edit("footerTop_block3_text2")}></span>
+                            </p>
+                        </div>
+                        <div className="footerTop__block">
+                            <div className="footerTop__text1 social">
+                                <A {...linkEdit("footerTop_block4_icon1_link")} 
+                                    className="footerTop__icon"
                                 >
-                                    <Img {...imgKit("section7_block4_icon1")} 
+                                    <Img {...imgKit("footerTop_block4_icon1")} 
                                     />
                                 </A>
                             </div>
-                            <p className="mainSe7__text2">
-                                <span {...edit("section7_block4_text2")}></span>
+                            <p className="footerTop__text2">
+                                <span {...edit("footerTop_block4_text2")}></span>
                             </p>
                         </div>
                     </div>
@@ -350,6 +359,7 @@ const Hotel: React.FC<IProp> = ({
 
 
                 {/* ::::::::::: TimeSpace ::::::::::: */}
+
                 <div className={`reservation ${reservationOn && 'on'}`}>
                     <div className="reservation__inner">
                         <div className="reservation__cancelWrap">
@@ -358,12 +368,13 @@ const Hotel: React.FC<IProp> = ({
                                  onClick={()=>{handelReservation(false)}}
                             />
                         </div>
-                        <TimeSpace infoKey="PKT0QF" />
+                        <TimeSpace infoKey="timeSpace" />
                     </div>
                 </div>
                     
 
                 {/* ::::::::::: Background Fitler ::::::::::: */}
+
                 <div className={`bgFilter ${bgFilter && 'on'}`}></div>
 
             </div>

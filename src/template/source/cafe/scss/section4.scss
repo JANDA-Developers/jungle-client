@@ -1,0 +1,166 @@
+
+.mainSe4 {
+    &__container {
+        display:flex;
+        flex-direction:column;
+        flex-flow:wrap;
+        justify-content: center;
+        margin-top:100px;
+        padding:0 10px;
+    }
+
+    &__block {
+        width:100%;
+        display:flex;
+        flex-direction: column;
+    }
+
+    &__textWrap {
+        padding:20px 10px;
+    }
+
+    h2.mainSe4__blockTtile {
+        font-size:25px !important;
+        font-weight:bold;
+    }
+
+    &__blockDesc {
+        margin-top:10px;
+        font-size:16px;
+        line-height:1.5em;
+    }
+
+
+    &__blockImg {
+        width:100%; 
+        height:300px;
+        @include bgImg;
+    }
+
+    &__blockBtn {
+        display:inline-block;
+        margin-top:20px;
+        font-size:17px;
+    }
+
+}
+
+@media screen and (min-width:600px) {
+
+    .mainSe4 {
+
+        &__container {
+            padding:0;
+        }
+    
+        &__block {
+            width:70%;
+        }
+    
+        &__textWrap {
+            padding:20px 0px 40px 0;
+        }
+    
+        h2.mainSe4__blockTtile {
+            font-size:30px !important;
+        }
+    
+        &__blockDesc {
+            margin-top:10px;
+            font-size:20px;
+        }
+    
+        &__blockBtn {
+            display:inline-block;
+            margin-top:20px;
+            font-size:20px;
+        }
+    
+    }
+
+}
+
+
+@media screen and (min-width:1024px) {
+
+    .mainSe4 {
+        
+        &__container {
+            display:flex;
+            flex-direction:row;
+            justify-content: space-between;
+            flex-flow:nowrap;
+            margin:70px auto 0 auto;
+            padding:0;
+            width:90%; max-width:1300px;
+
+        }
+
+        &__block {
+            width:32%;
+            display:flex;
+            flex-direction: column;
+        }
+
+        &__textWrap {
+            padding:0;
+        }
+    
+
+        h2.mainSe4__blockTtile {
+            margin-top:30px;
+            font-size:25px !important;
+        }
+
+        &__blockDesc {
+            margin-top:10px;
+            font-size:17px;
+        }
+
+        &__blockImg {
+            width:100%; 
+            height:300px;
+            @include bgImg;
+        }
+
+        &__blockBtn {
+            display:inline-block;
+            margin-top:20px;
+            font-size:17px;
+        }
+
+    }
+    
+}
+
+
+@media screen and (min-width:1680px) {
+
+    .mainSe4 {
+        
+        &__block {
+            width:32%;
+            display:flex;
+            flex-direction: column;
+        }
+
+        &__textWrap {
+            padding:0;
+        }
+    
+
+        h2.mainSe4__blockTtile {
+            font-size:30px !important;
+        }
+
+        &__blockDesc {
+            font-size:20px;
+        }
+
+        &__blockBtn {
+            font-size:20px;
+        }
+
+    }
+    
+}
