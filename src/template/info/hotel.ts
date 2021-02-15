@@ -4,62 +4,111 @@ import { SHARED_INFO2 } from "./shared"
 export const HOTEL_INFO = {
     ...SHARED_INFO2,
 
-    timeSpace: {
-        description: "타임스페이스 링크",
+    bookingKey: {
+        description: "잔다 솔루션 링크",
         value: "https://storeuser.space.stayjanda.cloud/?sc=PKT0QF&sgc=L6MPRO#&mode=mini"
     },
 
+    /* :::::::::::: Common :::::::::::: */
+
+    commonInfo_startline : {
+        type: JDinputType.line,
+        description: "공통 정보",
+    },
+
+    commonInfo_companyName : {
+        description: "업체명",
+        KR: "잔다 업체명",
+        GB: "Eng 잔다 업체명"
+    },
+
+    commonInfo_companyDesc : {
+        description: "업체 설명",
+        KR: "홈페이지 바로가기",
+        GB: "Eng 홈페이지 바로가기"
+    },
+
+    commonInfo_img : {
+        type: JDinputType.img,
+        description: "업체 대표 이미지",
+        value:"/assets/img/hotel/section1/mee00685.jpg"
+    },
+
+    commonInfo_favicon : {
+        type: JDinputType.img,
+        description: "파비콘 이미지",
+        value:"/favicon.ico"
+    },
+
+
     /* :::::::::::: Section 1 :::::::::::: */
 
-    section1_img1: {
-        type: JDinputType.img,
-        description: "섹션 1 이미지 1",
-        value:"/assets/img/hotel/section1/mee00685.jpg",
-    },
-    section1_text1: {
-        description: "섹션 1 텍스트 1",
-        KR: "쾌적한 환경",
-        GB: "Feel the Nature"
-    },
-    section1_text1_2: {
-        description: "섹션 1 텍스트 1-2",
-        KR: "Janda Leisure는 쾌적한 공간을 만들기 위해 최선을 다합니",
-        GB: "Feel the Nature"
+    section1_startline : {
+        type: JDinputType.line,
+        description: "섹션 1",
     },
 
-    section1_img2: {
-        type: JDinputType.img,
-        description: "섹션 1 이미지 2",
-        value:"/assets/img/hotel/section1/facility.jpg",
+    section1_array: {
+        description: "섹션 1 슬라이드 리스트",
+        type: JDinputType.array,
+        META: {
+            img: {
+                description: "슬라이드 이미지",
+                type: JDinputType.img,
+                default: ""
+            },
+            text1: {
+                description: "슬라이드 타이틀",
+                default: ""
+            },
+            text2: {
+                description: "슬라이드 내용",
+                default: ""
+            }
+        },
+        KR: [
+                {
+                    img: "/assets/img/hotel/section1/mee00685.jpg",
+                    text1: "쾌적한 환경233",
+                    text2: "Janda Leisure는 쾌적한 공간을 만들기 위해 최선을 다합니다",
+                },
+                {
+                    img: "/assets/img/hotel/section1/facility.jpg",
+                    text1: "럭셔리한 공간22",
+                    text2: "당일 아침에 만드는 수제 케이크",
+                },
+                {
+                    img: "/assets/img/hotel/section1/living_room.jpg",
+                    text1: "편안한 침실11",
+                    text2: "저희 시설을 이용하시는 고객을 위한 최고급 침실",
+                }
+        ],
+        GB: [
+                {
+                    img: "/assets/img/hotel/section1/mee00685.jpg",
+                    text1: "Eng 쾌적한 환경",
+                    text2: "Eng Janda Leisure는 쾌적한 공간을 만들기 위해 최선을 다합니다",
+                },
+                {
+                    img: "/assets/img/hotel/section1/facility.jpg",
+                    text1: "Eng 럭셔리한 공간",
+                    text2: "Eng 당일 아침에 만드는 수제 케이크",
+                },
+                {
+                    img: "/assets/img/hotel/section1/living_room.jpg",
+                    text1: "Eng 편안한 침실",
+                    text2: "Eng 저희 시설을 이용하시는 고객을 위한 최고급 침실",
+                },
+        ]
     },
-    section1_text2: {
-        description: "섹션 1 텍스트 2",
-        KR: "럭셔리한 공간",
-        GB: "Feel the Nature"
-    },
-    section1_text2_2: {
-        description: "섹션 1 텍스트 2-2",
-        KR: "anda Leisure에서 특별한 사람과 함께하세요",
-        GB: "Feel the Nature"
-    },
-    
-    section1_img3: {
-        type: JDinputType.img,
-        description: "섹션 1 이미지 2",
-        value:"/assets/img/hotel/section1/living_room.jpg",
-    },
-    section1_text3: {
-        description: "섹션 1 텍스트 2",
-        KR: "편안한 침실",
-        GB: "Feel the Nature"
-    },
-    section1_text3_2: {
-        description: "섹션 1 텍스트 2-2",
-        KR: "저희 시설을 이용하시는 고객을 위한 최고급 침실",
-        GB: "Feel the Nature"
-    },
+
 
     /* :::::::::::: Section 2 :::::::::::: */
+
+    section2_startline : {
+        type: JDinputType.line,
+        description: "섹션 2",
+    },
 
     section2_text1 : {
         description: "섹션 2 텍스트 1",
@@ -104,6 +153,17 @@ export const HOTEL_INFO = {
 
     /* :::::::::::: Section 3 :::::::::::: */
 
+    section3_startline : {
+        type: JDinputType.line,
+        description: "섹션 3",
+    },
+
+    section3_use : {
+        type: JDinputType.switch,
+        description: "섹션 3 - 사용여부",
+        value: true
+    },
+
     section3_title : {
         description: "섹션 3 타이틀",
         KR: "Janda Stay",
@@ -118,8 +178,8 @@ export const HOTEL_INFO = {
 
     section3_btnName : {
         description: "섹션 3 버튼명",
-        KR: "더 보기",
-        GB: "View more"
+        KR: "예약하기",
+        GB: "Resevation"
     },
 
     section3_room1_img : {
@@ -240,6 +300,18 @@ export const HOTEL_INFO = {
 
 
     /* :::::::::::: Section 4 :::::::::::: */
+
+    
+    section4_startline : {
+        type: JDinputType.line,
+        description: "섹션 4",
+    },
+
+    section4_use : {
+        type: JDinputType.switch,
+        description: "섹션 4 - 사용여부",
+        value: true
+    },
 
     section4_name : {
         description: "섹션 4 - 숙소명",
@@ -382,6 +454,17 @@ export const HOTEL_INFO = {
 
     /* :::::::::::: Section 5 :::::::::::: */
 
+    section5_startline : {
+        type: JDinputType.line,
+        description: "섹션 5",
+    },
+
+    section5_use : {
+        type: JDinputType.switch,
+        description: "섹션 5 - 사용여부",
+        value: true
+    },
+
     section5_title : {
         description: "섹션 5 - 타이틀",
         KR: "소중한 사람과 함께 할 수 있는 곳 <br> 자연이 살아 숨쉬는 공간, Janda Stay로 여러분을 초대합니다",
@@ -456,6 +539,12 @@ export const HOTEL_INFO = {
 
     /* :::::::::::: Section 6 :::::::::::: */
 
+    section6_startline : {
+        type: JDinputType.line,
+        description: "섹션 6",
+    },
+
+
     section6_img : {
         type: JDinputType.img,
         description: "섹션 6 - 이미지",
@@ -477,64 +566,111 @@ export const HOTEL_INFO = {
 
     /* :::::::::::: Footer top :::::::::::: */
 
+    footerTop_startline : {
+        type: JDinputType.line,
+        description: "푸터 상단 섹션",
+    },
+
     footerTop_block1_text1 : {
-        description: "섹션 7 - 블록 1 - Text 1",
+        description: "푸터 상단 - 블록 1 - Text 1",
         KR: "AM 00:00 ~ PM 24:00",
         GB: "Eng AM 00:00 ~ PM 24:00",
     },
 
     footerTop_block1_text2 : {
-        description: "섹션 7 - 블록 1 - Text 2",
+        description: "푸터 상단 - 블록 1 - Text 2",
         KR: "상담시간",
         GB: "Eng 상담시간",
     },
 
     footerTop_block2_text1 : {
-        description: "섹션 7 - 블록 2 - Text 1",
+        description: "푸터 상단 - 블록 2 - Text 1",
         KR: "서울시 강남구 신사동 000",
         GB: "Eng 서울시 강남구 신사동 000",
     },
 
     footerTop_block2_text2 : {
-        description: "섹션 7 - 블록 2 - Text 2",
+        description: "푸터 상단 - 블록 2 - Text 2",
         KR: "주소",
         GB: "Eng 주소",
     },
 
     footerTop_block3_text1 : {
-        description: "섹션 7 - 블록 3 - Text 1",
+        description: "푸터 상단 - 블록 3 - Text 1",
         KR: "011-111-2222",
         GB: "Eng 011-111-2222",
     },
 
     footerTop_block3_text2 : {
-        description: "섹션 7 - 블록 3 - Text 2",
+        description: "푸터 상단 - 블록 3 - Text 2",
         KR: "예약 전화",
         GB: "Eng 예약 전화",
     },
-
-    footerTop_block4_icon1 : {
-        type: JDinputType.img,
-        description: "섹션 7 - 아이콘 1",
-        value: "/assets/img/hotel/instagram.png",
-    },
-
-    footerTop_block4_icon1_link : {
-        description: "섹션 7 - 아이콘 1",
-        value: "/",
-    },
-
+    
     footerTop_block4_text2 : {
-        description: "섹션 7 - 블록 4 - Text 2",
+        description: "푸터 상단 - 소셜미디어 텍스트",
         KR: "소셜미디어",
         GB: "Eng 소셜미디어",
     },
 
+    footerTop_block4_icon1 : {
+        type: JDinputType.img,
+        description: "푸터 상단 - 아이콘 1",
+        value: "/assets/img/instagram.png",
+    },
+
+    footerTop_block4_icon1_link : {
+        description: "푸터 상단 - 아이콘 1 링크",
+        value: "https://www.instagram.com/",
+    },
+
+    footerTop_block4_icon2_use : {
+        type: JDinputType.switch,
+        description: "푸터 상단 - 아이콘 2 - 사용여부",
+        value: true
+    },
+
+    footerTop_block4_icon2 : {
+        type: JDinputType.img,
+        description: "푸터 상단 - 아이콘 2",
+        value: "/assets/img/facebook.png"
+    },
+
+    footerTop_block4_icon2_link : {
+        description: "푸터 상단 - 아이콘 2 링크",
+        value: "https://www.facebook.com/"
+    },
+
+    footerTop_block4_icon3_use : {
+        type: JDinputType.switch,
+        description: "푸터 상단 - 아이콘 3 - 사용여부",
+        value: true
+    },
+
+    footerTop_block4_icon3 : {
+        type: JDinputType.img,
+        description: "푸터 상단 - 아이콘 3",
+        value: "/assets/img/naver.png"
+    },
+
+    footerTop_block4_icon3_link : {
+        description: "푸터 상단 - 아이콘 3 링크",
+        value: "https://www.naver.com/"
+    },
+
+
+
+
 
     /* :::::::::::: Footer :::::::::::: */
 
+    footer_startline : {
+        type: JDinputType.line,
+        description: "푸터 섹션",
+    },
+
     footer_logo : {
-        description: "푸터 - 로고명",
+        description: "푸터 - 업체명",
         KR: "JANDA",
         GB: "Eng JANDA",
     },

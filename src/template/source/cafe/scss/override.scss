@@ -1,0 +1,28 @@
+/* ::::::: Override ::::::: */
+
+html,body {
+    height:auto;
+}
+
+.header {
+    display:none;
+}
+
+[data-edit="array"]:after {
+    width: 100%;
+    height: 15%;
+}
+
+.imgEdit {
+    width: 40%;
+    height: 20%;   
+    white-space:nowrap;
+}
+
+@media screen and (min-width:1024px) {
+
+    .header {
+        display:block;
+    }
+    
+}

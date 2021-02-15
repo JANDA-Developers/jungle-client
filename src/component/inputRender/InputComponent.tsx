@@ -3,12 +3,14 @@ import { Col, Flex, Grid, InputText, isLast, JDlabel, JDswitch, JDtagInput } fro
 import { ArrayController, ArrayControllerAdd } from "../pageInputRender.tsx/ArrayController"
 import { PhotoUpdater } from "../PhotoUpdater"
 import JDEditor from "../editor/Editor";
+import InputColor from "src/atom/InputColor";
 
 export enum JDinputType {
     text = "text",
     map = "map",
     line = "line",
     switch = "switch",
+    colour = 'colour',
     img = "img",
     timespace = "timespace",
     channelTak = "channelTalk",
@@ -38,6 +40,13 @@ export const InputComponent: React.FC<IInputComponentProps> = ({ onAddArray, KEY
             return <div className="adminEdit__newSection">
                 {label}
             </div>
+
+        case JDinputType.colour:
+            return <div className="adminEdit__colour">
+                <JDlabel txt={label} className="mr" />
+                <InputColor value={value} onChange={onChange} />
+            </div>
+            
         case JDinputType.switch:
             return <div className="adminEdit__switch">
                 <JDlabel txt={label} className="mr" />
@@ -67,7 +76,7 @@ export const InputComponent: React.FC<IInputComponentProps> = ({ onAddArray, KEY
         case JDinputType.array:
             return <div>
                 <JDlabel txt={label} />
-                <Grid >
+                <Grid>
                     {value.map((value: any, index: number) =>
                         <Col
                             key={index + "ArrayElement" + KEY}

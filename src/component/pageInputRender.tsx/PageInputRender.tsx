@@ -63,9 +63,8 @@ export const JDpageInputRender: React.FC<IProp<any>> = ({ children, onSubmit: ha
             }
         })}
         {children}
-        <JDbutton size="long" thema="primary" onClick={() => {
-            handleSubmit(data)
-        }} label="제출하기" />
+        <JDbutton className="adminEdit_btn" size="long" thema="primary" onClick={() => {
+            handleSubmit(data)}} label="수정하기" />
     </div>;
 };
 

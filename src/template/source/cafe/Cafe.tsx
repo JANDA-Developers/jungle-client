@@ -34,7 +34,12 @@ const Cafe: React.FC<IProp> = ({
         setBgFilter(state);
         setReservationOn(state);
     };
+    const [menuState, setMenuState] = useState('main_menuTap1');
     const editModalHook = useModal();
+
+    const handleMenuState = (menu:string) => {
+        setMenuState(menu);
+    }
 
     /*
 
@@ -50,6 +55,7 @@ const Cafe: React.FC<IProp> = ({
                 <link rel="stylesheet" href={"/assets/css/swiper.css"} />
                 <script type="text/javascript" src={"/assets/loadcheck.js"} />
                 <script type="text/javascript" src={"/assets/js/cafe/cafe.js"} defer />
+                <link rel="icon" href={get('commonInfo_favicon')}></link>
             </Helmet>
             <div id="cafe_1" className="page_main">
 
@@ -88,7 +94,7 @@ const Cafe: React.FC<IProp> = ({
                 <div className="mainSe2">
                     <div className="mainSe2__container" data-aos="fade-up">
                         <section className="mainSeHead">
-                            <h2 className="mainSeHead__title" style={{color: '#338f3f'}}>
+                            <h2 className="mainSeHead__title" style={{color: get('commonInfo_colour')}}>
                                 <span {...edit("section2_text1")}></span>
                             </h2>
                             <p className="mainSeHead__subtitle">
@@ -104,7 +110,7 @@ const Cafe: React.FC<IProp> = ({
                                 delay: 5000,
                                 disableOnInteraction: false
                             }}
-                    >
+                        >
                         {page.section2_array[lang].map((item,index) => 
                             <SwiperSlide className="mainSe2__slideList"
                                 {...editObjArr("section2_array", index, editModalHook)}
@@ -156,7 +162,7 @@ const Cafe: React.FC<IProp> = ({
 
                 <div className="mainSe4">
                     <section className="mainSeHead" data-aos="fade-up">
-                        <h2 className="mainSeHead__title" style={{color: '#338f3f'}}>
+                        <h2 className="mainSeHead__title" style={{color: get('commonInfo_colour')}}>
                             <span {...edit("section4_title")}></span>
                         </h2>
                         <p className="mainSeHead__subtitle deco">
@@ -210,7 +216,7 @@ const Cafe: React.FC<IProp> = ({
                     <>
                         <div className="mainSe5">
                             <section className="mainSeHead" data-aos="fade-up">
-                                <h2 className="mainSeHead__title" style={{color: '#338f3f'}}>
+                                <h2 className="mainSeHead__title" style={{color: get('commonInfo_colour')}}>
                                     <span {...edit("section5_title")}></span>
                                 </h2>
                                 <p className="mainSeHead__subtitle">
@@ -220,50 +226,210 @@ const Cafe: React.FC<IProp> = ({
                             <section className="mainSe5__menuWrap" data-aos="fade-up">
                                 <div className="mainSe5__menuTapWrap">
                                     {
-                                       get("section5_menu_tab1") != '0' && 
-                                            <button id="main_menuTap1" className="mainSe5__menuTap on">
+                       
+                                            <button id="main_menuTap1" className={`mainSe5__menuTap 
+                                                ${menuState == 'main_menuTap1' && 'on'}`} 
+                                                onClick={()=>{handleMenuState('main_menuTap1')}}>
                                                 <span {...edit("section5_menu_tab1")}></span>
                                             </button>
                                     }
                                     {
-                                        get("section5_menu_tab2") != '0' && 
-                                            <button id="main_menuTap2" className="mainSe5__menuTap">
+                                        get("section5_menu_tab2_use") && 
+                                            <button id="main_menuTap2" className={`mainSe5__menuTap 
+                                                ${menuState == 'main_menuTap2' && 'on'}`} 
+                                                onClick={()=>{handleMenuState('main_menuTap2')}}>
                                                 <span {...edit("section5_menu_tab2")}></span>
                                             </button>
                                     }
                                     {
-                                        get("section5_menu_tab3") != '0' && 
-                                            <button id="main_menuTap3" className="mainSe5__menuTap">
+                                        get("section5_menu_tab3_use") && 
+                                            <button id="main_menuTap3" className={`mainSe5__menuTap 
+                                                ${menuState == 'main_menuTap3' && 'on'}`} 
+                                                onClick={()=>{handleMenuState('main_menuTap3')}}>
                                                 <span {...edit("section5_menu_tab3")}></span>
                                             </button>
                                     }
                                     {
-                                        get("section5_menu_tab4") != '0' && 
-                                            <button id="main_menuTap4" className="mainSe5__menuTap">
+                                        get("section5_menu_tab4_use") && 
+                                            <button id="main_menuTap4" className={`mainSe5__menuTap 
+                                                ${menuState == 'main_menuTap4' && 'on'}`} 
+                                                onClick={()=>{handleMenuState('main_menuTap4')}}>
                                                 <span {...edit("section5_menu_tab4")}></span>
                                             </button>
                                     }
                                     {
-                                        get("section5_menu_tab5") != '0' && 
-                                            <button id="main_menuTap5" className="mainSe5__menuTap">
+                                        get("section5_menu_tab5_use") && 
+                                            <button id="main_menuTap5" className={`mainSe5__menuTap 
+                                                ${menuState == 'main_menuTap5' && 'on'}`} 
+                                                onClick={()=>{handleMenuState('main_menuTap5')}}>
                                                 <span {...edit("section5_menu_tab5")}></span>
                                             </button>
                                     }
                                     {
-                                        get("section5_menu_tab6") != '0' && 
-                                            <button id="main_menuTap6" className="mainSe5__menuTap">
+                                        get("section5_menu_tab6_use") && 
+                                            <button id="main_menuTap6" className={`mainSe5__menuTap 
+                                                ${menuState == 'main_menuTap6' && 'on'}`}
+                                                onClick={()=>{handleMenuState('main_menuTap6')}}>
                                                 <span {...edit("section5_menu_tab6")}></span>
                                             </button>
                                     }
                                     {
-                                        get("section5_menu_tab7") != '0' && 
-                                            <button id="main_menuTap7" className="mainSe5__menuTap">
+                                        get("section5_menu_tab7_use") && 
+                                            <button id="main_menuTap7" className={`mainSe5__menuTap 
+                                                ${menuState == 'main_menuTap7' && 'on'}`}
+                                                onClick={()=>{handleMenuState('main_menuTap7')}}>
                                                 <span {...edit("section5_menu_tab7")}></span>
                                             </button>
                                     }
                                 </div>
-                                <div className="mainSe5__menuListWWrap main_menuTap1 on">
+
+                                {  /* :::::::: Menu 1 List  ::::::::*/  }
+                                <div className={`mainSe5__menuListWWrap main_menuTap1 ${menuState == 'main_menuTap1' && 'on'}`}>
                                     {page.section5_menu1_array[lang].map((item,index) =>  
+                                        <div className="mainSe5__menuList first">
+                                            <div className="mainSe5__menuInfo">
+                                            <div className="mainSe5__menuImgWrap">
+                                                <img src={item.img} alt="popular menus" className="mainSe5__menuImg" />
+                                            </div>
+                                            <div className="mainSe5__menuDetail">
+                                                <strong className="mainSe5__menuName">
+                                                    {item.name}
+                                                </strong>
+                                                <p className="mainSe5__menuDesc">
+                                                    {item.desc}
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div className="mainSe5__menuPrice">
+                                                {item.price}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {  /* :::::::: Menu 2 List  ::::::::*/  }
+                                <div className={`mainSe5__menuListWWrap main_menuTap2 ${menuState == 'main_menuTap2' && 'on'}`}>
+                                    {page.section5_menu2_array[lang].map((item,index) =>  
+                                        <div className="mainSe5__menuList first">
+                                            <div className="mainSe5__menuInfo">
+                                            <div className="mainSe5__menuImgWrap">
+                                                <img src={item.img} alt="popular menus" className="mainSe5__menuImg" />
+                                            </div>
+                                            <div className="mainSe5__menuDetail">
+                                                <strong className="mainSe5__menuName">
+                                                    {item.name}
+                                                </strong>
+                                                <p className="mainSe5__menuDesc">
+                                                    {item.desc}
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div className="mainSe5__menuPrice">
+                                                {item.price}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {  /* :::::::: Menu 3 List  ::::::::*/  }
+                                <div className={`mainSe5__menuListWWrap main_menuTap3 ${menuState == 'main_menuTap3' && 'on'}`}>
+                                    {page.section5_menu3_array[lang].map((item,index) =>  
+                                        <div className="mainSe5__menuList first">
+                                            <div className="mainSe5__menuInfo">
+                                            <div className="mainSe5__menuImgWrap">
+                                                <img src={item.img} alt="popular menus" className="mainSe5__menuImg" />
+                                            </div>
+                                            <div className="mainSe5__menuDetail">
+                                                <strong className="mainSe5__menuName">
+                                                    {item.name}
+                                                </strong>
+                                                <p className="mainSe5__menuDesc">
+                                                    {item.desc}
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div className="mainSe5__menuPrice">
+                                                {item.price}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {  /* :::::::: Menu 4 List  ::::::::*/  }
+                                <div className={`mainSe5__menuListWWrap main_menuTap4 ${menuState == 'main_menuTap4' && 'on'}`}>
+                                    {page.section5_menu4_array[lang].map((item,index) =>  
+                                        <div className="mainSe5__menuList first">
+                                            <div className="mainSe5__menuInfo">
+                                            <div className="mainSe5__menuImgWrap">
+                                                <img src={item.img} alt="popular menus" className="mainSe5__menuImg" />
+                                            </div>
+                                            <div className="mainSe5__menuDetail">
+                                                <strong className="mainSe5__menuName">
+                                                    {item.name}
+                                                </strong>
+                                                <p className="mainSe5__menuDesc">
+                                                    {item.desc}
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div className="mainSe5__menuPrice">
+                                                {item.price}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {  /* :::::::: Menu 5 List  ::::::::*/  }
+                                <div className={`mainSe5__menuListWWrap main_menuTap5 ${menuState == 'main_menuTap5' && 'on'}`}>
+                                    {page.section5_menu5_array[lang].map((item,index) =>  
+                                        <div className="mainSe5__menuList first">
+                                            <div className="mainSe5__menuInfo">
+                                            <div className="mainSe5__menuImgWrap">
+                                                <img src={item.img} alt="popular menus" className="mainSe5__menuImg" />
+                                            </div>
+                                            <div className="mainSe5__menuDetail">
+                                                <strong className="mainSe5__menuName">
+                                                    {item.name}
+                                                </strong>
+                                                <p className="mainSe5__menuDesc">
+                                                    {item.desc}
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div className="mainSe5__menuPrice">
+                                                {item.price}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {  /* :::::::: Menu 6 List  ::::::::*/  }
+                                <div className={`mainSe5__menuListWWrap main_menuTap6 ${menuState == 'main_menuTap6' && 'on'}`}>
+                                    {page.section5_menu6_array[lang].map((item,index) =>  
+                                        <div className="mainSe5__menuList first">
+                                            <div className="mainSe5__menuInfo">
+                                            <div className="mainSe5__menuImgWrap">
+                                                <img src={item.img} alt="popular menus" className="mainSe5__menuImg" />
+                                            </div>
+                                            <div className="mainSe5__menuDetail">
+                                                <strong className="mainSe5__menuName">
+                                                    {item.name}
+                                                </strong>
+                                                <p className="mainSe5__menuDesc">
+                                                    {item.desc}
+                                                </p>
+                                            </div>
+                                            </div>
+                                            <div className="mainSe5__menuPrice">
+                                                {item.price}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+
+                                {  /* :::::::: Menu 7 List  ::::::::*/  }
+                                <div className={`mainSe5__menuListWWrap main_menuTap7 ${menuState == 'main_menuTap7' && 'on'}`}>
+                                    {page.section5_menu7_array[lang].map((item,index) =>  
                                         <div className="mainSe5__menuList first">
                                             <div className="mainSe5__menuInfo">
                                             <div className="mainSe5__menuImgWrap">
@@ -356,11 +522,23 @@ const Cafe: React.FC<IProp> = ({
                         <div className="footerTop__block">
                             <div className="footerTop__text1 social">
                                 <A {...linkEdit("footerTop_block4_icon1_link")} 
-                                    className="footerTop__icon"
-                                >
-                                    <Img {...imgKit("footerTop_block4_icon1")} 
-                                    />
+                                    className="footerTop__icon">
+                                    <Img {...imgKit("footerTop_block4_icon1")} />
                                 </A>
+                                {
+                                get("footerTop_block4_icon2_use") &&
+                                <A {...linkEdit("footerTop_block4_icon2_link")} 
+                                    className="footerTop__icon">
+                                    <Img {...imgKit("footerTop_block4_icon2")} />
+                                </A>
+                                }
+                                {
+                                get("footerTop_block4_icon3_use") &&
+                                <A {...linkEdit("footerTop_block4_icon3_link")} 
+                                    className="footerTop__icon">
+                                    <Img {...imgKit("footerTop_block4_icon3")} />
+                                </A>
+                                }
                             </div>
                             <p className="footerTop__text2">
                                 <span {...edit("footerTop_block4_text2")}></span>
@@ -381,9 +559,6 @@ const Cafe: React.FC<IProp> = ({
                     </div>
                 </footer>
 
-
-
-                
             </div>
 
         </>

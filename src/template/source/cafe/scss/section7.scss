@@ -24,12 +24,19 @@
     &__text2 {
         margin-top:20px;
         font-size:15px;
+        font-weight:bold;
         color:grey;
+    }
+
+    .social {
+        display:flex;
+        justify-content: center;
     }
 
     &__icon {
         display:block;
         position:relative;
+        margin:0 5px;
         img {
             width:25px;
         }
@@ -40,6 +47,8 @@
             font-size:15px;
         }
     }
+
+    
 
 }
 
@@ -82,7 +91,7 @@
 }
 
 
-@media screen and (min-width:1680px) {
+@media screen and (min-width:1780px) {
 
     
 }

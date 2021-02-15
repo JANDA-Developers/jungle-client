@@ -4,10 +4,46 @@ import { SHARED_INFO2 } from "./shared"
 export const CAFE_INFO = {
     ...SHARED_INFO2,
 
-    timeSpace: {
-        description: "타임스페이스 링크",
-        KR: "",
-        GB: ""
+    bookingKey: {
+        description: "잔다 솔루션 링크",
+        value: "https://storeuser.space.stayjanda.cloud/?sc=PKT0QF&sgc=L6MPRO#&mode=mini"
+    },
+
+    /* :::::::::::: Common :::::::::::: */
+
+    commonInfo_startline : {
+        type: JDinputType.line,
+        description: "공통 정보",
+    },
+
+    commonInfo_colour : {
+        type: JDinputType.colour,
+        description: "공통 부분 색상 설정",
+        value:"#338f3f",
+    },
+
+    commonInfo_companyName : {
+        description: "업체명",
+        KR: "잔다 업체명",
+        GB: "Eng 잔다 업체명"
+    },
+
+    commonInfo_companyDesc : {
+        description: "업체 설명",
+        KR: "홈페이지 바로가기",
+        GB: "Eng 홈페이지 바로가기"
+    },
+
+    commonInfo_img : {
+        type: JDinputType.img,
+        description: "업체 대표 이미지",
+        value:"/assets/img/cafe/pc002276763.jpg"
+    },
+    
+    commonInfo_favicon : {
+        type: JDinputType.img,
+        description: "파비콘 이미지",
+        value:"/favicon.ico"
     },
 
     /* :::::::::::: Section 1 :::::::::::: */
@@ -18,7 +54,7 @@ export const CAFE_INFO = {
     },
 
     section1_array: {
-        description: "Section 2 메뉴 리스트",
+        description: "섹션1 슬라이드 리스트",
         type: JDinputType.array,
         META: {
             img: {
@@ -304,10 +340,22 @@ export const CAFE_INFO = {
         GB: "Eng 메뉴 1"
     },
 
+    section5_menu_tab2_use : {
+        type: JDinputType.switch,
+        description: "메뉴 2 사용여부 ",
+        value: true
+    },
+
     section5_menu_tab2 : {
         description: "섹션 5 - 메뉴 탭 2",
         KR: "메뉴 2",
         GB: "Eng 메뉴 2"
+    },
+
+    section5_menu_tab3_use : {
+        type: JDinputType.switch,
+        description: "메뉴 3 사용여부 ",
+        value: true
     },
 
     section5_menu_tab3 : {
@@ -316,10 +364,22 @@ export const CAFE_INFO = {
         GB: "Eng 메뉴 3"
     },
 
+    section5_menu_tab4_use : {
+        type: JDinputType.switch,
+        description: "메뉴 4 사용여부 ",
+        value: true
+    },
+
     section5_menu_tab4 : {
         description: "섹션 5 - 메뉴 탭 4",
         KR: "메뉴 4",
         GB: "Eng 메뉴 4"
+    },
+
+    section5_menu_tab5_use : {
+        type: JDinputType.switch,
+        description: "메뉴 5 사용여부 ",
+        value: true
     },
 
     section5_menu_tab5 : {
@@ -328,15 +388,28 @@ export const CAFE_INFO = {
         GB: "Eng 메뉴 5"
     },
 
+    section5_menu_tab6_use : {
+        type: JDinputType.switch,
+        description: "메뉴 6 사용여부 ",
+        value: true
+    },
+
+
     section5_menu_tab6 : {
         description: "섹션 5 - 메뉴 탭 6",
         KR: "메뉴 6",
         GB: "Eng 메뉴 6"
     },
 
+    section5_menu_tab7_use : {
+        type: JDinputType.switch,
+        description: "메뉴 7 사용여부 ",
+        value: true
+    },
+
     section5_menu_tab7 : {
         description: "섹션 5 - 메뉴 탭 7",
-        KR: "0",
+        KR: "메뉴 7",
         GB: "Eng 메뉴 7"
     },
 
@@ -867,28 +940,63 @@ export const CAFE_INFO = {
         GB: "Eng 예약 전화",
     },
 
-    footerTop_block4_icon1 : {
-        type: JDinputType.img,
-        description: "섹션 7 - 아이콘 1",
-        value: "/assets/img/hotel/instagram.png",
-    },
-
-    footerTop_block4_icon1_link : {
-        description: "섹션 7 - 아이콘 1",
-        value: "/",
-    },
-
     footerTop_block4_text2 : {
         description: "섹션 7 - 블록 4 - Text 2",
         KR: "소셜미디어",
         GB: "Eng 소셜미디어",
     },
 
+    footerTop_block4_icon1 : {
+        type: JDinputType.img,
+        description: "섹션 7 - 아이콘 1",
+        value: "/assets/img/instagram.png"
+    },
+
+    footerTop_block4_icon1_link : {
+        description: "섹션 7 - 아이콘 1",
+        value: "https://www.instagram.com/"
+    },
+
+    footerTop_block4_icon2_use : {
+        type: JDinputType.switch,
+        description: "푸터 상단 - 아이콘 2 - 사용여부",
+        value: true
+    },
+
+    footerTop_block4_icon2 : {
+        type: JDinputType.img,
+        description: "푸터 상단 - 아이콘 2",
+        value: "/assets/img/facebook.png"
+    },
+
+    footerTop_block4_icon2_link : {
+        description: "푸터 상단 - 아이콘 2 링크",
+        value: "https://www.facebook.com/"
+    },
+
+    footerTop_block4_icon3_use : {
+        type: JDinputType.switch,
+        description: "푸터 상단 - 아이콘 3 - 사용여부",
+        value: true
+    },
+
+    footerTop_block4_icon3 : {
+        type: JDinputType.img,
+        description: "푸터 상단 - 아이콘 3",
+        value: "/assets/img/naver.png"
+    },
+
+    footerTop_block4_icon3_link : {
+        description: "푸터 상단 - 아이콘 3 링크",
+        value: "https://www.naver.com/"
+    },
+
+
 
     /* :::::::::::: Footer :::::::::::: */
 
     footer_logo : {
-        description: "푸터 - 로고명",
+        description: "푸터 - 업체명",
         KR: "JANDA",
         GB: "Eng JANDA",
     },

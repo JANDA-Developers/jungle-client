@@ -24,11 +24,17 @@
     &__text2 {
         margin-top:20px;
         font-size:15px;
+        font-weight:700;
         color:grey;
     }
 
+    .social {
+        display:flex;
+        justify-content: center;
+    }
+
     &__icon {
-        display:block;
+        margin:0 5px;
         position:relative;
         img {
             width:25px;
@@ -82,7 +88,7 @@
 }
 
 
-@media screen and (min-width:1680px) {
+@media screen and (min-width:1780px) {
 
     
 }

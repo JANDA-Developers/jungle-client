@@ -7,25 +7,56 @@
 
 .adminEdit {
 
-
     .JDlabel  {
         font-size:1rem;
+        &.mr {
+            margin:0 0.625rem 0.4rem 0 ;
+        }
     }
     
     &__newSection {
-        padding:50px 0;
-        font-size:30px;
+        margin:1.25rem 0;
+        padding:1.875rem 0;
+        font-size:1.875rem;
         text-align:center;
         background:#eeeeee;
     }
 
     &__switch {
         display:flex;
-        margin:20px 0;
+        margin:1.25rem 0;
         align-items: center;
         .mr {
-            margin:0 10px 0 0 ;
+            margin:0 0.625rem 0 0 ;
         }
+    }
+
+    &__colour {
+        margin:1.25rem 0;
+    }
+
+    &__colourPicker {
+        margin-right:10px;
+    }
+
+    &__colourBtn {
+        margin-right:10px;
+        padding:5px;
+        font-size:14px;
+        background:#ffffff;
+        border:1px solid #000000;
+        cursor:pointer;
+        transition:background 300ms, color 300ms;
+        &:hover {
+            color:#ffffff;
+            background:#000000;;
+        }
+    }
+
+    .adminEdit_btn  {
+        position:fixed;
+        right:20px; bottom:20px;
+        width:150px;
     }
 
 }
