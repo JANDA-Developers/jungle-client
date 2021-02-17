@@ -88,17 +88,17 @@ export const HOTEL_INFO = {
         KR: [
                 {
                     img: "/assets/img/hotel/section1/living_room.jpg",
-                    text1: "편안한 침실11",
+                    text1: "편안한 침실",
                     text2: "저희 시설을 이용하시는 고객을 위한 최고급 침실",
                 },
                 {
                     img: "/assets/img/hotel/section1/mee00685.jpg",
-                    text1: "쾌적한 환경233",
+                    text1: "쾌적한 환경",
                     text2: "Janda Leisure는 쾌적한 공간을 만들기 위해 최선을 다합니다",
                 },
                 {
                     img: "/assets/img/hotel/section1/facility.jpg",
-                    text1: "럭셔리한 공간22",
+                    text1: "럭셔리한 공간",
                     text2: "저희 시설을 이용하시는 고객을 위한 최고급 침실",
                 }
         ],

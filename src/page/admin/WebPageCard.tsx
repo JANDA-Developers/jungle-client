@@ -56,7 +56,7 @@ export const WebPageCard: React.FC<IProp> = ({ webPage, onEdit: handleEdit, onDe
         mode: "fit",
         element: <div>
             <JDbutton br="no" mr onClick={handleDelete} thema="error">삭제하기</JDbutton>
-            <JDbutton br="no" mr onClick={handleEdit} thema="primary">수정하기</JDbutton>
+            {/* Original <JDbutton br="no" mr onClick={handleEdit} thema="primary">수정하기</JDbutton> */}
             <JDbutton br="no" thema="grey1" onClick={handleAdditionInfo}>상세편집</JDbutton>
             <JDbutton br="no" thema="grey1" onClick={toPage}>바로가기</JDbutton>
         </div>

@@ -70,7 +70,7 @@ export const Admin: React.FC<IProp> = () => {
             <Flex>
                 <JDbutton tooltip={limitToCreate ? "더이상 페이지를 생성하실수 없습니다." : ""} disabled={limitToCreate} mr mb thema="primary" onClick={handleClick} >페이지 생성하기</JDbutton>
                 {isAdmin || <div>
-                    {!isEmpty(items) && <JDbadge mb thema={limitToCreate ? "error" : "black"} tooltip="페이지를 생성할 수 있는 갯수 입니다. 이이상 페이지를 늘리기 위해서는 JANDA 서비스센터에 문의 바랍니다.">{me?.pageLimit! - items.length} +</JDbadge>}
+                    {!isEmpty(items) && <JDbadge mb thema={limitToCreate ? "error" : "black"} tooltip="페이지를 생성할 수 있는 갯수 입니다.">{me?.pageLimit! - items.length} +</JDbadge>}
                 </div>}
             </Flex>
             <LoadingCard mb count={5} loading={getLoading || componentLoading} />

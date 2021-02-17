@@ -41,6 +41,14 @@ const Cafe: React.FC<IProp> = ({
     const editModalHook_1 = useModal();
     const editModalHook_2 = useModal();
 
+    const section5_menu1_arrayHook = useModal();
+    const section5_menu2_arrayHook = useModal();
+    const section5_menu3_arrayHook = useModal();
+    const section5_menu4_arrayHook = useModal();
+    const section5_menu5_arrayHook = useModal();
+    const section5_menu6_arrayHook = useModal();
+    const section5_menu7_arrayHook = useModal();
+
     const handleMenuState = (menu:string) => {
         setMenuState(menu);
     }
@@ -317,6 +325,8 @@ const Cafe: React.FC<IProp> = ({
                                             </div>
                                         </div>
                                     )}
+                                    <InfoSubmitModal {...arrayEditModalKit("section5_menu1_array", section5_menu1_arrayHook)}/>
+                                    <Add {...arrAddKit("section5_menu1_array", section5_menu1_arrayHook)} />
                                 </div>
 
                                 {  /* :::::::: Menu 2 List  ::::::::*/  }
@@ -341,6 +351,8 @@ const Cafe: React.FC<IProp> = ({
                                             </div>
                                         </div>
                                     )}
+                                    <InfoSubmitModal {...arrayEditModalKit("section5_menu2_array", section5_menu2_arrayHook)}/>
+                                    <Add {...arrAddKit("section5_menu2_array", section5_menu2_arrayHook)} />
                                 </div>
 
                                 {  /* :::::::: Menu 3 List  ::::::::*/  }
@@ -365,6 +377,8 @@ const Cafe: React.FC<IProp> = ({
                                             </div>
                                         </div>
                                     )}
+                                    <InfoSubmitModal {...arrayEditModalKit("section5_menu3_array", section5_menu3_arrayHook)}/>
+                                    <Add {...arrAddKit("section5_menu3_array", section5_menu3_arrayHook)} />
                                 </div>
 
                                 {  /* :::::::: Menu 4 List  ::::::::*/  }
@@ -389,6 +403,8 @@ const Cafe: React.FC<IProp> = ({
                                             </div>
                                         </div>
                                     )}
+                                    <InfoSubmitModal {...arrayEditModalKit("section5_menu4_array", section5_menu4_arrayHook)}/>
+                                    <Add {...arrAddKit("section5_menu4_array", section5_menu4_arrayHook)} />
                                 </div>
 
                                 {  /* :::::::: Menu 5 List  ::::::::*/  }
@@ -413,6 +429,8 @@ const Cafe: React.FC<IProp> = ({
                                             </div>
                                         </div>
                                     )}
+                                    <InfoSubmitModal {...arrayEditModalKit("section5_menu5_array", section5_menu5_arrayHook)}/>
+                                    <Add {...arrAddKit("section5_menu5_array", section5_menu5_arrayHook)} />
                                 </div>
 
                                 {  /* :::::::: Menu 6 List  ::::::::*/  }
@@ -437,6 +455,8 @@ const Cafe: React.FC<IProp> = ({
                                             </div>
                                         </div>
                                     )}
+                                    <InfoSubmitModal {...arrayEditModalKit("section5_menu6_array", section5_menu6_arrayHook)}/>
+                                    <Add {...arrAddKit("section5_menu6_array", section5_menu6_arrayHook)} />
                                 </div>
 
                                 {  /* :::::::: Menu 7 List  ::::::::*/  }
@@ -461,6 +481,8 @@ const Cafe: React.FC<IProp> = ({
                                             </div>
                                         </div>
                                     )}
+                                    <InfoSubmitModal {...arrayEditModalKit("section5_menu7_array", section5_menu7_arrayHook)}/>
+                                    <Add {...arrAddKit("section5_menu7_array", section5_menu7_arrayHook)} />
                                 </div>
                                 
                             </section>

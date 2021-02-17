@@ -12,6 +12,12 @@
     overflow:auto !important;
 }
 
+.JDtooltip {
+    display:flex;
+    align-items: center;
+    max-height:30px;
+}
+
 .adminEdit {
 
     .JDlabel  {

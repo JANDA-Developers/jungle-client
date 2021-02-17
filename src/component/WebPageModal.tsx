@@ -40,7 +40,7 @@ export const WebPageModal: React.FC<IProp> = ({ modalHook, onCreate }) => {
     );
     const [templateKey, setTemplateKey] = useState<TemplateKey>((page?.templateKey as TemplateKey) || TemplateKey.Foo);
     const isCreate = !page?._id;
-    const selectedLangsOps = opFilter(page?.supportLanguage || [Langs.KR], LANG_SELECT_OPS)
+    const selectedLangsOps = opFilter(page?.supportLanguage || [Langs.KR, Langs.GB], LANG_SELECT_OPS)
     const supportLagnsHook = useMultiSelect(selectedLangsOps, LANG_SELECT_OPS)
     const pageTypeHook = useSelect(opFind(page?.type, PAGE_TYPE_OPS), PAGE_TYPE_OPS)
     const handleTemplateClick = (key: TemplateKey) => () => {
@@ -85,6 +85,9 @@ export const WebPageModal: React.FC<IProp> = ({ modalHook, onCreate }) => {
     const handleUpdate = () => {
         if (!validate) return;
         omits(nextData, "value")
+
+        // @ts-ignore
+        nextData.value = undefined
 
         pageUpdate({
             variables: {
