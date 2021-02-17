@@ -116,9 +116,13 @@ export const WebPageModal: React.FC<IProp> = ({ modalHook, onCreate }) => {
         <JDlabel txt="템플릿 선택하기" />
         <Grid className="templateListWrap">
             {TEMPLATES.map(temp =>
-                <Col key={temp.key} md={6} sm={12} full={3}>
-                    <Tempalte mb style={{ minWidth: "200px", height: "420px" }} mr selected={temp.key === templateKey} onClick={handleTemplateClick(temp.key)} title={temp.title} describe={temp.describe} img={temp.img} />
-                </Col>
+                <>
+                    { temp.key != 'Its' &&
+                        <Col key={temp.key} md={6} sm={12} full={3}>
+                            <Tempalte mb style={{ minWidth: "200px", height: "420px" }} mr selected={temp.key === templateKey} onClick={handleTemplateClick(temp.key)} title={temp.title} describe={temp.describe} img={temp.img} />
+                        </Col>
+                    }
+                </>
             )}
         </Grid>
     </JDmodal>;

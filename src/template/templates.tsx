@@ -45,7 +45,7 @@ export interface ITempalte {
 
 export const TEMPLATES: ITempalte[] = [
     {
-        title: "숙박, 호텔, 게스트하우스",
+        title: "숙박, 게스트하우스",
         describe: <div>
             <JDbadge mb thema="grey4">숙박업</JDbadge>
             호텔, 게스트 하우스등 숙박관련 원페이지 생성
