@@ -74,7 +74,7 @@ export const WebPageCard: React.FC<IProp> = ({ webPage, onEdit: handleEdit, onDe
                 </JDtypho>
                 <JDtypho mb flex={{ vCenter: true }} size="small">
                     <InputText mr iconOnClick={handleCopy} iconProps={{ size: "small", hover: true, tooltip: "복사하기" }} icon="copy" value={webPage.domain || url} Size="small" />
-                    <JDicon size="small" tooltip="도메인수정" hover onClick={handleDomainChange} icon="edit" />
+                    {/* <JDicon size="small" tooltip="도메인수정" hover onClick={handleDomainChange} icon="edit" /> */}
                 </JDtypho>
             </Col>
             <Col mb full={4} md={6}>
