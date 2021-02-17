@@ -14,7 +14,7 @@ import { Content } from 'src/component/Content';
 import { TimeSpace } from 'src/component/TimeSpace';
 import { InfoSubmitModal } from 'src/component/InfoSubmitModal';
 import BookingIframe from 'src/component/BookingIframe';
-import './scss/cafe.scss';
+import './scss/pub.scss';
 
 
 
@@ -133,7 +133,7 @@ const Cafe: React.FC<IProp> = ({
                                 </SwiperSlide>
                             )}
                         </Swiper>
-                        <InfoSubmitModal {...arrayEditModalKit("section2_array", editModalHook_2)} />
+                        <InfoSubmitModal {...arrayEditModalKit("section2_array", editModalHook_2)}/>
                         <Add {...arrAddKit("section2_array", editModalHook_2)} />
                     </div>
                 </div>
@@ -342,6 +342,7 @@ const Cafe: React.FC<IProp> = ({
                                         </div>
                                     )}
                                 </div>
+                                
 
                                 {  /* :::::::: Menu 3 List  ::::::::*/  }
                                 <div className={`mainSe5__menuListWWrap main_menuTap3 ${menuState == 'main_menuTap3' && 'on'}`}>
@@ -366,6 +367,7 @@ const Cafe: React.FC<IProp> = ({
                                         </div>
                                     )}
                                 </div>
+                               
 
                                 {  /* :::::::: Menu 4 List  ::::::::*/  }
                                 <div className={`mainSe5__menuListWWrap main_menuTap4 ${menuState == 'main_menuTap4' && 'on'}`}>
@@ -390,6 +392,7 @@ const Cafe: React.FC<IProp> = ({
                                         </div>
                                     )}
                                 </div>
+                              
 
                                 {  /* :::::::: Menu 5 List  ::::::::*/  }
                                 <div className={`mainSe5__menuListWWrap main_menuTap5 ${menuState == 'main_menuTap5' && 'on'}`}>
@@ -414,7 +417,7 @@ const Cafe: React.FC<IProp> = ({
                                         </div>
                                     )}
                                 </div>
-
+                                
                                 {  /* :::::::: Menu 6 List  ::::::::*/  }
                                 <div className={`mainSe5__menuListWWrap main_menuTap6 ${menuState == 'main_menuTap6' && 'on'}`}>
                                     {page.section5_menu6_array[lang].map((item,index) =>  
@@ -438,6 +441,7 @@ const Cafe: React.FC<IProp> = ({
                                         </div>
                                     )}
                                 </div>
+                                
 
                                 {  /* :::::::: Menu 7 List  ::::::::*/  }
                                 <div className={`mainSe5__menuListWWrap main_menuTap7 ${menuState == 'main_menuTap7' && 'on'}`}>
@@ -462,6 +466,7 @@ const Cafe: React.FC<IProp> = ({
                                         </div>
                                     )}
                                 </div>
+                           
                                 
                             </section>
                         </div>

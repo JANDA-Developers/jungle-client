@@ -9,8 +9,10 @@ export enum JDinputType {
     text = "text",
     map = "map",
     line = "line",
+    notice = 'notice',
     switch = "switch",
     colour = 'colour',
+    listLine = 'listLine',
     img = "img",
     timespace = "timespace",
     channelTak = "channelTalk",
@@ -36,11 +38,22 @@ interface IInputComponentProps {
 export const InputComponent: React.FC<IInputComponentProps> = ({ onAddArray, KEY, label, type = JDinputType.text, value, onChange, onDeleteArray, arrayMeta }) => {
 
     switch (type) {
+        case JDinputType.notice:
+            return <div className="adminEdit__notice">
+                <strong className="adminEdit__noticeTitle">Notice</strong> 
+                <span className="adminEdit__noticeText">{label}</span>
+            </div>
+
         case JDinputType.line:
             return <div className="adminEdit__newSection">
                 {label}
             </div>
 
+        case JDinputType.listLine:
+            return <div className="adminEdit__listLine">
+                {label}
+            </div>
+            
         case JDinputType.colour:
             return <div className="adminEdit__colour">
                 <JDlabel txt={label} className="mr" />
@@ -60,8 +73,8 @@ export const InputComponent: React.FC<IInputComponentProps> = ({ onAddArray, KEY
             return <JDEditor model={value} setModel={onChange} onChange={onChange} />
         case JDinputType.link:
             return <InputText mb placeholder="링크 주소를 입력 해주세요." label={label} value={value} onChange={onChange} />
-        case JDinputType.timespace:
-            return <InputText mb placeholder="타임스페이스 주소입력" label={label} value={value} onChange={onChange} />
+        // case JDinputType.timespace:
+        //     return <InputText mb placeholder="타임스페이스 주소입력" label={label} value={value} onChange={onChange} />
         case JDinputType.timespace:
             return <InputText mb placeholder="타임스페이스 주소입력" label={label} value={value} onChange={onChange} />
         case JDinputType.tag:

@@ -31,7 +31,7 @@ const InputColor:React.FC<IProp> = ({value, onChange}) => {
             {
                 colourPicked &&
                 <span className="adminEdit__colourPicked">
-                    선택된 색상 : {colour}
+                    선택된 색상 : {colour} / 우측하단 수정하기 버튼을 통해 적용
                 </span>
             }
           

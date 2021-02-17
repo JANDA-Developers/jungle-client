@@ -13,8 +13,8 @@ import { LangChange } from 'src/component/LanguageChnager';
 import { Content } from 'src/component/Content';
 import { TimeSpace } from 'src/component/TimeSpace';
 import { InfoSubmitModal } from 'src/component/InfoSubmitModal';
-import './scss/hotel.scss';
 import BookingIframe from 'src/component/BookingIframe';
+import './scss/hotel.scss';
 
 
 type INFO = typeof HOTEL_INFO;
@@ -30,22 +30,21 @@ const Hotel: React.FC<IProp> = ({
 }) => {
 
     const [bgFilter, setBgFilter] = useState(false);
-    const [reserBtn, setReserBtn] = useState(true);
+    const [reserBtn, setReserBtn] = useState(false); // 이후 get('bookingKey_use') 값으로 설정
     const [reservationOn, setReservationOn] = useState(false);
     const handelReservation = (state:boolean) => {
         setBgFilter(state);
         setReservationOn(state);
     };
-    const editModalHook = useModal();
-
-    console.log(window.location.href);
-
+    const editModalHook_1 = useModal();
+    const editModalHook_2 = useModal();
     return (
         <>
             <Helmet>
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
                 <meta name="description" content={get('commonInfo_companyDesc')}></meta>
                 <title>{get('commonInfo_companyName')}</title>
+                <link rel="icon" href={get('commonInfo_favicon')}></link>
                 <meta property="og:title" content={get('commonInfo_companyName')}></meta>
                 <meta property="og:description" content={get('commonInfo_companyDesc')}></meta>
                 <meta property="og:url" content={window.location.href}></meta>
@@ -69,7 +68,7 @@ const Hotel: React.FC<IProp> = ({
                             }}>
                          {page.section1_array[lang].map((item,index) => 
                             <SwiperSlide 
-                                {...editObjArr("section1_array", index, editModalHook)}
+                                {...editObjArr("section1_array", index, editModalHook_1)}
                             >
                                 <div className="mainSe1__slideImage" style={{backgroundImage: `url(${item.img})`}}>
                                     <div className="mainSe1__slideFilter" style={{opacity: '0.3'}} />
@@ -90,6 +89,8 @@ const Hotel: React.FC<IProp> = ({
                     </div>
                     <p className="mainSe1__scrollText">Scroll Down</p>
                 </div>
+                <InfoSubmitModal {...arrayEditModalKit("section1_array", editModalHook_1)} />
+                <Add {...arrAddKit("section1_array", editModalHook_1)} />
                 
                 {/* ::::::::::: Section 2 ::::::::::: */}
 
@@ -101,7 +102,7 @@ const Hotel: React.FC<IProp> = ({
                             <p className="mainSe2__text" {...edit("section2_text3")}></p>
                             <A {...linkEdit("section2_btn_link")} 
                                 className="mainSe2__btn" 
-                                style={{background: '#C19B76'}} >
+                                style={{background: get('commonInfo_colour')}} >
                                 <span {...edit("section2_btn_text")}></span>
                             </A>
                         </section>
@@ -179,8 +180,7 @@ const Hotel: React.FC<IProp> = ({
                             }}>
                             {page.section4_array[lang].map((item,index) => 
                                 <SwiperSlide 
-                                    {...editObjArr("section4_array", index, editModalHook)}
-                                >
+                                    {...editObjArr("section4_array", index, editModalHook_2)}>
                                     <div className="mainSe4">
                                         <div className="mainSe4__imgWrap">
                                             <div className="mainSe4__img" 
@@ -192,7 +192,7 @@ const Hotel: React.FC<IProp> = ({
                                                 <h2 className="mainSe4__title">
                                                     {item.title}
                                                 </h2>
-                                                <h3 className="mainSe4__subtitle" style={{color: '#C19B76'}}>
+                                                <h3 className="mainSe4__subtitle" style={{color: get('commonInfo_colour')}}>
                                                     {item.name}
                                                 </h3>
                                                 <p className="mainSe4__content">
@@ -215,8 +215,8 @@ const Hotel: React.FC<IProp> = ({
                                 </SwiperSlide>
                             )}
                         </Swiper>
-                        <InfoSubmitModal {...arrayEditModalKit("section4_array", editModalHook)}/>
-                        <Add {...arrAddKit("section4_array", editModalHook)} />
+                        <InfoSubmitModal {...arrayEditModalKit("section4_array", editModalHook_2)}/>
+                        <Add {...arrAddKit("section4_array", editModalHook_2)} />
                     </div>
 
                 }
@@ -249,7 +249,7 @@ const Hotel: React.FC<IProp> = ({
                                         </p>
                                         <A {...linkEdit("section5_block1_link")} 
                                             className="facility__btn"
-                                            style={{border: '2px solid #C19B76', color: '#C19B76'}}
+                                            style={{border: `2px solid ${get('commonInfo_colour')}`, color: get('commonInfo_colour')}}
                                         >
                                             <span {...edit("section5_btnText")}></span>
                                         </A>
@@ -268,7 +268,7 @@ const Hotel: React.FC<IProp> = ({
                                         </p>
                                         <A {...linkEdit("section5_block2_link")} 
                                             className="facility__btn"
-                                            style={{border: '2px solid #C19B76', color: '#C19B76'}}
+                                            style={{border: `2px solid ${get('commonInfo_colour')}`, color: get('commonInfo_colour')}}
                                         >
                                             <span {...edit("section5_btnText")}></span>
                                         </A>
@@ -372,7 +372,7 @@ const Hotel: React.FC<IProp> = ({
                 </footer>
 
 
-                {/* ::::::::::: TimeSpace ::::::::::: */}
+                {/* ::::::::::: Booking System  ::::::::::: */}
 
                 <div className={`reservation ${reservationOn && 'on'}`}>
                     <div className="reservation__inner">

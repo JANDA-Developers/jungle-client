@@ -1,7 +1,7 @@
 import { JDinputType } from "src/component/inputRender/InputComponent"
 import { SHARED_INFO2 } from "./shared"
 
-export const CAFE_INFO = {
+export const PUB_INFO = {
     ...SHARED_INFO2,
 
     commonInfo_notice : {
@@ -86,37 +86,37 @@ export const CAFE_INFO = {
         },
         KR: [
                 {
-                    img: "/assets/img/cafe/pc002276763.jpg",
-                    text1: "커피 한잔의 여유",
-                    text2: "Janda Coffee에서 특별한 사람과 함께 하세요",
+                    img: "/assets/img/pub/pc001010628.jpg",
+                    text1: "다양한 주류",
+                    text2: "Janda Pub에서 국내는 물론 해외 주류 역시 경험하실 수 있습니다",
                 },
                 {
-                    img: "/assets/img/cafe/wmtg110415.jpg",
-                    text1: "향과 맛에 대한 자부심",
-                    text2: "좋은 원두에서 나오는 깊은 맛",
+                    img: "/assets/img/pub/cm08504426.jpg",
+                    text1: "퀄리티 높은 디너",
+                    text2: "최고의 쉐프가 만든 디너를 맛보세요",
                 },
                 {
-                    img: "/assets/img/cafe/wmtg011290.jpg",
-                    text1: "부드러운 케이크",
-                    text2: "당일 아침에 만드는 수제 케이크",
+                    img: "/assets/img/pub/cm08011497.jpg",
+                    text1: "특별한 날, 특별한 사람과",
+                    text2: "당신의 주말을 특별하게 만들어 줄 곳.",
                 }
         ],
         GB: [
                 {
-                    img: "/assets/img/cafe/pc002276763.jpg",
-                    text1: "Eng 커피 한잔의 여유",
-                    text2: "Eng Janda Coffee에서 특별한 사람과 함께 하세요",
+                    img: "/assets/img/pub/cm08505238.jpg",
+                    text1: "Eng 다양한 주류",
+                    text2: "Janda Pub에서 국내는 물론 해외 주류 역시 경험하실 수 있습니다",
                 },
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    text1: "Eng 향과 맛에 대한 자부심",
-                    text2: "Eng 좋은 원두에서 나오는 깊은 맛",
+                    img: "/assets/img/pub/cm08504426.jpg",
+                    text1: "Eng 퀄리티 높은 디너",
+                    text2: "최고의 쉐프가 만든 디너를 맛보세요",
                 },
                 {
-                    img: "/assets/img/cafe/wmtg011290.jpg",
-                    text1: "부드러운 케이크",
-                    text2: "당일 아침에 만드는 수제 케이크",
-                },
+                    img: "/assets/img/pub/cm08011497.jpg",
+                    text1: "Eng 특별한 날, 특별한 사람과",
+                    text2: "당신의 주말을 특별하게 만들어 줄 곳.",
+                }
         ]
     },
 
@@ -130,8 +130,8 @@ export const CAFE_INFO = {
 
     section2_text1 : {
         description: "섹션 2 - 타이틀",
-        KR: "Cafe JANDA",
-        GB: "Eng Cafe JANDA"
+        KR: "Pub JANDA",
+        GB: "Eng Pub JANDA"
     },
 
     section2_text2 : {
@@ -141,7 +141,7 @@ export const CAFE_INFO = {
     },
 
     section2_array: {
-        description: "Section 2 메뉴 리스트",
+        description: "섹션 2 메뉴 리스트",
         type: JDinputType.array,
         META: {
             img: {
@@ -160,56 +160,56 @@ export const CAFE_INFO = {
         },
         KR: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/pc003079179.jpg",
+                    name: "밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목넘김",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "보딩턴스 앱",
+                    desc: "벌꿀의 달콜함과 부드러운 목넘김",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
+                    img: "/assets/img/pub/yaytg632946.jpg",
+                    name: "크로넨 버그 1664",
+                    desc: "풍부한 찬산향이 일품인 맥주",
                 },
                 {
-                    img: "/assets/img/cafe/ti325055150.png",
-                    name: "모카라떼",
-                    desc: "모카시럽과 밀크스팁의 부드러움",
+                    img: "/assets/img/pub/cm08374895.jpg",
+                    name: "코리아 복분자",
+                    desc: "깊고 진한 한국의 전통주",
                 },
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "바닐라 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08585378.jpg",
+                    name: "스파클링 와인",
+                    desc: "프랑스 닐 지방에서 재배한 포도로 만든 스파클링와인",
                 },
         ],
         GB: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/pc003079179.jpg",
+                    name: "Eng 밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목넘김",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 보딩턴스 앱",
+                    desc: "벌꿀의 달콜함과 부드러운 목넘김",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
+                    img: "/assets/img/pub/yaytg632946.jpg",
+                    name: "Eng 크로넨 버그 1664",
+                    desc: "풍부한 찬산향이 일품인 맥주",
                 },
                 {
-                    img: "/assets/img/cafe/ti325055150.png",
-                    name: "Eng 모카라떼",
-                    desc: "Eng 모카시럽과 밀크스팁의 부드러움",
+                    img: "/assets/img/pub/cm08374895.jpg",
+                    name: "Eng 코리아 복분자",
+                    desc: "깊고 진한 한국의 전통주",
                 },
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 바닐라 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08585378.jpg",
+                    name: "Eng 스파클링 와인",
+                    desc: "프랑스 닐 지방에서 재배한 포도로 만든 스파클링와인",
                 },
         ]
     },
@@ -225,13 +225,13 @@ export const CAFE_INFO = {
     section3_img : {
         description: "섹션 3 - 배경 이미지",
         type: JDinputType.img,
-        value: "/assets/img/cafe/yaytg586946.jpg",
+        value: "/assets/img/pub/cm08011497.jpg",
     },
 
     section3_title : {
         description: "섹션 3 - 타이틀",
-        KR: "품질 높은 커피를 만나보세요 당신의 커피",
-        GB: "Eng 품질 높은 커피를 만나보세요 당신의 커피"
+        KR: "영국느낌의 펍을 만나보세요",
+        GB: "영국 런던의 느낌을 그대로 옮겨 놓은듯한 Janda Pub에서 특별한 하루를 보내보세요."
     },
 
     section3_desc : {
@@ -247,6 +247,7 @@ export const CAFE_INFO = {
     },
 
 
+
     /* :::::::::::: Section 4 :::::::::::: */
 
     section4_startline : {
@@ -256,68 +257,68 @@ export const CAFE_INFO = {
 
     section4_title : {
         description: "섹션 4 - 타이틀",
-        KR: "Janda Cafe",
-        GB: "Eng Janda Cafe"
+        KR: "Janda Pub",
+        GB: "Eng Janda Pub"
     },
 
     section4_subtitle : {
         description: "섹션 4 - 서브 타이틀",
-        KR: "잔다 커피 특징",
+        KR: "잔다 펍의 특징",
         GB: "Eng 잔다 커피 특징"
     },
 
     section4_desc : {
         description: "섹션 4 - 섹션 설명",
-        KR: "카페 잔다는 커피를 사랑하는 여러분에게 항상 더 좋은 커피를 내려드릴 수 있도록 끊임없는 연구를 하고 있습니다.",
-        GB: "Eng 카페 잔다는 커피를 사랑하는 여러분에게 항상 더 좋은 커피를 내려드릴 수 있도록 끊임없는 연구를 하고 있습니다."
+        KR: "저희 Janda Pub은 여러분에게 늘 다양하고 뛰어난 술을 선보이기 위해 노력하고있습니다.",
+        GB: "Eng 저희 Janda Pub은 여러분에게 늘 다양하고 뛰어난 술을 선보이기 위해 노력하고있습니다."
     },
 
     section4_list1_img : {
         type: JDinputType.img,
         description: "섹션 4 - 리스트 1 이미지",
-        value: "/assets/img/cafe/wmtg110415.jpg",
+        value: "/assets/img/pub/pc001024383.jpg",
     },
 
     section4_list1_title : {
         description: "섹션 4 - 리스트 1 타이틀",
-        KR: "최고급 원두를 사용합니다",
-        GB: "Eng 최고급 원두를 사용합니다 "
+        KR: "고급스러운 분위기",
+        GB: "Eng 고급스러운 분위기"
     },
 
     section4_list1_desc : {
         description: "섹션 4 - 리스트 1 설명",
-        KR: "최고급 원두를 사용하여 깊은 맛의 커피를 즐길 수 있습니다",
-        GB: "Eng 최고급 원두를 사용하여 깊은 맛의 커피를 즐길 수 있습니다"
+        KR: "Janda Pub의 고급스러운 느낌을 만끽하세요",
+        GB: "Eng Janda Pub의 고급스러운 느낌을 만끽하세요"
     },
 
     section4_list2_img : {
         type: JDinputType.img,
         description: "섹션 4 - 리스트 2 이미지",
-        value: "/assets/img/cafe/cb114000054.jpg",
+        value: "/assets/img/pub/cm08366453.jpg",
     },
 
     section4_list2_title : {
         description: "섹션 4 - 리스트 2 타이틀",
-        KR: "크로와상과 아보카도의 조합",
-        GB: "Eng 크로와상과 아보카도의 조합"
+        KR: "홈 브루잉 수제 맥주",
+        GB: "Eng 홈 브루잉 수제 맥주"
     },
 
     section4_list2_desc : {
         description: "섹션 4 - 리스트 2 설명",
-        KR: "크로와상과 아보카도의 만남 일요일의 스페셜 메뉴 입니다.",
-        GB: "Eng 크로와상과 아보카도의 만남 일요일의 스페셜 메뉴 입니다."
+        KR: "홈 브루잉한 수제 맥주의 깊은 맛",
+        GB: "Eng 홈 브루잉한 수제 맥주의 깊은 맛"
     },
 
     section4_list3_img : {
         type: JDinputType.img,
         description: "섹션 4 - 리스트 3 이미지",
-        value: "/assets/img/cafe/ti302a17009.jpg",
+        value: "/assets/img/pub/cm08505238.jpg",
     },
 
     section4_list3_title : {
         description: "섹션 4 - 리스트 3 타이틀",
-        KR: "제주녹차의 싱그러움",
-        GB: "Eng 제주녹차의 싱그러움 "
+        KR: "최고급 와인 구비",
+        GB: "Eng 최고급 와인 구비"
     },
 
     section4_list3_desc : {
@@ -342,8 +343,8 @@ export const CAFE_INFO = {
 
     section5_title : {
         description: "섹션 5 - 타이틀",
-        KR: "Janda Cafe",
-        GB: "Eng Janda Cafe"
+        KR: "Janda Pub",
+        GB: "Eng Janda Pub"
     },
    
     section5_subtitle : {
@@ -460,46 +461,45 @@ export const CAFE_INFO = {
         },
         KR: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ],
         GB: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ]
     },
-
 
     section5_listline_menu2 : {
         type: JDinputType.listLine,
@@ -530,42 +530,42 @@ export const CAFE_INFO = {
         },
         KR: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ],
         GB: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ]
     },
@@ -599,42 +599,42 @@ export const CAFE_INFO = {
         },
         KR: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ],
         GB: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ]
     },
@@ -668,42 +668,42 @@ export const CAFE_INFO = {
         },
         KR: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ],
         GB: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ]
     },
@@ -737,42 +737,42 @@ export const CAFE_INFO = {
         },
         KR: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ],
         GB: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ]
     },
@@ -806,42 +806,42 @@ export const CAFE_INFO = {
         },
         KR: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ],
         GB: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ]
     },
@@ -875,42 +875,42 @@ export const CAFE_INFO = {
         },
         KR: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ],
         GB: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 밀러 드래프트",
+                    desc: "적당한 탄산과 부드러운 목 넘김",
                     price: "7000원",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 보딩턴스 에일",
+                    desc: "벌꿀와 느껴지는 깊은 맛",
+                    price: "8000원",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
+                    img: "/assets/img/pub/cm08272446.jpg",
+                    name: "Eng 크로넨버그 1996",
+                    desc: "풍부한 거품에서 오는 부드러운 목 넘김",
+                    price: "9000원",
                 },
         ]
     },
@@ -954,7 +954,7 @@ export const CAFE_INFO = {
     },
 
     section6_text4 : {
-        description: "섹션 6 - 텍스트 3",
+        description: "섹션 6 - 텍스트 4",
         KR: "Contact : 01-111-2225",
         GB: "Eng Contact : 01-111-2225",
     },
@@ -1076,7 +1076,6 @@ export const CAFE_INFO = {
         GB: "Eng Copyrights © stayjanda.com All Rights Reserved",
     },
 
-
 }
 
-export default CAFE_INFO
+export default PUB_INFO;

@@ -12,13 +12,14 @@ const headers = {
 };
 
 const errorLink = onError(({ graphQLErrors, networkError }) => {
+
   if (graphQLErrors) {
     graphQLErrors.map(({ message, locations, path }) => {
       console.warn(
         `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`
       );
     });
-    toast.warn("알수 없는 문제가 발생했습니다. 문의 부탁드립니다.f");
+    // toast.warn("알수 없는 문제가 발생했습니다. 문의 부탁드립니다.f");
   } else if (networkError) {
     toast.warn("서버가 응답하지 않습니다.");
   }
@@ -34,7 +35,7 @@ dotenv.config({
 });
 
 const client = new ApolloClient({
-  link: from([fileUploadLink, errorLink]),
+  link: from([ errorLink,fileUploadLink]),
   cache,
 });
 

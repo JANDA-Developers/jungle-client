@@ -7,10 +7,12 @@ import sampleInfo from "./info/sampleInfo";
 import testInfo from "./info/test";
 import hotelInfo from "./info/hotel";
 import cafeInfo from "./info/cafe";
+import pubInfo from "./info/pub";
 import SampleTemplate from "../template/source/SampleTemplate";
 import TestTemplate from "../template/source/test/test";
 import HotelTemplate from "../template/source/hotel/Hotel";
 import CafeTemplate from "../template/source/cafe/Cafe";
+import PubTemplate from "../template/source/pub/Pub";
 
 import HouseManual from "./source/housemanual/HouseManual";
 import Profile from "./source/profile/Profile";
@@ -23,6 +25,7 @@ import ItsGuide from "./source/itsGuid/ItsGuide";
 export enum TemplateKey {
     "Hotel" = "Hotel",
     "Cafe" = "Cafe",
+    "Pub" = "Pub",
     "test" = "test",
     "Its" = "Its",
     "Profile" = "Profile",
@@ -42,10 +45,10 @@ export interface ITempalte {
 
 export const TEMPLATES: ITempalte[] = [
     {
-        title: "숙박",
+        title: "숙박, 호텔, 게스트하우스",
         describe: <div>
             <JDbadge mb thema="grey4">숙박업</JDbadge>
-            숙소 이용에 대한 가이드를 하고 싶을때 숙소 위치와 정보, 긴 설명보다 링크 한번으로 해결 가능
+            호텔, 게스트 하우스등 숙박관련 원페이지 생성
         </div>,
         img: "/assets/img/main_hotel.png",
         key: TemplateKey.Hotel,
@@ -53,7 +56,7 @@ export const TEMPLATES: ITempalte[] = [
         View: HotelTemplate
     },
     {
-        title: "카페",
+        title: "카페, 식당",
         describe: <div>
             <JDbadge mb thema="grey4">카페</JDbadge>
             카페 원페이지 사이트 생성
@@ -62,6 +65,17 @@ export const TEMPLATES: ITempalte[] = [
         key: TemplateKey.Cafe,
         value: cafeInfo,
         View: CafeTemplate
+    },
+    {
+        title: "펍, 바",
+        describe: <div>
+            <JDbadge mb thema="grey4">펍</JDbadge>
+            펍, 바 원페이지 사이트 생성
+        </div>,
+        img: "/assets/img/main_pub.png",
+        key: TemplateKey.Pub,
+        value: pubInfo,
+        View: PubTemplate
     },
     {
         title: "잇츠가이더",

@@ -35,7 +35,7 @@
             &__title {
                 margin-top:20px;
                 font-size:30px;
-                font-weight:100;
+                font-weight:bold;
             }
 
             &__text {
@@ -61,6 +61,7 @@
     &__title {
         position:relative;
         font-size:15px;
+        font-weight:bold;
         letter-spacing:2px;
         &:before {
             content:"";
@@ -93,7 +94,6 @@
             &__title {
                 margin-top:20px;
                 font-size:40px;
-                font-weight:100;
             }
 
             &__text {
@@ -253,7 +253,6 @@
                 &__title {
                     margin-top:40px;
                     font-size:40px;
-                    font-weight:100;
                 }
 
                 &__text {

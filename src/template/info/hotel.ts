@@ -4,10 +4,25 @@ import { SHARED_INFO2 } from "./shared"
 export const HOTEL_INFO = {
     ...SHARED_INFO2,
 
-    bookingKey: {
-        description: "잔다 솔루션 링크",
-        value: "https://storeuser.space.stayjanda.cloud/?sc=PKT0QF&sgc=L6MPRO#&mode=mini"
+    commonInfo_notice : {
+        type: JDinputType.notice,
+        description: "이미지는 1mb 이하의 이미지를 사용하여 주십시요 용량이 큰 이미지는 페이지 로딩 속도를 저하시킵니다",
     },
+
+    
+    /* :::::::::::: Solution Info :::::::::::: */
+    
+    // bookingKey_use : {
+    //     type: JDinputType.switch,
+    //     description: "잔다 솔루션 사용 여부 [ 준비중입니다 ]",
+    //     value: false
+    // },
+
+    bookingKey: {
+        description: "잔다 솔루션 링크 [ 준비중인 기능입니다 ]",
+        value: "준비중입니다"
+    },
+
 
     /* :::::::::::: Common :::::::::::: */
 
@@ -16,16 +31,20 @@ export const HOTEL_INFO = {
         description: "공통 정보",
     },
 
+    commonInfo_colour : {
+        type: JDinputType.colour,
+        description: "공통 부분 색상 설정",
+        value:"#C19B76",
+    },
+
     commonInfo_companyName : {
         description: "업체명",
-        KR: "잔다 업체명",
-        GB: "Eng 잔다 업체명"
+        value:"홈페이지명",
     },
 
     commonInfo_companyDesc : {
         description: "업체 설명",
-        KR: "홈페이지 바로가기",
-        GB: "Eng 홈페이지 바로가기"
+        value:"홈페이지 바로가기",
     },
 
     commonInfo_img : {
@@ -36,7 +55,7 @@ export const HOTEL_INFO = {
 
     commonInfo_favicon : {
         type: JDinputType.img,
-        description: "파비콘 이미지",
+        description: "파비콘 이미지 [ 일반 이미지가 아닌 파비콘 이미지로 업데이트 하셔야 합니다 ]",
         value:"/favicon.ico"
     },
 
@@ -68,6 +87,11 @@ export const HOTEL_INFO = {
         },
         KR: [
                 {
+                    img: "/assets/img/hotel/section1/living_room.jpg",
+                    text1: "편안한 침실11",
+                    text2: "저희 시설을 이용하시는 고객을 위한 최고급 침실",
+                },
+                {
                     img: "/assets/img/hotel/section1/mee00685.jpg",
                     text1: "쾌적한 환경233",
                     text2: "Janda Leisure는 쾌적한 공간을 만들기 위해 최선을 다합니다",
@@ -75,15 +99,15 @@ export const HOTEL_INFO = {
                 {
                     img: "/assets/img/hotel/section1/facility.jpg",
                     text1: "럭셔리한 공간22",
-                    text2: "당일 아침에 만드는 수제 케이크",
-                },
-                {
-                    img: "/assets/img/hotel/section1/living_room.jpg",
-                    text1: "편안한 침실11",
                     text2: "저희 시설을 이용하시는 고객을 위한 최고급 침실",
                 }
         ],
         GB: [
+                {
+                    img: "/assets/img/hotel/section1/living_room.jpg",
+                    text1: "Eng 편안한 침실",
+                    text2: "Eng 저희 시설을 이용하시는 고객을 위한 최고급 침실",
+                },
                 {
                     img: "/assets/img/hotel/section1/mee00685.jpg",
                     text1: "Eng 쾌적한 환경",
@@ -92,11 +116,6 @@ export const HOTEL_INFO = {
                 {
                     img: "/assets/img/hotel/section1/facility.jpg",
                     text1: "Eng 럭셔리한 공간",
-                    text2: "Eng 당일 아침에 만드는 수제 케이크",
-                },
-                {
-                    img: "/assets/img/hotel/section1/living_room.jpg",
-                    text1: "Eng 편안한 침실",
                     text2: "Eng 저희 시설을 이용하시는 고객을 위한 최고급 침실",
                 },
         ]
@@ -172,15 +191,10 @@ export const HOTEL_INFO = {
     
     section3_subtitle : {
         description: "섹션 3 서브 타이틀",
-        KR: "객실",
+        KR: "Best rooms",
         GB: "Rooms"
     },
 
-    section3_btnName : {
-        description: "섹션 3 버튼명",
-        KR: "예약하기",
-        GB: "Resevation"
-    },
 
     section3_room1_img : {
         type: JDinputType.img,
@@ -316,7 +330,7 @@ export const HOTEL_INFO = {
     section4_name : {
         description: "섹션 4 - 숙소명",
         KR: "LUXURY HOTEL & BEST RESORT",
-        GB: "LUXURY HOTEL & BEST RESORT"
+        GB: "Eng LUXURY HOTEL & BEST RESORT"
     },
 
     section4_btn : {
@@ -425,13 +439,13 @@ export const HOTEL_INFO = {
     section4_text1 : {
         description: "섹션 4 - 텍스트 1",
         KR: "LUXURY HOTEL & BEST RESORT",
-        GB: "LUXURY HOTEL & BEST RESORT"
+        GB: "Eng LUXURY HOTEL & BEST RESORT"
     },
 
     section4_text2 : {
         description: "섹션 4 - 텍스트 2",
         KR: "space with nature",
-        GB: "space with nature"
+        GB: "Eng space with nature"
     },
 
     section4_text3 : {
@@ -480,25 +494,25 @@ export const HOTEL_INFO = {
     section5_block1_img : {
         type: JDinputType.img,
         description: "섹션 5 - 블록1 - 이미지",
-        value: "/assets/img/hotel/section4/pc003272645.jpg",
+        value: "/assets/img/hotel/pc001010632.jpg",
     },
 
     section5_block1_text1 : {
         description: "섹션 5 - 블록1 - 텍스트 1",
         KR: "JANDA STAY",
-        GB: "JANDA STAY",
+        GB: "Eng JANDA STAY",
     },
 
     section5_block1_text2 : {
         description: "섹션 5 - 블록1 - 텍스트 2",
         KR: "럭셔리한 풀빌라",
-        GB: "럭셔리한 풀빌라",
+        GB: "Eng 럭셔리한 풀빌라",
     },
 
     section5_block1_text3 : {
         description: "섹션 5 - 블록1 - 텍스트 3",
         KR: "바다와 맞닿아 있는 풀빌라는, 외국에 있는듯한 여유로운 시간을 선사합니다. 풀 사이드에 준비된 베드에서 낮잠을 즐겨보세요.",
-        GB: "바다와 맞닿아 있는 풀빌라는, 외국에 있는듯한 여유로운 시간을 선사합니다. 풀 사이드에 준비된 베드에서 낮잠을 즐겨보세요.",
+        GB: "Eng 바다와 맞닿아 있는 풀빌라는, 외국에 있는듯한 여유로운 시간을 선사합니다. 풀 사이드에 준비된 베드에서 낮잠을 즐겨보세요.",
     },
 
     section5_block1_link : {
@@ -509,25 +523,25 @@ export const HOTEL_INFO = {
     section5_block2_img : {
         type: JDinputType.img,
         description: "섹션 5 - 블록2 - 이미지",
-        value: "/assets/img/hotel/section4/pc003272645.jpg",
+        value: "/assets/img/hotel/cm26009851.jpg",
     },
     
     section5_block2_text1 : {
         description: "섹션 5 - 블록2 - 텍스트 1",
         KR: "JANDA STAY",
-        GB: "JANDA STAY",
+        GB: "Eng JANDA STAY",
     },
     
     section5_block2_text2 : {
         description: "섹션 5 - 블록2 - 텍스트 2",
         KR: "탁 트인 전망",
-        GB: "탁 트인 전망",
+        GB: "Eng 탁 트인 전망",
     },
     
     section5_block2_text3 : {
         description: "섹션 5 - 블록2 - 텍스트 3",
         KR: "Janda Stay 최상층에는 탁 트인 전망을 볼 수 있는 라운지가 위치하고 있습니다. 바다를 내려다보며 여행지의 설렘과 여유로움을 만끽해보세요.",
-        GB: "Janda Stay 최상층에는 탁 트인 전망을 볼 수 있는 라운지가 위치하고 있습니다. 바다를 내려다보며 여행지의 설렘과 여유로움을 만끽해보세요.",
+        GB: "Eng Janda Stay 최상층에는 탁 트인 전망을 볼 수 있는 라운지가 위치하고 있습니다. 바다를 내려다보며 여행지의 설렘과 여유로움을 만끽해보세요.",
     },
     
     section5_block2_link : {
@@ -616,7 +630,7 @@ export const HOTEL_INFO = {
     footerTop_block4_icon1 : {
         type: JDinputType.img,
         description: "푸터 상단 - 아이콘 1",
-        value: "/assets/img/instagram.png",
+        value: "/assets/img/common/instagram.png",
     },
 
     footerTop_block4_icon1_link : {
@@ -633,7 +647,7 @@ export const HOTEL_INFO = {
     footerTop_block4_icon2 : {
         type: JDinputType.img,
         description: "푸터 상단 - 아이콘 2",
-        value: "/assets/img/facebook.png"
+        value: "/assets/img/common/facebook.png"
     },
 
     footerTop_block4_icon2_link : {
@@ -650,7 +664,7 @@ export const HOTEL_INFO = {
     footerTop_block4_icon3 : {
         type: JDinputType.img,
         description: "푸터 상단 - 아이콘 3",
-        value: "/assets/img/naver.png"
+        value: "/assets/img/common/naver.png"
     },
 
     footerTop_block4_icon3_link : {

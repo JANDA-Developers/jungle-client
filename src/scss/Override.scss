@@ -4,6 +4,13 @@
     justify-content: flex-start !important;
 }
 
+.ReactModal__Content {
+    overflow:auto;
+}
+
+.ReactModal__Content:hover {
+    overflow:auto !important;
+}
 
 .adminEdit {
 
@@ -51,6 +58,35 @@
             color:#ffffff;
             background:#000000;;
         }
+    }
+
+    &__notice {
+        position:relative;
+        margin:10px 0;
+        padding:15px 25px;
+        color:#000000;
+        background:#dde8fc;
+        &:before {
+            content:"";
+            position:absolute;
+            top:0; left:0;
+            width:5px; height:100%;
+            background:#2F6CE7;
+        }
+    }
+
+    &__noticeTitle {
+        margin-right:10px;
+    }
+
+    &__noticeText {
+        line-height:1.5em;
+    }
+
+    &__listLine {
+        padding:5px;
+        color:#ffffff;
+        background:black;
     }
 
     .adminEdit_btn  {

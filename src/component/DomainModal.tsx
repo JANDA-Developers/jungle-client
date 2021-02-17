@@ -14,7 +14,13 @@ interface IProp {
 }
 
 export const DomainModal: React.FC<IProp> = ({ modalHook }) => {
-    const [addDomain, { loading }] = useAddDomain()
+    const [addDomain, { loading }] = useAddDomain({
+        onError: ({message}) => {
+            if(message.includes("already exists")) {
+                toast.warn("이미 존재하는 도메인입니다, 임의의 이름으로 자동 생성되었습니다");
+            }
+        }
+    })
     const domainHook = useInput("");
     const page = modalHook.info?.page;
     const handleAddDomain = () => {
