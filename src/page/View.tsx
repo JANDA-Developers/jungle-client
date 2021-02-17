@@ -28,6 +28,9 @@ const browserLn = window.navigator.userLanguage || window.navigator.language;
 export const View: React.FC = () => {
     const { code: paramCode } = useParams<{ code?: string }>();
 
+    console.log('View Code');
+    console.log(paramCode);
+
     const code = paramCode || getFromUrl("code") || localManager.get("lastAccessCode");
 
     const ln = getFromUrl("ln") || "KR" || browserLn;

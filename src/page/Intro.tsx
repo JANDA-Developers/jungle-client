@@ -1,6 +1,6 @@
 import { JDbutton, JDexceptionPage, JDtypho } from '@janda-com/front';
 import React, { useContext } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import { APPconetxt, Paths } from '../App';
 import { Centerlize } from '../utils/authChecker';
 interface IProp { }
@@ -8,7 +8,10 @@ interface IProp { }
 export const Intro: React.FC<IProp> = () => {
     const history = useHistory();
     const { me } = useContext(APPconetxt);
+    const { code: paramCode } = useParams<{ code?: string }>();
 
+    console.log('Intro Code');
+    console.log(paramCode);
 
     const goToLogin = () => {
         me ? history.push(Paths.ADMIN) : history.push(Paths.LOGIN)
