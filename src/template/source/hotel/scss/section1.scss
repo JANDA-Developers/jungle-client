@@ -98,6 +98,7 @@
         position:absolute; z-index:10;
         top:50%; left:50%;
         transform:translate(-50%, -50%);
+        width:80%;
         color:white;
         text-align:center;
         opacity:0;
@@ -247,6 +248,7 @@
             position:absolute; z-index:10;
             top:50%; left:50%;
             transform:translate(-50%, -50%);
+            width:auto;
             text-align:center;
             .text_1 {
                 font-size:60px;

@@ -331,7 +331,7 @@ const Hotel: React.FC<IProp> = ({
                                 <span {...edit("footerTop_block3_text2")}></span>
                             </p>
                         </div>
-                        <div className="footerTop__block">
+                        <div className="footerTop__block socialBlock">
                             <div className="footerTop__text1 social">
                                 <a href={get('footerTop_block4_icon1_link')} className="footerTop__icon" target="_blink">
                                     <img src={get('footerTop_block4_icon1')}       

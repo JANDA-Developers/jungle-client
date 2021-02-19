@@ -5,15 +5,19 @@
     &__container {
         display:flex;
         flex-direction: row;
-        flex-wrap: wrap;
         margin:0 auto;
         width:100%; max-width:1200px;
+        overflow:auto;
     }
 
     &__block {
-        width:50%;
+        width:100%;
+        min-width:100%;
         padding:40px 10px; 
         text-align:center;
+        &.socialBlock {
+            order:-1;
+        }
     }
 
     &__text1 {
@@ -36,7 +40,7 @@
     &__icon {
         display:block;
         position:relative;
-        margin:0 5px;
+        margin:0 10px;
         img {
             width:25px;
         }
@@ -74,8 +78,12 @@
 
         &__block {
             width:25%;
+            min-width:0;
             padding:100px 0; 
             text-align:center;
+            &.socialBlock {
+                order:-1;
+            }
         }
 
         &__text1 {

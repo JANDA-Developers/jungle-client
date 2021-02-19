@@ -43,7 +43,7 @@ export const APP: React.FC = () => {
                     <Route path={Paths.SUPERADMIN} component={SuperAdmin} />
                     <Route exact path={Paths.VIEW} component={View} />
                     <Route exact path={Paths.INTRO} component={Intro} />
-                    <Intro />
+                    {/* ?? <Intro /> */}
                 </Switch>
             </Suspense>
         </HashRouter>

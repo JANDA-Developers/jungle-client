@@ -111,6 +111,17 @@ const Cafe: React.FC<IProp> = ({
                             spaceBetween={10}
                             slidesPerView={4}
                             speed={700}
+                            breakpoints={{
+                                300: {
+                                    slidesPerView: 1,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                                1024: {
+                                    slidesPerView: 4,
+                                }
+                            }}
                             autoplay={{
                                 delay: 5000,
                                 disableOnInteraction: false
@@ -535,7 +546,7 @@ const Cafe: React.FC<IProp> = ({
                                 <span {...edit("footerTop_block3_text2")}></span>
                             </p>
                         </div>
-                        <div className="footerTop__block">
+                        <div className="footerTop__block socialBlock">
                             <div className="footerTop__text1 social">
                                 <a href={get('footerTop_block4_icon1_link')} className="footerTop__icon" target="_blink">
                                     <img src={get('footerTop_block4_icon1')}       

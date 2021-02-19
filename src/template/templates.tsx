@@ -59,7 +59,7 @@ export const TEMPLATES: ITempalte[] = [
         title: "카페, 식당",
         describe: <div>
             <JDbadge mb thema="grey4">카페</JDbadge>
-            카페 원페이지 사이트 생성
+            카페, 식당 원페이지 사이트 생성
         </div>,
         img: "/assets/img/main_cafe.png",
         key: TemplateKey.Cafe,
