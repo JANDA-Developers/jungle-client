@@ -1,0 +1,26 @@
+
+ /* ::::::: Override ::::::: */
+
+.pageEditBtn {
+    display:none;
+}
+
+[data-edit="array"]:after {
+    width: 100%;
+    height: 15%;
+}
+
+.imgEdit {
+    z-index:50;
+    width: 40%;
+    height: 20%;   
+    white-space:nowrap;
+}
+
+@media screen and (min-width:1024px) {
+
+    .pageEditBtn {
+        display:inline-block;
+    }
+
+}

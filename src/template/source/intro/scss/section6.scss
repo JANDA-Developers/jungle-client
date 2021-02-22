@@ -1,0 +1,181 @@
+
+.section6 {
+    background:#f8f8f8;
+
+    &__inner {
+        margin:0 auto; 
+        padding:50px 0;
+        width:100%; max-width:90vw;
+    }
+
+    &__head {
+        margin:0 auto;
+        width:100%; max-width:1200px;
+        text-align: center;
+    }
+
+    &__title {
+        font-size:20px;
+        color:$color_theme1;
+    }
+
+    &__subtitle {
+        margin-top:20px;
+        font-size:30px;
+        font-weight:bold;
+        line-height:1.3;
+    }
+
+    &__desc {
+        margin-top:20px;
+        font-size:17px;
+        line-height:1.5;
+    }
+    
+    &__deco {
+        position:relative;
+        margin:30px auto 0 auto;
+        width:150px;
+        height:3px; 
+        background:$color_theme1;
+    }
+
+    &__content {
+        margin-top:50px;
+    }
+
+    &__list {
+        position:relative;
+        height:auto;
+    }
+
+    &__listimg {
+        height:250px;
+        @include bgImg;
+    }
+
+    &__listinfo {
+        position:relative;
+        padding:0 10px;
+        font-weight:bold;
+    }
+
+    &__listtitle {
+        margin-top:20px;
+        font-size:25px;
+        line-height:1.3;
+    }
+
+    &__listdesc {
+        display:inline-block;
+        margin-top:10px;
+        padding:5px 10px 3px 10px; 
+        font-size:15px;
+        color:#ffffff;
+        background:$color_theme1;
+    }
+
+}
+
+
+@media screen and (min-width:768px) {
+    
+    .section6 {
+        
+        &__title {
+            font-size:35px;
+        }
+
+    }
+    
+}
+
+
+
+@media screen and (min-width:1024px) {
+    
+    .section6 {
+        
+        &__inner {
+            margin:0 auto;
+            padding:100px 0;
+            width:100%; max-width:90vw;
+        }
+
+        &__head {
+            margin:0 auto;
+            width:100%; max-width:1200px;
+        }
+
+        &__title {
+            font-size:20px;
+        }
+
+        &__subtitle {
+            font-size:35px;
+        }
+
+        &__desc {
+            font-size:17px;
+        }
+
+        &__content {
+            margin-top:60px;
+        }
+
+        &__list {
+            position:relative;
+        }
+
+        &__listimg {
+            height:350px;
+            @include bgImg;
+        }
+
+        &__listtitle {
+            margin-top:20px;
+            font-size:25px;
+            line-height:1.3;
+        }
+    
+        &__listdesc {
+            margin-top:10px;
+            font-size:15px;
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width:1780px) {
+
+    .section6 {
+
+        &__title {
+            font-size:25px;
+        }
+    
+        &__subtitle {
+            font-size:40px;
+        }
+    
+        &__desc {
+            font-size:20px;
+        }
+
+        &__listtitle {
+            font-size:27px;
+        }
+    
+        &__listdesc {
+            font-size:17px;
+        }
+
+
+    }
+
+}
+
+
+

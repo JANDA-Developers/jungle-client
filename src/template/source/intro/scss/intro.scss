@@ -1,0 +1,62 @@
+
+@mixin bgImg {
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+@font-face { 
+    font-family: 'NEXON Lv1 Gothic'; 
+    font-weight: normal; 
+    font-style: normal; 
+    src: url('/assets/fonts/NEXONLv1GothicRegular.woff') format('woff'),
+          url('/assets/fonts/NEXONLv1GothicRegular.ttf') format('truetype');
+}
+
+$color_theme1 : rgb(37, 37, 253);
+
+html, body, #root {
+    width:100%;
+    overflow-x:visible;
+    height:auto;
+}
+
+* {
+    margin:0; 
+    box-sizing: border-box;
+}
+
+P {
+    margin:0;
+}
+
+h1,h2,h3 {
+    margin:0;
+    letter-spacing:1px;
+}
+
+
+#office1_main {
+
+    font-family: 'NEXON Lv1 Gothic', 'Noto Sans KR', sans-serif;
+    
+    /* ::::::: Common ::::::: */
+    
+    a {
+        position:relative;
+        color:inherit;
+        text-decoration: none;
+    }
+    
+    @import './override.scss';
+    @import './common.scss';
+    @import './section1.scss';
+    @import './section2.scss';
+    @import './section3.scss';
+    @import './section4.scss';
+    @import './section5.scss';
+    @import './section6.scss';
+    
+}
+
+

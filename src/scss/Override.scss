@@ -66,6 +66,29 @@
         }
     }
 
+    &__warning {
+        position:relative;
+        margin:10px 0;
+        padding:15px 25px;
+        color:#000000;
+        background:#fcdddd;
+        &:before {
+            content:"";
+            position:absolute;
+            top:0; left:0;
+            width:5px; height:100%;
+            background:#e72f2f;
+        }
+    }
+
+    &__warningTitle {
+        margin-right:10px;
+    }
+
+    &__warningText {
+        line-height:1.5em;
+    }
+
     &__notice {
         position:relative;
         margin:10px 0;
@@ -102,7 +125,6 @@
     }
 
 }
-
 
 
 @media screen and (min-width:768px) {
