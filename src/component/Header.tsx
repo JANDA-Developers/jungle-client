@@ -28,7 +28,8 @@ const Header: React.FC<IProps> = ({ children, onMenuClick, rightChilds, leftChil
             }} className="header__items">
                 <div className="header__left">
                     {onMenuClick && <JDicon size="small" hover onClick={onMenuClick} color="white" icon="menu" />}
-                    {leftChilds}
+                    {/* Original {leftChilds} */}
+                    <img src="/assets/img/common/logo.png" alt="logo" className="header__logo" />
                 </div>
                 {middleChilds && <div className="header__middle">
                     {middleChilds}

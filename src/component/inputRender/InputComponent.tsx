@@ -6,10 +6,11 @@ import JDEditor from "../editor/Editor";
 import InputColor from "src/atom/InputColor";
 
 export enum JDinputType {
+    warning = 'warning',
+    notice = 'notice',
     text = "text",
     map = "map",
     line = "line",
-    notice = 'notice',
     switch = "switch",
     colour = 'colour',
     listLine = 'listLine',
@@ -38,6 +39,13 @@ interface IInputComponentProps {
 export const InputComponent: React.FC<IInputComponentProps> = ({ onAddArray, KEY, label, type = JDinputType.text, value, onChange, onDeleteArray, arrayMeta }) => {
 
     switch (type) {
+
+        case JDinputType.warning:
+            return <div className="adminEdit__warning">
+                <strong className="adminEdit__warningTitle">Warning</strong> 
+                <span className="adminEdit__warningText">{label}</span>
+            </div>
+
         case JDinputType.notice:
             return <div className="adminEdit__notice">
                 <strong className="adminEdit__noticeTitle">Notice</strong> 

@@ -8,12 +8,13 @@ import testInfo from "./info/test";
 import hotelInfo from "./info/hotel";
 import cafeInfo from "./info/cafe";
 import pubInfo from "./info/pub";
+import introInfo from "./info/intro";
 import SampleTemplate from "../template/source/SampleTemplate";
 import TestTemplate from "../template/source/test/test";
 import HotelTemplate from "../template/source/hotel/Hotel";
 import CafeTemplate from "../template/source/cafe/Cafe";
 import PubTemplate from "../template/source/pub/Pub";
-
+import IntroTemplate from "../template/source/intro/Intro";
 import HouseManual from "./source/housemanual/HouseManual";
 import Profile from "./source/profile/Profile";
 import { TElements } from "@janda-com/front/dist/types/interface";
@@ -26,6 +27,7 @@ export enum TemplateKey {
     "Hotel" = "Hotel",
     "Cafe" = "Cafe",
     "Pub" = "Pub",
+    "Intro" = "Intro",
     "test" = "test",
     "Its" = "Its",
     "Profile" = "Profile",
@@ -76,6 +78,17 @@ export const TEMPLATES: ITempalte[] = [
         key: TemplateKey.Pub,
         value: pubInfo,
         View: PubTemplate
+    },
+    {
+        title: "일반 소개 페이지",
+        describe: <div>
+            <JDbadge mb thema="grey4">소개 페이지</JDbadge>
+            기업, 공간 대여등 소개 페이지 생성
+        </div>,
+        img: "/assets/img/main_intro.png",
+        key: TemplateKey.Intro,
+        value: introInfo,
+        View: IntroTemplate
     },
     {
         title: "잇츠가이더",

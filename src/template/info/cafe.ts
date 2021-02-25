@@ -4,12 +4,16 @@ import { SHARED_INFO2 } from "./shared"
 export const CAFE_INFO = {
     ...SHARED_INFO2,
 
+    commonInfo_warning : {
+        type: JDinputType.warning,
+        description: "기본적으로 템플릿에 설정된 이미지들은 상업용으로 사용하실 수 없습니다. 반드시 다른 이미지로 변경하여 사용하여 주십시요",
+    },
+
     commonInfo_notice : {
         type: JDinputType.notice,
         description: "이미지는 1mb 이하의 이미지를 사용하여 주십시요. 용량이 큰 이미지는 페이지 로딩 속도를 저하시킵니다",
     },
 
-    
     /* :::::::::::: Solution Info :::::::::::: */
     
     // bookingKey_use : {
