@@ -11,12 +11,15 @@ interface IArrayControllerProps extends CardProps {
     onChange: (data: any) => void;
     value: any;
     isLast: boolean;
+    META?:any
 }
 
-export const ArrayController: React.FC<IArrayControllerProps> = ({ onChange, value, onDelete, isLast }) => {
+[{},{},{}]
+export const ArrayController: React.FC<IArrayControllerProps> = ({ onChange, value, onDelete, isLast, META }) => {
+
     return <JDcard mode="border" mr={isLast ? "no" : true} mb >
-        <ObjectInputRender onChange={onChange} value={value} />
-        <JDbutton onClick={onDelete} thema="error" label="삭제하기" />
+        <ObjectInputRender META={META} onChange={onChange} value={value} />
+        <JDbutton  onClick={onDelete} thema="error" label="삭제하기" />
     </JDcard>
 }
 
@@ -36,6 +39,9 @@ export const ArrayControllerAdd: React.FC<IAddArrayControllerProps> = ({ value, 
                 const { description, type, META } = value;
 
                 if (description) {
+
+                    const metaDesc = META?.[key]?.[description]
+                    
                     return <InputComponent
                         key={key}
                         onChange={(v, index) => {
@@ -45,7 +51,8 @@ export const ArrayControllerAdd: React.FC<IAddArrayControllerProps> = ({ value, 
                                 data[key]["default"][index] = v;
                             }
                             setData({ ...data })
-                        }} arrayMeta={META} value={_value} type={type} label={description} />
+                        }}  value={_value} type={type} label={metaDesc || description} />
+                       
                 } else {
                     return <div />
                 }

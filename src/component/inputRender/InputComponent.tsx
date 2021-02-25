@@ -4,6 +4,7 @@ import { ArrayController, ArrayControllerAdd } from "../pageInputRender.tsx/Arra
 import { PhotoUpdater } from "../PhotoUpdater"
 import JDEditor from "../editor/Editor";
 import InputColor from "src/atom/InputColor";
+import { FwebPage } from "src/type/api";
 
 export enum JDinputType {
     warning = 'warning',
@@ -103,6 +104,7 @@ export const InputComponent: React.FC<IInputComponentProps> = ({ onAddArray, KEY
                             key={index + "ArrayElement" + KEY}
                             md={12} full={6} >
                             <ArrayController
+                                META={arrayMeta}
                                 isLast={isLast(index, value)}
                                 onDelete={() => { onDeleteArray?.(index) }}
                                 onChange={(data) => { onChange(data, index) }}
@@ -126,4 +128,13 @@ export const InputComponent: React.FC<IInputComponentProps> = ({ onAddArray, KEY
             </div>
         default: return <div />
     }
+}
+
+
+
+
+export const Href = (link:string,{domain,key}:FwebPage) => {
+    if(link === "/") return domain || location.href + "/#/" +key
+    //코드  // 도메인으로  변환해주는 함수 
+    return link
 }

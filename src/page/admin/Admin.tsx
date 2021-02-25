@@ -80,7 +80,8 @@ export const Admin: React.FC<IProp> = () => {
             )}
             <JDpagination pageRangeDisplayed={viewCount} marginPagesDisplayed={0}  {...paginatorHook} pageCount={pageInfo.totalPageCount} />
             <WebPageModal onCreate={(page) => {
-                domainModalHook.openModal({ page });
+                console.log('Original - domain modal hide');
+                // Original - open domain modal domainModalHook.openModal({ page });
             }} key={webPageModalHook.info?.page._id} modalHook={webPageModalHook} />
             <DomainModal key={domainModalHook.info?.page._id} modalHook={domainModalHook} />
         </JDcontainer>

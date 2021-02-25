@@ -38,7 +38,7 @@ export const INTRO_INFO = {
     commonInfo_colour : {
         type: JDinputType.colour,
         description: "공통 부분 색상 설정",
-        value:"#338f3f",
+        value:"#2525fd",
     },
 
     commonInfo_companyName : {
@@ -157,7 +157,7 @@ export const INTRO_INFO = {
         KR: [
                 {
                     img: "/assets/img/intro/yaytg109251.jpg",
-                    text1: "Best place for creative minds",
+                    text1: "창의적인 사람들을 위한 공간",
                     text2: "Creative Place for creative minds",
                     text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                 },
@@ -206,7 +206,7 @@ export const INTRO_INFO = {
 
     section2_btn_use : {
         type: JDinputType.switch,
-        description: "섹션 2 버튼 사용여부 ",
+        description: "섹션 2 버튼 사용여부 2",
         value: true
     },
 
@@ -217,7 +217,7 @@ export const INTRO_INFO = {
     },
 
     section2_array: {
-        description: "섹션1 슬라이드 리스트",
+        description: "섹션2 슬라이드 리스트",
         type: JDinputType.array,
         META: {
             img: {
@@ -225,9 +225,9 @@ export const INTRO_INFO = {
                 type: JDinputType.img,
                 default: ""
             },
-            imgPos: {
+            posx: {
                 description: "슬라이드 이미지 X축 위치",
-                default: "50"
+                default: ""
             },
             text1: {
                 description: "슬라이드 타이틀",
@@ -249,15 +249,15 @@ export const INTRO_INFO = {
         KR: [
                 {
                     img: "/assets/img/intro/yaytg109251.jpg",
-                    imgPos: "20",
+                    posx: "20",
                     text1: "OFFICE A_",
-                    text2: "Creative Place for creative minds",
+                    text2: "최고의 인재들이 공유하는 공간",
                     text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                     btnLink:"/",
                 },
                 {
                     img: "/assets/img/intro/cm08298050.jpg",
-                    imgPos: "20",
+                    posx: "20",
                     text1: "OFFICE B_",
                     text2: "Creative Place for creative minds",
                     text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -265,7 +265,7 @@ export const INTRO_INFO = {
                 },
                 {
                     img: "/assets/img/intro/pc001008766.jpg",
-                    imgPos: "20",
+                    posx: "20",
                     text1: "OFFICE C_",
                     text2: "Creative Place for creative minds",
                     text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -275,7 +275,7 @@ export const INTRO_INFO = {
         GB: [
                 {
                     img: "/assets/img/intro/yaytg109251.jpg",
-                    imgPos: "20",
+                    posx: "20",
                     text1: "OFFICE A_",
                     text2: "Creative Place for creative minds",
                     text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -283,7 +283,7 @@ export const INTRO_INFO = {
                 },
                 {
                     img: "/assets/img/intro/cm08298050.jpg",
-                    imgPos: "20",
+                    posx: "20",
                     text1: "OFFICE B_",
                     text2: "Creative Place for creative minds",
                     text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -291,7 +291,7 @@ export const INTRO_INFO = {
                 },
                 {
                     img: "/assets/img/intro/pc001008766.jpg",
-                    imgPos: "20",
+                    posx: "20",
                     text1: "OFFICE C_",
                     text2: "Creative Place for creative minds",
                     text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
@@ -316,7 +316,7 @@ export const INTRO_INFO = {
 
     section3_subtitle : {
         description: "섹션 3 - 서브 타이틀",
-        KR: "The Best Office Facilities",
+        KR: "업무를 위한 최적의 장소",
         GB: "Eng The Best Office Facilities"
     },
 
@@ -328,7 +328,7 @@ export const INTRO_INFO = {
 
     
     section3_array: {
-        description: "섹션1 슬라이드 리스트",
+        description: "섹션3 슬라이드 리스트",
         type: JDinputType.array,
         META: {
             img: {
@@ -336,7 +336,7 @@ export const INTRO_INFO = {
                 type: JDinputType.img,
                 default: ""
             },
-            imgPos: {
+            posx: {
                 description: "슬라이드 이미지 X축 위치",
                 default: "50"
             },
@@ -352,31 +352,31 @@ export const INTRO_INFO = {
         KR: [
                 {
                     img: "/assets/img/intro/yaytg109251.jpg",
-                    imgPos: "50",
+                    posx: "50",
                     title: "OFFICE A_",
                     text: "Creative Place for creative minds",
                 },
                 {
                     img: "/assets/img/intro/cm08298050.jpg",
-                    imgPos: "50",
+                    posx: "50",
                     title: "OFFICE B_",
                     text: "Creative Place for creative minds",
                 },
                 {
                     img: "/assets/img/intro/pc001008766.jpg",
-                    imgPos: "50",
+                    posx: "50",
                     title: "OFFICE C_",
                     text: "Creative Place for creative minds",
                 },
                 {
                     img: "/assets/img/intro/cm08298050.jpg",
-                    imgPos: "50",
+                    posx: "50",
                     title: "OFFICE A_",
                     text: "Creative Place for creative minds",
                 },
                 {
                     img: "/assets/img/intro/pc001008766.jpg",
-                    imgPos: "50",
+                    posx: "50",
                     title: "OFFICE B_",
                     text: "Creative Place for creative minds",
                 },
@@ -384,31 +384,31 @@ export const INTRO_INFO = {
         GB: [
                 {
                     img: "/assets/img/intro/yaytg109251.jpg",
-                    imgPos: "50",
+                    posx: "50",
                     title: "Eng OFFICE A_",
                     text: "Creative Place for creative minds",
                 },
                 {
                     img: "/assets/img/intro/cm08298050.jpg",
-                    imgPos: "50",
+                    posx: "50",
                     title: "Eng OFFICE B_",
                     text: "Creative Place for creative minds",
                 },
                 {
                     img: "/assets/img/intro/pc001008766.jpg",
-                    imgPos: "50",
+                    posx: "50",
                     title: "Eng OFFICE C_",
                     text: "Creative Place for creative minds",
                 },
                 {
                     img: "/assets/img/intro/cm08298050.jpg",
-                    imgPos: "50",
+                    posx: "50",
                     title: "Eng OFFICE A_",
                     text: "Creative Place for creative minds",
                 },
                 {
                     img: "/assets/img/intro/pc001008766.jpg",
-                    imgPos: "50",
+                    posx: "50",
                     title: "Eng OFFICE B_",
                     text: "Creative Place for creative minds",
                 },
@@ -430,7 +430,7 @@ export const INTRO_INFO = {
         value: "/assets/img/intro/cm08423293.jpg",
     },
 
-    section4_imgPos : {
+    section4_posx : {
         description: "섹션 4 이미지 X 축",
         value: "50",
     },
@@ -443,7 +443,7 @@ export const INTRO_INFO = {
 
     section4_subtitle : {
         description: "섹션 4 - 서브 타이틀",
-        KR: "The best Office Environment for creative minds",
+        KR: "창의적인 사람들이 몰려오는 곳",
         GB: "ENG The best Office Environment for creative minds"
     },
 
@@ -486,14 +486,14 @@ export const INTRO_INFO = {
 
     section5_title : {
         description: "섹션 5 - 타이틀",
-        KR: "Janda Office",
-        GB: "Eng Janda Cafe"
+        KR: "Janda Shared Office",
+        GB: "Eng Janda OFFICE"
     },
    
     section5_subtitle : {
         description: "섹션 5 - 서브 타이틀",
-        KR: "메뉴 안내",
-        GB: "Eng 메뉴 안내"
+        KR: "Lorem Ipsum is simply dummy text of the printing and typesetting industry",
+        GB: "Eng Lorem Ipsum is simply dummy text of the printing and typesetting industry"
     },
 
     section5_btnText : {
@@ -524,7 +524,7 @@ export const INTRO_INFO = {
 
     section6_subtitle : {
         description: "섹션 6 - 서브 타이틀",
-        KR: "Meet our team.",
+        KR: "팀원 구성",
         GB: "Eng Meet our team.",
     },
 
@@ -536,7 +536,7 @@ export const INTRO_INFO = {
 
     
     section6_array: {
-        description: "섹션1 슬라이드 리스트",
+        description: "섹션6 슬라이드 리스트",
         type: JDinputType.array,
         META: {
             img: {

@@ -39,18 +39,18 @@ export const DomainModal: React.FC<IProp> = ({ modalHook }) => {
 
     return <JDmodal loading={loading} head={{
         element: <div>
-            <JDtypho size="h6">페이지 생성 완료{/*도메인설정하기*/}</JDtypho>
-            {/* <Small>주소창에 표시될 값을 지정하세요. (생략해도 좋습니다.)</Small> */}
+            <JDtypho size="h6">도메인설정하기</JDtypho>
+            <Small>주소창에 표시될 값을 지정하세요. (생략해도 좋습니다.)</Small>
         </div>
     }} {...modalHook} >
         <div>
-            {/* <JDswitch tooltip="유료도메인은 서비스 개발중 입니다." mb="large" checked={false} ltxt="무료도메인" rtxt="유료도메인" /> */}
-            {/* <Flex vCenter>
+             {/* <JDswitch tooltip="유료도메인은 서비스 개발중 입니다." mb="large" checked={false} ltxt="무료도메인" rtxt="유료도메인" /> */}
+            <Flex vCenter>
                 <InputText mb="small" {...domainHook} Size="big" placeholder="도메인을 입력해주세요." />
                 <JDtypho mb="small" size="h6">.stayjanda.cloud</JDtypho>
             </Flex>
-            <Tiny mb="large" color="warn">뛰워쓰기 특수문자 금지 영문만 입력</Tiny> */}
-            {/* <JDbutton onClick={handleAddDomain} mode="flat" thema="primary" size="long" label="완료" /> */}
+            <Tiny mb="large" color="warn">뛰워쓰기 특수문자 금지 영문만 입력</Tiny>
+            <JDbutton onClick={handleAddDomain} mode="flat" thema="primary" size="long" label="완료" />
         </div>
     </JDmodal>;
 };

@@ -172,7 +172,7 @@ const Intro: React.FC<IProp> = ({
                                         <div className="section2__imgWrap">
                                             <div className="section2__img bbaa" 
                                             style={{backgroundImage: `url(${item.img})`, 
-                                                    backgroundPosition: `${item.imgPos}% 50%`}}>
+                                                    backgroundPosition: `${item.posx}% 50%`}}>
                                             </div>
                                             <div className="section2__imgDeco" />
                                         </div>
@@ -224,7 +224,7 @@ const Intro: React.FC<IProp> = ({
                                         <div className="section3__list">
                                             <div className="section3__listimg" 
                                                  style={{backgroundImage: `url(${item.img})`, 
-                                                        backgroundPosition: `${item.imgPos}% 50%`}} />
+                                                        backgroundPosition: `${item.posx}% 50%`}} />
                                             <div className="section3__listfilter" />
                                             <div className="section3__listinfo">
                                                 <p className="section3__listtitle">
@@ -248,7 +248,7 @@ const Intro: React.FC<IProp> = ({
                     <div className="section4__listWrap">
                         <div className="section4__imgWrap">
                             <BG className="section4__img" {...imgKit("section4_img")} 
-                                posx={`${get("section4_imgPos")}`} > 
+                                posx={`${get("section4_posx")}`} > 
                             </BG>
                             <div className="section4__imgDeco" />
                         </div>

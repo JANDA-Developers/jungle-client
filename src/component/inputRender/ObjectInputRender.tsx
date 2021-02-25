@@ -22,7 +22,6 @@ export const ObjectInputRender: React.FC<IObjectInputRender> = ({ value, onChang
         let type: JDinputType = JDinputType.text;
         let label: string = key
 
-
         if (key.includes("img")) {
             type = JDinputType.img
         }
@@ -31,13 +30,11 @@ export const ObjectInputRender: React.FC<IObjectInputRender> = ({ value, onChang
             onChange(value);
         }
 
-
         if (META) {
             if (!META[key]) throw Error(`META 오브젝트에 ${key} 값은 존재하지 않습니다`)
             type = META[key].type || JDinputType.text
             label = META[key].description
         }
-
 
         return <InputComponent key={key + "ObjectInputRender"} onChange={handleOnChnage} value={_value} type={type} label={label} />
     })}
