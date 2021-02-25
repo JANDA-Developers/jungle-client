@@ -39,7 +39,7 @@ export const DomainModal: React.FC<IProp> = ({ modalHook }) => {
 
     return <JDmodal loading={loading} head={{
         element: <div>
-            <JDtypho size="h6">도메인설정하기</JDtypho>
+            <JDtypho size="h6">도메인설정완료</JDtypho>
             {/* <Small>주소창에 표시될 값을 지정하세요. (생략해도 좋습니다.)</Small> */}
         </div>
     }} {...modalHook} >
@@ -50,7 +50,7 @@ export const DomainModal: React.FC<IProp> = ({ modalHook }) => {
                 <JDtypho mb="small" size="h6">.stayjanda.cloud</JDtypho>
             </Flex>
             <Tiny mb="large" color="warn">뛰워쓰기 특수문자 금지 영문만 입력</Tiny> */}
-            <JDbutton onClick={handleAddDomain} mode="flat" thema="primary" size="long" label="완료" />
+            {/* <JDbutton onClick={handleAddDomain} mode="flat" thema="primary" size="long" label="완료" /> */}
         </div>
     </JDmodal>;
 };

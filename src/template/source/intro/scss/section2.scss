@@ -1,10 +1,9 @@
 
 
 .section2 {
-
+    margin-top:50px;
     &__inner {
-        margin:0 auto;
-        padding:50px 0;
+        margin:0px auto;
         width:100%; max-width:1200px;
     }
 
@@ -84,10 +83,6 @@
 
     .section2 {
 
-        &__inner {
-            padding:100px 0;
-        }
-
         &__title {
             font-size:25px;
         }
@@ -117,14 +112,10 @@
 @media screen and (min-width:1024px) {
 
     .section2 {
+        margin-top:100px;
 
         &__inner {
             margin:0 auto;
-            padding:0;
-        }
-
-        &__slide {
-            padding:100px 0;
         }
 
         &__listWrap {

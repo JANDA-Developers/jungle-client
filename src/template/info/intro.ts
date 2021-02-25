@@ -1,7 +1,7 @@
 import { JDinputType } from "src/component/inputRender/InputComponent"
 import { SHARED_INFO2 } from "./shared"
 
-export const CAFE_INFO = {
+export const INTRO_INFO = {
     ...SHARED_INFO2,
 
     commonInfo_warning : {
@@ -63,6 +63,68 @@ export const CAFE_INFO = {
         value:"/favicon.ico"
     },
 
+
+    /* :::::::::::: Header :::::::::::: */
+
+    header_logo : {
+        description: "헤더 로고 이미지",
+        type: JDinputType.img,
+        value: "/assets/img/intro/logo.png",
+    },
+
+    header_logo_text1 : {
+        description: "헤더 로고 텍스트 1",
+        KR: "Janda Space",
+        GB: "Eng Janda Space"
+    },
+
+    header_logo_text2 : {
+        description: "헤더 로고 텍스트 2",
+        KR: "THE BEST SHARED OFFFICE SPACE",
+        GB: "Eng THE BEST SHARED OFFFICE SPACE"
+    },
+
+    header_contact : {
+        description: "헤더 컨텍트",
+        KR: "Contact US : 000-1111-2222",
+        GB: "Eng Contact US : 000-1111-2222"
+    },
+
+    social_1_img : {
+        description: "소셜 미디어 1 이미지",
+        type: JDinputType.img,
+        value: "/assets/img/intro/facebook.png",
+    },
+
+    social_1_link : {
+        description: "소셜 미디어 1 링크",
+        value:"/",
+    },
+
+    social_2_img : {
+        description: "소셜 미디어 2 이미지",
+        type: JDinputType.img,
+        value: "/assets/img/intro/instagram.png",
+    },
+    
+    social_2_link : {
+        description: "/",
+        value:"/",
+    },
+
+    social_3_img : {
+        description: "소셜 미디어 3 이미지",
+        type: JDinputType.img,
+        value: "/assets/img/intro/naver.png",
+    },
+
+    social_3_link : {
+        description: "소셜 미디어 3 링크",
+        value:"/",
+    },
+
+
+
     /* :::::::::::: Section 1 :::::::::::: */
 
     section1_startline : {
@@ -84,43 +146,53 @@ export const CAFE_INFO = {
                 default: ""
             },
             text2: {
-                description: "슬라이드 내용",
+                description: "슬라이드 내용1",
+                default: ""
+            },
+            text3: {
+                description: "슬라이드 내용2",
                 default: ""
             }
         },
         KR: [
                 {
-                    img: "/assets/img/cafe/pc002276763.jpg",
-                    text1: "커피 한잔의 여유",
-                    text2: "Janda Coffee에서 특별한 사람과 함께 하세요",
+                    img: "/assets/img/intro/yaytg109251.jpg",
+                    text1: "Best place for creative minds",
+                    text2: "Creative Place for creative minds",
+                    text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                 },
                 {
-                    img: "/assets/img/cafe/wmtg110415.jpg",
-                    text1: "향과 맛에 대한 자부심",
-                    text2: "좋은 원두에서 나오는 깊은 맛",
+                    img: "/assets/img/intro/cm08298050.jpg",
+                    text1: "Meet Creatove People",
+                    text2: "Creative Place for creative minds",
+                    text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                 },
                 {
-                    img: "/assets/img/cafe/wmtg011290.jpg",
-                    text1: "부드러운 케이크",
-                    text2: "당일 아침에 만드는 수제 케이크",
+                    img: "/assets/img/intro/pc001008766.jpg",
+                    text1: "The best shared place",
+                    text2: "Creative Place for creative minds",
+                    text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                 }
         ],
         GB: [
                 {
-                    img: "/assets/img/cafe/pc002276763.jpg",
-                    text1: "Eng 커피 한잔의 여유",
-                    text2: "Eng Janda Coffee에서 특별한 사람과 함께 하세요",
+                    img: "/assets/img/intro/yaytg109251.jpg",
+                    text1: "Best place for creative minds",
+                    text2: "Creative Place for creative minds",
+                    text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                 },
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    text1: "Eng 향과 맛에 대한 자부심",
-                    text2: "Eng 좋은 원두에서 나오는 깊은 맛",
+                    img: "/assets/img/intro/cm08298050.jpg",
+                    text1: "Meet Creatove People",
+                    text2: "Creative Place for creative minds",
+                    text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
                 },
                 {
-                    img: "/assets/img/cafe/wmtg011290.jpg",
-                    text1: "부드러운 케이크",
-                    text2: "당일 아침에 만드는 수제 케이크",
-                },
+                    img: "/assets/img/intro/pc001008766.jpg",
+                    text1: "The best shared place",
+                    text2: "Creative Place for creative minds",
+                    text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                }
         ]
     },
 
@@ -132,89 +204,99 @@ export const CAFE_INFO = {
         description: "섹션 2",
     },
 
-    section2_text1 : {
-        description: "섹션 2 - 타이틀",
-        KR: "Cafe JANDA",
-        GB: "Eng Cafe JANDA"
+    section2_btn_use : {
+        type: JDinputType.switch,
+        description: "섹션 2 버튼 사용여부 ",
+        value: true
     },
 
-    section2_text2 : {
-        description: "섹션 2 - 서브 타이틀",
-        KR: "베스트 메뉴",
-        GB: "Eng 베스트 메뉴"
+    section2_btn_text : {
+        description: "섹션 2 - 버튼 텍스트",
+        KR: "Reservation",
+        GB: "Eng Reservation"
     },
 
     section2_array: {
-        description: "Section 2 메뉴 리스트",
+        description: "섹션1 슬라이드 리스트",
         type: JDinputType.array,
         META: {
             img: {
-                description: "메뉴 이미지",
+                description: "슬라이드 이미지",
                 type: JDinputType.img,
                 default: ""
             },
-            name: {
-                description: "메뉴 이름",
+            imgPos: {
+                description: "슬라이드 이미지 X축 위치",
+                default: "50"
+            },
+            text1: {
+                description: "슬라이드 타이틀",
                 default: ""
             },
-            desc: {
-                description: "매뉴 설명 설명",
+            text2: {
+                description: "슬라이드 내용1",
+                default: ""
+            },
+            text3: {
+                description: "슬라이드 내용2",
+                default: ""
+            },
+            btnLink: {
+                description: "버튼 링크",
                 default: ""
             }
         },
         KR: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/intro/yaytg109251.jpg",
+                    imgPos: "20",
+                    text1: "OFFICE A_",
+                    text2: "Creative Place for creative minds",
+                    text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    btnLink:"/",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
+                    img: "/assets/img/intro/cm08298050.jpg",
+                    imgPos: "20",
+                    text1: "OFFICE B_",
+                    text2: "Creative Place for creative minds",
+                    text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    btnLink:"/",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                },
-                {
-                    img: "/assets/img/cafe/ti325055150.png",
-                    name: "모카라떼",
-                    desc: "모카시럽과 밀크스팁의 부드러움",
-                },
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "바닐라 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
-                },
+                    img: "/assets/img/intro/pc001008766.jpg",
+                    imgPos: "20",
+                    text1: "OFFICE C_",
+                    text2: "Creative Place for creative minds",
+                    text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    btnLink:"/",
+                }
         ],
         GB: [
                 {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
+                    img: "/assets/img/intro/yaytg109251.jpg",
+                    imgPos: "20",
+                    text1: "OFFICE A_",
+                    text2: "Creative Place for creative minds",
+                    text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    btnLink:"/",
                 },
                 {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
+                    img: "/assets/img/intro/cm08298050.jpg",
+                    imgPos: "20",
+                    text1: "OFFICE B_",
+                    text2: "Creative Place for creative minds",
+                    text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    btnLink:"/",
                 },
                 {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                },
-                {
-                    img: "/assets/img/cafe/ti325055150.png",
-                    name: "Eng 모카라떼",
-                    desc: "Eng 모카시럽과 밀크스팁의 부드러움",
-                },
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 바닐라 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
-                },
+                    img: "/assets/img/intro/pc001008766.jpg",
+                    imgPos: "20",
+                    text1: "OFFICE C_",
+                    text2: "Creative Place for creative minds",
+                    text3: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    btnLink:"/",
+                }
         ]
     },
 
@@ -226,29 +308,113 @@ export const CAFE_INFO = {
         description: "섹션 3",
     },
 
-    section3_img : {
-        description: "섹션 3 - 배경 이미지",
-        type: JDinputType.img,
-        value: "/assets/img/cafe/yaytg586946.jpg",
-    },
-
     section3_title : {
         description: "섹션 3 - 타이틀",
-        KR: "품질 높은 커피를 만나보세요 당신의 커피",
-        GB: "Eng 품질 높은 커피를 만나보세요 당신의 커피"
+        KR: "JANDA OFFICE",
+        GB: "Eng JANDA OFFICE"
+    },
+
+    section3_subtitle : {
+        description: "섹션 3 - 서브 타이틀",
+        KR: "The Best Office Facilities",
+        GB: "Eng The Best Office Facilities"
     },
 
     section3_desc : {
         description: "섹션 3 - 내용",
-        KR: "산미가 느껴지는 시나몬 로스트, 균형 잡힌 미디움 로스트, 강한 풍미와 중후한 맛의 풀시티 로스트로 분류되는 다양한 로스트 스펙트럼으로 여러분의 커피를 찾아보세요.",
-        GB: "Eng 산미가 느껴지는 시나몬 로스트, 균형 잡힌 미디움 로스트, 강한 풍미와 중후한 맛의 풀시티 로스트로 분류되는 다양한 로스트 스펙트럼으로 여러분의 커피를 찾아보세요."
+        KR: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown",
+        GB: "Eng Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown"
     },
 
-    section3_btnText : {
-        description: "섹션 3 - 버튼 텍스트",
-        KR: "준비중입니다",
-        GB: "eng 준비중입니다"
+    
+    section3_array: {
+        description: "섹션1 슬라이드 리스트",
+        type: JDinputType.array,
+        META: {
+            img: {
+                description: "슬라이드 이미지",
+                type: JDinputType.img,
+                default: ""
+            },
+            imgPos: {
+                description: "슬라이드 이미지 X축 위치",
+                default: "50"
+            },
+            title: {
+                description: "슬라이드 타이틀",
+                default: ""
+            },
+            text: {
+                description: "슬라이드 내용",
+                default: ""
+            }
+        },
+        KR: [
+                {
+                    img: "/assets/img/intro/yaytg109251.jpg",
+                    imgPos: "50",
+                    title: "OFFICE A_",
+                    text: "Creative Place for creative minds",
+                },
+                {
+                    img: "/assets/img/intro/cm08298050.jpg",
+                    imgPos: "50",
+                    title: "OFFICE B_",
+                    text: "Creative Place for creative minds",
+                },
+                {
+                    img: "/assets/img/intro/pc001008766.jpg",
+                    imgPos: "50",
+                    title: "OFFICE C_",
+                    text: "Creative Place for creative minds",
+                },
+                {
+                    img: "/assets/img/intro/cm08298050.jpg",
+                    imgPos: "50",
+                    title: "OFFICE A_",
+                    text: "Creative Place for creative minds",
+                },
+                {
+                    img: "/assets/img/intro/pc001008766.jpg",
+                    imgPos: "50",
+                    title: "OFFICE B_",
+                    text: "Creative Place for creative minds",
+                },
+        ],
+        GB: [
+                {
+                    img: "/assets/img/intro/yaytg109251.jpg",
+                    imgPos: "50",
+                    title: "Eng OFFICE A_",
+                    text: "Creative Place for creative minds",
+                },
+                {
+                    img: "/assets/img/intro/cm08298050.jpg",
+                    imgPos: "50",
+                    title: "Eng OFFICE B_",
+                    text: "Creative Place for creative minds",
+                },
+                {
+                    img: "/assets/img/intro/pc001008766.jpg",
+                    imgPos: "50",
+                    title: "Eng OFFICE C_",
+                    text: "Creative Place for creative minds",
+                },
+                {
+                    img: "/assets/img/intro/cm08298050.jpg",
+                    imgPos: "50",
+                    title: "Eng OFFICE A_",
+                    text: "Creative Place for creative minds",
+                },
+                {
+                    img: "/assets/img/intro/pc001008766.jpg",
+                    imgPos: "50",
+                    title: "Eng OFFICE B_",
+                    text: "Creative Place for creative minds",
+                },
+        ]
     },
+
 
 
     /* :::::::::::: Section 4 :::::::::::: */
@@ -258,78 +424,46 @@ export const CAFE_INFO = {
         description: "섹션 4",
     },
 
+    section4_img : {
+        description: "섹션 4 이미지",
+        type: JDinputType.img,
+        value: "/assets/img/intro/cm08423293.jpg",
+    },
+
+    section4_imgPos : {
+        description: "섹션 4 이미지 X 축",
+        value: "50",
+    },
+
     section4_title : {
         description: "섹션 4 - 타이틀",
-        KR: "Janda Cafe",
-        GB: "Eng Janda Cafe"
+        KR: "JANDA OFFICE",
+        GB: "Eng JANDA OFFICE"
     },
 
     section4_subtitle : {
         description: "섹션 4 - 서브 타이틀",
-        KR: "잔다 커피 특징",
-        GB: "Eng 잔다 커피 특징"
+        KR: "The best Office Environment for creative minds",
+        GB: "ENG The best Office Environment for creative minds"
     },
 
     section4_desc : {
         description: "섹션 4 - 섹션 설명",
-        KR: "카페 잔다는 커피를 사랑하는 여러분에게 항상 더 좋은 커피를 내려드릴 수 있도록 끊임없는 연구를 하고 있습니다.",
-        GB: "Eng 카페 잔다는 커피를 사랑하는 여러분에게 항상 더 좋은 커피를 내려드릴 수 있도록 끊임없는 연구를 하고 있습니다."
+        KR: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown",
+        GB: "Eng Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown"
     },
 
-    section4_list1_img : {
-        type: JDinputType.img,
-        description: "섹션 4 - 리스트 1 이미지",
-        value: "/assets/img/cafe/wmtg110415.jpg",
+    section4_btnText : {
+        description: "섹션 4 - 버튼 텍스트",
+        KR: "Reservation",
+        GB: "ENG Reservation"
     },
 
-    section4_list1_title : {
-        description: "섹션 4 - 리스트 1 타이틀",
-        KR: "최고급 원두를 사용합니다",
-        GB: "Eng 최고급 원두를 사용합니다 "
+    section4_btnLink : {
+        description: "섹션 4 - 버튼 링크",
+        value:"/"
     },
 
-    section4_list1_desc : {
-        description: "섹션 4 - 리스트 1 설명",
-        KR: "최고급 원두를 사용하여 깊은 맛의 커피를 즐길 수 있습니다",
-        GB: "Eng 최고급 원두를 사용하여 깊은 맛의 커피를 즐길 수 있습니다"
-    },
-
-    section4_list2_img : {
-        type: JDinputType.img,
-        description: "섹션 4 - 리스트 2 이미지",
-        value: "/assets/img/cafe/cb114000054.jpg",
-    },
-
-    section4_list2_title : {
-        description: "섹션 4 - 리스트 2 타이틀",
-        KR: "크로와상과 아보카도의 조합",
-        GB: "Eng 크로와상과 아보카도의 조합"
-    },
-
-    section4_list2_desc : {
-        description: "섹션 4 - 리스트 2 설명",
-        KR: "크로와상과 아보카도의 만남 일요일의 스페셜 메뉴 입니다.",
-        GB: "Eng 크로와상과 아보카도의 만남 일요일의 스페셜 메뉴 입니다."
-    },
-
-    section4_list3_img : {
-        type: JDinputType.img,
-        description: "섹션 4 - 리스트 3 이미지",
-        value: "/assets/img/cafe/ti302a17009.jpg",
-    },
-
-    section4_list3_title : {
-        description: "섹션 4 - 리스트 3 타이틀",
-        KR: "제주녹차의 싱그러움",
-        GB: "Eng 제주녹차의 싱그러움 "
-    },
-
-    section4_list3_desc : {
-        description: "섹션 4 - 리스트 3 설명",
-        KR: "제주녹차의 싱그러움 그대로 가져와 구현하였습니다",
-        GB: "Eng 제주녹차의 싱그러움 그대로 가져와 구현하였습니다"
-    },
-  
 
     /* :::::::::::: Section 5 :::::::::::: */
 
@@ -344,9 +478,15 @@ export const CAFE_INFO = {
         value: true
     },
 
+    section5_img : {
+        description: "섹션 5 이미지",
+        type: JDinputType.img,
+        value: "/assets/img/intro/cm08423293.jpg",
+    },
+
     section5_title : {
         description: "섹션 5 - 타이틀",
-        KR: "Janda Cafe",
+        KR: "Janda Office",
         GB: "Eng Janda Cafe"
     },
    
@@ -356,708 +496,110 @@ export const CAFE_INFO = {
         GB: "Eng 메뉴 안내"
     },
 
-    section5_menu_tab1 : {
-        description: "섹션 5 - 메뉴 탭 1",
-        KR: "메뉴 1",
-        GB: "Eng 메뉴 1"
+    section5_btnText : {
+        description: "섹션 5 - 버튼 텍스트",
+        KR: "Reservation",
+        GB: "ENG Reservation"
     },
 
-    section5_menu_tab2_use : {
-        type: JDinputType.switch,
-        description: "메뉴 2 사용여부 ",
-        value: true
-    },
-
-    section5_menu_tab2 : {
-        description: "섹션 5 - 메뉴 탭 2",
-        KR: "메뉴 2",
-        GB: "Eng 메뉴 2"
-    },
-
-    section5_menu_tab3_use : {
-        type: JDinputType.switch,
-        description: "메뉴 3 사용여부 ",
-        value: true
-    },
-
-    section5_menu_tab3 : {
-        description: "섹션 5 - 메뉴 탭 3",
-        KR: "메뉴 3",
-        GB: "Eng 메뉴 3"
-    },
-
-    section5_menu_tab4_use : {
-        type: JDinputType.switch,
-        description: "메뉴 4 사용여부 ",
-        value: false
-    },
-
-    section5_menu_tab4 : {
-        description: "섹션 5 - 메뉴 탭 4",
-        KR: "메뉴 4",
-        GB: "Eng 메뉴 4"
-    },
-
-    section5_menu_tab5_use : {
-        type: JDinputType.switch,
-        description: "메뉴 5 사용여부 ",
-        value: false
-    },
-
-    section5_menu_tab5 : {
-        description: "섹션 5 - 메뉴 탭 5",
-        KR: "메뉴 5",
-        GB: "Eng 메뉴 5"
-    },
-
-    section5_menu_tab6_use : {
-        type: JDinputType.switch,
-        description: "메뉴 6 사용여부 ",
-        value: false
-    },
-
-
-    section5_menu_tab6 : {
-        description: "섹션 5 - 메뉴 탭 6",
-        KR: "메뉴 6",
-        GB: "Eng 메뉴 6"
-    },
-
-    section5_menu_tab7_use : {
-        type: JDinputType.switch,
-        description: "메뉴 7 사용여부 ",
-        value: false
-    },
-
-    section5_menu_tab7 : {
-        description: "섹션 5 - 메뉴 탭 7",
-        KR: "메뉴 7",
-        GB: "Eng 메뉴 7"
-    },
-
-    section5_listline_menu1 : {
-        type: JDinputType.listLine,
-        description: "메뉴 리스트",
-    },
-
-    section5_menu1_array: {
-        description: "Section 5 메뉴 리스트 1" ,
-        type: JDinputType.array,
-        META: {
-            img: {
-                description: "메뉴 이미지",
-                type: JDinputType.img,
-                default: ""
-            },
-            name: {
-                description: "메뉴 이름",
-                default: ""
-            },
-            desc: {
-                description: "매뉴 설명 설명",
-                default: ""
-            },
-            price: {
-                description: "매뉴 가격",
-                default: ""
-            }
-        },
-        KR: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ],
-        GB: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ]
-    },
-
-
-    section5_listline_menu2 : {
-        type: JDinputType.listLine,
-        description: "메뉴 리스트",
-    },
-
-    section5_menu2_array: {
-        description: "Section 5 메뉴 리스트 2",
-        type: JDinputType.array,
-        META: {
-            img: {
-                description: "메뉴 이미지",
-                type: JDinputType.img,
-                default: ""
-            },
-            name: {
-                description: "메뉴 이름",
-                default: ""
-            },
-            desc: {
-                description: "매뉴 설명 설명",
-                default: ""
-            },
-            price: {
-                description: "매뉴 가격",
-                default: ""
-            }
-        },
-        KR: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ],
-        GB: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ]
-    },
-
-    section5_listline_menu3 : {
-        type: JDinputType.listLine,
-        description: "메뉴 리스트",
-    },
-
-    section5_menu3_array: {
-        description: "Section 5 메뉴 리스트 3",
-        type: JDinputType.array,
-        META: {
-            img: {
-                description: "메뉴 이미지",
-                type: JDinputType.img,
-                default: ""
-            },
-            name: {
-                description: "메뉴 이름",
-                default: ""
-            },
-            desc: {
-                description: "매뉴 설명 설명",
-                default: ""
-            },
-            price: {
-                description: "매뉴 가격",
-                default: ""
-            }
-        },
-        KR: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ],
-        GB: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ]
-    },
-
-    section5_listline_menu4 : {
-        type: JDinputType.listLine,
-        description: "메뉴 리스트",
-    },
-
-    section5_menu4_array: {
-        description: "Section 5 메뉴 리스트 4",
-        type: JDinputType.array,
-        META: {
-            img: {
-                description: "메뉴 이미지",
-                type: JDinputType.img,
-                default: ""
-            },
-            name: {
-                description: "메뉴 이름",
-                default: ""
-            },
-            desc: {
-                description: "매뉴 설명 설명",
-                default: ""
-            },
-            price: {
-                description: "매뉴 가격",
-                default: ""
-            }
-        },
-        KR: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ],
-        GB: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ]
-    },
-
-    section5_listline_menu5 : {
-        type: JDinputType.listLine,
-        description: "메뉴 리스트",
-    },
-
-    section5_menu5_array: {
-        description: "Section 5 메뉴 리스트 5",
-        type: JDinputType.array,
-        META: {
-            img: {
-                description: "메뉴 이미지",
-                type: JDinputType.img,
-                default: ""
-            },
-            name: {
-                description: "메뉴 이름",
-                default: ""
-            },
-            desc: {
-                description: "매뉴 설명 설명",
-                default: ""
-            },
-            price: {
-                description: "매뉴 가격",
-                default: ""
-            }
-        },
-        KR: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ],
-        GB: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ]
-    },
-
-    section5_listline_menu6 : {
-        type: JDinputType.listLine,
-        description: "메뉴 리스트",
-    },
-
-    section5_menu6_array: {
-        description: "Section 5 메뉴 리스트 6",
-        type: JDinputType.array,
-        META: {
-            img: {
-                description: "메뉴 이미지",
-                type: JDinputType.img,
-                default: ""
-            },
-            name: {
-                description: "메뉴 이름",
-                default: ""
-            },
-            desc: {
-                description: "매뉴 설명 설명",
-                default: ""
-            },
-            price: {
-                description: "매뉴 가격",
-                default: ""
-            }
-        },
-        KR: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ],
-        GB: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ]
-    },
-
-    section5_listline_menu7 : {
-        type: JDinputType.listLine,
-        description: "메뉴 리스트",
-    },
-
-    section5_menu7_array: {
-        description: "Section 5 메뉴 리스트 7",
-        type: JDinputType.array,
-        META: {
-            img: {
-                description: "메뉴 이미지",
-                type: JDinputType.img,
-                default: ""
-            },
-            name: {
-                description: "메뉴 이름",
-                default: ""
-            },
-            desc: {
-                description: "매뉴 설명 설명",
-                default: ""
-            },
-            price: {
-                description: "매뉴 가격",
-                default: ""
-            }
-        },
-        KR: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "카페 라떼",
-                    desc: "에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "그린티 라떼",
-                    desc: "깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "크로와상",
-                    desc: "고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ],
-        GB: [
-                {
-                    img: "/assets/img/cafe/cb036008565.png",
-                    name: "Eng 카페 라떼",
-                    desc: "Eng 에스프레소와 따뜻한 우유의 조합",
-                    price: "7000원",
-                },
-                {
-                    img: "/assets/img/cafe/cb036188916.png",
-                    name: "Eng 그린티 라떼",
-                    desc: "Eng 깊고 진한 녹차 맛",
-                    price: "9000원",
-                },
-                {
-                    img: "/assets/img/cafe/ti325059808.png",
-                    name: "Eng 크로와상",
-                    desc: "Eng 고소한 풍미가 살아있는 크로와상",
-                    price: "8000원",
-                },
-        ]
+    section5_btnLink : {
+        description: "섹션 5 - 버튼 링크",
+        value:"/"
     },
 
 
     /* :::::::::::: Section 6 :::::::::::: */
+
 
     section6_startline : {
         type: JDinputType.line,
         description: "섹션 6",
     },
 
-    section6_img : {
-        type: JDinputType.img,
-        description: "섹션 6 - 배경 이미지",
-        value:"/assets/img/cafe/pc002276763.jpg"
-    },
-
     section6_title : {
         description: "섹션 6 - 타이틀",
-        KR: "영업시간",
-        GB: "Eng 영업시간",
+        KR: "JANDA OFFICE",
+        GB: "Eng JANDA OFFICE",
     },
 
-    section6_text1 : {
-        description: "섹션 6 - 텍스트 1",
-        KR: "평일 : 11am ~ 10pm",
-        GB: "Eng 평일 : 11am ~ 10pm",
+    section6_subtitle : {
+        description: "섹션 6 - 서브 타이틀",
+        KR: "Meet our team.",
+        GB: "Eng Meet our team.",
     },
 
-    section6_text2 : {
-        description: "섹션 6 - 텍스트 2",
-        KR: "주말 / 공휴일 : 11am ~ 9pm",
-        GB: "Eng 주말 / 공휴일 : 11am ~ 9pm",
+    section6_text : {
+        description: "섹션 6 - 텍스트 ",
+        KR: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown",
+        GB: "Eng Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown",
     },
-
-    section6_text3 : {
-        description: "섹션 6 - 텍스트 3",
-        KR: "정기휴무 : 첫째 주 월요일",
-        GB: "Eng 정기휴무 : 첫째 주 월요일",
-    },
-
-    section6_text4 : {
-        description: "섹션 6 - 텍스트 3",
-        KR: "Contact : 01-111-2225",
-        GB: "Eng Contact : 01-111-2225",
-    },
-
 
     
-    /* :::::::::::: Footer top :::::::::::: */
-
-    footerTop_startline : {
-        type: JDinputType.line,
-        description: "푸터 상단",
+    section6_array: {
+        description: "섹션1 슬라이드 리스트",
+        type: JDinputType.array,
+        META: {
+            img: {
+                description: "슬라이드 이미지",
+                type: JDinputType.img,
+                default: ""
+            },
+            title: {
+                description: "슬라이드 타이틀",
+                default: ""
+            },
+            text: {
+                description: "슬라이드 내용",
+                default: ""
+            }
+        },
+        KR: [
+                {
+                    img: "/assets/img/intro/pc001008608_l.jpg",
+                    title: "Craig Furgerson",
+                    text: "CEO",
+                },
+                {
+                    img: "/assets/img/intro/pc001008620_l.jpg",
+                    title: "Jeniffer Rorence",
+                    text: "Executive Producer",
+                },
+                {
+                    img: "/assets/img/intro/pc001009865_l.jpg",
+                    title: "Anderson Cooper",
+                    text: "Show Host",
+                },
+                {
+                    img: "/assets/img/intro/pc001017216_l.jpg",
+                    title: "Elon Musk",
+                    text: "Engineer",
+                },
+        ],
+        GB: [
+                {
+                    img: "/assets/img/intro/pc001008608_l.jpg",
+                    title: "Craig Furgerson",
+                    text: "CEO",
+                },
+                {
+                    img: "/assets/img/intro/pc001008620_l.jpg",
+                    title: "Jeniffer Rorence",
+                    text: "Executive Producer",
+                },
+                {
+                    img: "/assets/img/intro/pc001009865_l.jpg",
+                    title: "Anderson Cooper",
+                    text: "Show Host",
+                },
+                {
+                    img: "/assets/img/intro/pc001017216_l.jpg",
+                    title: "Elon Musk",
+                    text: "Engineer",
+                },
+        ]
     },
 
-    footerTop_block1_text1 : {
-        description: "푸터 상단 - 블록 1 - Text 1",
-        KR: "AM 00:00 ~ PM 24:00",
-        GB: "Eng AM 00:00 ~ PM 24:00",
-    },
-
-    footerTop_block1_text2 : {
-        description: "푸터 상단 - 블록 1 - Text 2",
-        KR: "상담시간",
-        GB: "Eng 상담시간",
-    },
-
-    footerTop_block2_text1 : {
-        description: "푸터 상단 - 블록 2 - Text 1",
-        KR: "서울시 강남구 신사동 000",
-        GB: "Eng 서울시 강남구 신사동 000",
-    },
-
-    footerTop_block2_text2 : {
-        description: "푸터 상단 - 블록 2 - Text 2",
-        KR: "주소",
-        GB: "Eng 주소",
-    },
-
-    footerTop_block3_text1 : {
-        description: "푸터 상단 - 블록 3 - Text 1",
-        KR: "011-111-2222",
-        GB: "Eng 011-111-2222",
-    },
-
-    footerTop_block3_text2 : {
-        description: "푸터 상단 - 블록 3 - Text 2",
-        KR: "예약 전화",
-        GB: "Eng 예약 전화",
-    },
-
-    footerTop_block4_text2 : {
-        description: "푸터 상단 - 블록 4 - Text 2",
-        KR: "소셜미디어",
-        GB: "Eng 소셜미디어",
-    },
-
-    footerTop_block4_icon1 : {
-        type: JDinputType.img,
-        description: "푸터 상단 - 아이콘 1",
-        value: "/assets/img/common/instagram.png"
-    },
-
-    footerTop_block4_icon1_link : {
-        description: "푸터 상단 - 아이콘 1 링크",
-        value: "https://www.instagram.com/"
-    },
-
-    footerTop_block4_icon2_use : {
-        type: JDinputType.switch,
-        description: "푸터 상단 - 아이콘 2 - 사용여부",
-        value: true
-    },
-
-    footerTop_block4_icon2 : {
-        type: JDinputType.img,
-        description: "푸터 상단 - 아이콘 2",
-        value: "/assets/img/common/facebook.png"
-    },
-
-    footerTop_block4_icon2_link : {
-        description: "푸터 상단 - 아이콘 2 링크",
-        value: "https://www.facebook.com/"
-    },
-
-    footerTop_block4_icon3_use : {
-        type: JDinputType.switch,
-        description: "푸터 상단 - 아이콘 3 - 사용여부",
-        value: true
-    },
-
-    footerTop_block4_icon3 : {
-        type: JDinputType.img,
-        description: "푸터 상단 - 아이콘 3",
-        value: "/assets/img/common/naver.png"
-    },
-
-    footerTop_block4_icon3_link : {
-        description: "푸터 상단 - 아이콘 3 링크",
-        value: "https://www.naver.com/"
-    },
+    
 
 
     /* :::::::::::: Footer :::::::::::: */
@@ -1069,9 +611,51 @@ export const CAFE_INFO = {
     },
 
     footer_logo : {
-        description: "푸터 - 업체명",
-        KR: "JANDA",
-        GB: "Eng JANDA",
+        description: "푸터 - 로고",
+        type: JDinputType.img,
+        value:"/assets/img/intro/logo_footer.png"
+    },
+
+    footer_logo_text1 : {
+        description: "푸터 - 로고 텍스트 1",
+        KR: "JANDA SPACE",
+        GB: "Eng JANDA SPACE",
+    },
+
+    footer_logo_text2 : {
+        description: "푸터 - 로고 텍스트 2",
+        KR: "THE BEST SHARED OFFFICE SPACE",
+        GB: "Eng THE BEST SHARED OFFFICE SPACE",
+    },
+
+    footer_info1 : {
+        description: "푸터 - 정보 1",
+        KR: "업체 : Warner Brothers Studio Store",
+        GB: "Eng 업체 : Warner Brothers Studio Store",
+    },
+
+    footer_info2 : {
+        description: "푸터 - 정보 2",
+        KR: "대표 : 제니퍼 로렌스",
+        GB: "Eng 대표 : 제니퍼 로렌스",
+    },
+
+    footer_info3 : {
+        description: "푸터 - 정보 3",
+        KR: "주소지 : 3815 Clifford Street, Hayward",
+        GB: "Eng 주소지 : 3815 Clifford Street, Hayward",
+    },
+
+    footer_info4 : {
+        description: "푸터 - 정보 4",
+        KR: "Contact : 000-111-2222",
+        GB: "Eng Contact : 000-111-2222",
+    },
+
+    footer_info5 : {
+        description: "푸터 - 정보 5",
+        KR: "상담 가능 시간 : 09am ~ 11pm.",
+        GB: "Eng 상담 가능 시간 : 09am ~ 11pm.",
     },
 
     footer_copyright : {
@@ -1081,6 +665,8 @@ export const CAFE_INFO = {
     },
 
 
+
+
 }
 
-export default CAFE_INFO
+export default INTRO_INFO
