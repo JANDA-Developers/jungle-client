@@ -18,10 +18,10 @@ export const PUB_INFO = {
     //     value: false
     // },
 
-    bookingKey: {
-        description: "잔다 솔루션 링크 [ 준비중인 기능입니다 ]",
-        value: "준비중입니다"
-    },
+    // bookingKey: {
+    //     description: "잔다 솔루션 링크",
+    //     value: ""
+    // },
 
 
     /* :::::::::::: Common :::::::::::: */
@@ -241,9 +241,14 @@ export const PUB_INFO = {
     },
 
     section3_btnText : {
-        description: "섹션 3 - 버튼 텍스트",
-        KR: "준비중입니다",
-        GB: "eng 준비중입니다"
+        description: "섹션 3 - 버튼텍스트",
+        KR: "인스타 투어",
+        GB: "eng 인스타 투어"
+    },
+
+    section3_btnLink : {
+        description: "섹션 3 - 버튼 링크",
+        value:"https://www.instagram.com/"
     },
 
 

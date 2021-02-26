@@ -18,6 +18,7 @@ export interface IViewContext<Page = TWebPageInfo> extends IUsePageEdit<Page> {
     editMode: boolean;
     setEditMode: ISet<boolean>;
     originPage?: FwebPage;
+    pageKey?:string;
 }
 
 export const ViewContext = React.createContext<IViewContext | null>(null);
@@ -27,9 +28,6 @@ const browserLn = window.navigator.userLanguage || window.navigator.language;
 
 export const View: React.FC = () => {
     const { code: paramCode } = useParams<{ code?: string }>();
-
-    console.log('View Code');
-    console.log(paramCode);
 
     const code = paramCode || getFromUrl("code") || localManager.get("lastAccessCode");
 
@@ -55,7 +53,7 @@ export const View: React.FC = () => {
         <Loading />
         <ViewModeLayout >
 
-            <View {...context} template={editTools.target} />
+            <View {...context} template={editTools.target} pageKey={paramCode} />
 
         </ViewModeLayout>
     </ViewContext.Provider>

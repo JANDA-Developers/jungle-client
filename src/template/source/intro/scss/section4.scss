@@ -25,7 +25,6 @@
         display:block;
         font-size:20px;
         font-weight:bold;
-        color:$color_theme1;
         text-transform: uppercase;
     }
 
@@ -73,8 +72,6 @@
         font-size:17px;
         font-weight:bold;
         color:#ffffff;
-        background:$color_theme1;
-        border:2px solid $color_theme1;
     }
 
 }
@@ -181,8 +178,8 @@
             font-size:20px;
             transition:background 300ms;
             &:hover {
-                color:$color_theme1;
-                background:#ffffff;
+                color:inherit;
+                background:#ffffff !important;
             }
         }
 

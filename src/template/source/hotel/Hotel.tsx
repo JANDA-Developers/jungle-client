@@ -14,6 +14,7 @@ import { Content } from 'src/component/Content';
 import { TimeSpace } from 'src/component/TimeSpace';
 import { InfoSubmitModal } from 'src/component/InfoSubmitModal';
 import BookingIframe from 'src/component/BookingIframe';
+import { rootChkList, rootPathTransform } from 'src/utils/templates';
 import './scss/hotel.scss';
 
 
@@ -26,7 +27,7 @@ SwiperCore.use([Autoplay]);
 
 
 const Hotel: React.FC<IProp> = ({ 
-    get, setLang, edit, linkEdit, template, arrAddKit, page, arrayEditModalKit, editObjArr, addArray, editArray, removeArray, editMode, bg, imgKit, src, originPage, lang, l
+    get, pageKey, setLang, edit, linkEdit, template, arrAddKit, page, arrayEditModalKit, editObjArr, addArray, editArray, removeArray, editMode, bg, imgKit, src, originPage, lang, l
 }) => {
 
     const [bgFilter, setBgFilter] = useState(false);
@@ -38,6 +39,19 @@ const Hotel: React.FC<IProp> = ({
     };
     const editModalHook_1 = useModal();
     const editModalHook_2 = useModal();
+
+    const rootPathChk = (url:string, option?:any) => {
+
+        const chkurl = url.trim();
+
+        if(rootChkList.includes(chkurl)) {
+            return rootPathTransform(pageKey);
+        }else{
+            return chkurl;
+        }
+       
+    }
+
     return (
         <>
             <Helmet>
@@ -100,11 +114,13 @@ const Hotel: React.FC<IProp> = ({
                             <h2 className="mainSe2__title" {...edit("section2_text1")}></h2>
                             <p className="mainSe2__subTitle" {...edit("section2_text2")}></p>
                             <p className="mainSe2__text" {...edit("section2_text3")}></p>
-                            <A {...linkEdit("section2_btn_link")} 
-                                className="mainSe2__btn" 
-                                style={{background: get('commonInfo_colour')}} >
+                            <a href={`${rootPathChk(`${get("section2_btn_link")}`)}`}   
+                               target="_blank"
+                               className="mainSe2__btn" 
+                               style={{background: get('commonInfo_colour')}}
+                            >
                                 <span {...edit("section2_btn_text")}></span>
-                            </A>
+                            </a>
                         </section>
                         <section className="mainSe2__imageWrap">
                             <BG  className="mainSe2__image1" {...imgKit("section2_img1")}> </BG>
@@ -198,17 +214,18 @@ const Hotel: React.FC<IProp> = ({
                                                 <p className="mainSe4__content">
                                                     {item.desc}
                                                 </p>
-                                                {
+                                                {/* {
                                                     reserBtn && 
-                                                    <a href={item.link} className="mainSe4__btn"
-                                                        onClick={(e)=>{
+                                                    <a href="#"  
+                                                       className="mainSe4__btn"
+                                                       onClick={(e)=>{
                                                             e.preventDefault();
                                                             handelReservation(true)}
                                                         }
                                                     >
-                                                        <span>{item.btn}</span>
+                                                        <span>{get("bookingBtnText")}</span>
                                                     </a>
-                                                }
+                                                } */}
                                             </div>
                                         </div>
                                     </div>
@@ -247,12 +264,13 @@ const Hotel: React.FC<IProp> = ({
                                         <p className="facility__text"
                                             {...edit("section5_block1_text3")}>
                                         </p>
-                                        <A {...linkEdit("section5_block1_link")} 
-                                            className="facility__btn"
-                                            style={{border: `2px solid ${get('commonInfo_colour')}`, color: get('commonInfo_colour')}}
+                                        <a href={`${rootPathChk(`${get("section5_block1_link")}`)}`}
+                                           target="_blank"
+                                           className="facility__btn"
+                                           style={{border: `2px solid ${get('commonInfo_colour')}`, color: get('commonInfo_colour')}}
                                         >
-                                            <span {...edit("section5_btnText")}></span>
-                                        </A>
+                                            <span {...edit("section5_block1_linkText")}></span>
+                                        </a>
                                     </div>
                                 </div>
                                 <div className="mainSe5__facilityBlock">
@@ -266,12 +284,13 @@ const Hotel: React.FC<IProp> = ({
                                         <p className="facility__text"
                                             {...edit("section5_block2_text3")}>
                                         </p>
-                                        <A {...linkEdit("section5_block2_link")} 
-                                            className="facility__btn"
-                                            style={{border: `2px solid ${get('commonInfo_colour')}`, color: get('commonInfo_colour')}}
+                                        <a href={`${rootPathChk(`${get("section5_block2_link")}`)}`}
+                                           target="_blank"
+                                           className="facility__btn"
+                                           style={{border: `2px solid ${get('commonInfo_colour')}`, color: get('commonInfo_colour')}}
                                         >
-                                            <span {...edit("section5_btnText")}></span>
-                                        </A>
+                                            <span {...edit("section5_block2_linkText")}></span>
+                                        </a>
                                     </div>
                                     <BG className="mainSe5__facilityImg" 
                                         {...imgKit("section5_block2_img")}>
@@ -333,20 +352,20 @@ const Hotel: React.FC<IProp> = ({
                         </div>
                         <div className="footerTop__block socialBlock">
                             <div className="footerTop__text1 social">
-                                <a href={get('footerTop_block4_icon1_link')} className="footerTop__icon" target="_blink">
+                                <a href={`${rootPathChk(`${get("footerTop_block4_icon1_link")}`)}`} className="footerTop__icon" target="_blink">
                                     <img src={get('footerTop_block4_icon1')}       
                                          alt="social media" />
                                 </a>
                                 {
                                 get("footerTop_block4_icon2_use") &&
-                                <a href={get('footerTop_block4_icon2_link')} className="footerTop__icon" target="_blink">
+                                <a href={`${rootPathChk(`${get("footerTop_block4_icon2_link")}`)}`} className="footerTop__icon" target="_blink">
                                     <img src={get('footerTop_block4_icon2')}       
                                          alt="social media" />
                                 </a>
                                 }
                                 {
                                 get("footerTop_block4_icon3_use") &&
-                                <a href={get('footerTop_block4_icon3_link')} className="footerTop__icon" target="_blink">
+                                <a href={`${rootPathChk(`${get("footerTop_block4_icon3_link")}`)}`} className="footerTop__icon" target="_blink">
                                     <img src={get('footerTop_block4_icon3')}       
                                         alt="social media" />
                                 </a>
@@ -383,7 +402,7 @@ const Hotel: React.FC<IProp> = ({
                             />
                         </div>
                         {/* <TimeSpace infoKey="bookingKey" /> */}
-                        <BookingIframe url={get('bookingKey')} />
+                        {/* <BookingIframe url={get('bookingKey')} /> */}
                     </div>
                 </div>
 

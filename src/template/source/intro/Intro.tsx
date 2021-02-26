@@ -14,8 +14,8 @@ import { Content } from 'src/component/Content';
 import { TimeSpace } from 'src/component/TimeSpace';
 import { InfoSubmitModal } from 'src/component/InfoSubmitModal';
 import BookingIframe from 'src/component/BookingIframe';
+import { rootChkList, rootPathTransform } from 'src/utils/templates';
 import './scss/intro.scss';
-
 
 
 type INFO = typeof INTRO_INFO;
@@ -26,7 +26,7 @@ interface IProp extends IViewContext<INFO> {
 SwiperCore.use([Autoplay]);
 
 const Intro: React.FC<IProp> = ({
-    get, 
+    get, pageKey,
     setLang, edit, linkEdit, template, arrAddKit, page, arrayEditModalKit, editObjArr, addArray, editArray, removeArray, editMode, bg, imgKit, src, originPage, lang, l
 }) => {
 
@@ -44,12 +44,18 @@ const Intro: React.FC<IProp> = ({
     const editModal_section6 = useModal();
 
 
-    /*
+    const rootPathChk = (url:string, option?:any) => {
 
-    
-        
-    */
+        const chkurl = url.trim();
 
+        if(rootChkList.includes(chkurl)) {
+            return rootPathTransform(pageKey);
+        }else{
+            return chkurl;
+        }
+       
+    }
+  
     return (
         <>
             <Helmet>
@@ -64,7 +70,6 @@ const Intro: React.FC<IProp> = ({
                 <link rel="stylesheet" href={"/assets/css/normalize.css"} />
                 <link rel="stylesheet" href={"/assets/css/swiper.css"} />
                 <script type="text/javascript" src={"/assets/loadcheck.js"} />
-                <script type="text/javascript" src={"/assets/js/cafe/cafe.js"} defer />
             </Helmet>
             <div id="office1_main">
                 <header className="introhead">
@@ -88,13 +93,13 @@ const Intro: React.FC<IProp> = ({
                             </div>
                             <div className="introhead__deco" />
                             <div className="introhead">
-                                <a href={`${get("social_1_link")}`} className="introhead__socialLink" target="_blank">
+                                <a href={`${rootPathChk(`${get("social_1_link")}`)}`} className="introhead__socialLink" target="_blank">
                                     <img src={`${get("social_1_img")}`} alt="social media" className="introhead__socialImg" />
                                 </a>
-                                <a href={`${get("social_2_link")}`} className="introhead__socialLink" target="_blank">
+                                <a href={`${rootPathChk(`${get("social_2_link")}`)}`}className="introhead__socialLink" target="_blank">
                                     <img src={`${get("social_2_img")}`} alt="social media" className="introhead__socialImg" />
                                 </a>
-                                <a href={`${get("social_3_link")}`} className="introhead__socialLink" target="_blank">
+                                <a href={`${rootPathChk(`${get("social_3_link")}`)}`}className="introhead__socialLink" target="_blank">
                                     <img src={`${get("social_3_img")}`} alt="social media" className="introhead__socialImg" />
                                 </a>
                             </div>
@@ -153,20 +158,28 @@ const Intro: React.FC<IProp> = ({
                                 >
                                     <div className="section2__listWrap">
                                         <div className="section2__textWrap">
-                                            <p className="section2__title">
+                                            <p className="section2__title"
+                                               style={{color: get('commonInfo_colour')}}>
                                                 {item.text1}
                                             </p>
                                             <p className="section2__subtitle">
                                                 {item.text2}
                                             </p>
-                                            <p className="section2__deco" style={{backgroundColor: 'rgb(37, 37, 253)'}} />
+                                            <p className="section2__deco" 
+                                            style={{backgroundColor: get('commonInfo_colour')}} />
                                             <p className="section2__desc">
                                                 {item.text3}
                                             </p>
-                                            <div className="section2__btnWrap">
-                                                <a href={item.btnLink} className="section2__btn" target="_blank">
+                                            <div className="section2__btnWrap" 
+                                                 style={{color: get('commonInfo_colour')}}>
+                                                 <a href={`${rootPathChk(item.btnLink)}`}     
+                                                   className="section2__btn" target="_blank"
+                                                   style={{
+                                                      backgroundColor: get('commonInfo_colour'),
+                                                      border:`2px solid ${get('commonInfo_colour')}`
+                                                    }}>
                                                     {get('section2_btn_text')}
-                                                </a>
+                                                 </a>
                                             </div>
                                         </div>
                                         <div className="section2__imgWrap">
@@ -187,7 +200,8 @@ const Intro: React.FC<IProp> = ({
                 <section className="section3">
                     <div className="section3__inner">
                         <div className="section3__head">
-                            <h2 className="section3__title">
+                            <h2 className="section3__title" 
+                                style={{color: get('commonInfo_colour')}}>
                                 <span {...edit("section3_title")}></span>
                             </h2>
                             <p className="section3__subtitle">
@@ -196,7 +210,8 @@ const Intro: React.FC<IProp> = ({
                             <p className="section3__desc">
                                 <span {...edit("section3_desc")}></span>
                             </p>
-                            <p className="section3__deco" style={{backgroundColor: 'rgb(37, 37, 253)'}} />
+                            <p className="section3__deco" 
+                               style={{backgroundColor: get('commonInfo_colour')}} />
                         </div>
                         <div className="section3__content">
                             <Swiper className="section3__slide"
@@ -253,20 +268,28 @@ const Intro: React.FC<IProp> = ({
                             <div className="section4__imgDeco" />
                         </div>
                         <div className="section4__textWrap">
-                            <p className="section4__title">
+                            <p className="section4__title" 
+                               style={{color: get('commonInfo_colour')}}>
                                 <span {...edit("section4_title")}></span>
                             </p>
                             <p className="section4__subtitle">
                                 <span {...edit("section4_subtitle")}></span>
                             </p>
-                            <p className="section4__deco" style={{backgroundColor: 'rgb(37, 37, 253)'}} />
+                            <p className="section4__deco" 
+                               style={{backgroundColor: get('commonInfo_colour')}} />
                             <p className="section4__desc">
                                 <span {...edit("section4_desc")}></span>
                             </p>
-                            <div className="section4__btnWrap">
-                                <A {...linkEdit("section4_btnLink")} className="section4__btn">
+
+                            <div className="section4__btnWrap" style={{color: get('commonInfo_colour')}}>
+                                 <a href={`${rootPathChk(`${get("section4_btnLink")}`, 'section4')}`}
+                                    className="section4__btn" target="_blank"
+                                    style={{
+                                        backgroundColor: get('commonInfo_colour'),
+                                        border:`2px solid ${get('commonInfo_colour')}`
+                                    }}>
                                     <span {...edit("section4_btnText")}></span>
-                                </A>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -283,16 +306,18 @@ const Intro: React.FC<IProp> = ({
                             <p className="section5__desc">
                                 <span {...edit("section5_subtitle")}></span>
                             </p> 
-                            <A {...linkEdit("section5_btnLink")} className="section5__btn">
+                            <a href={`${rootPathChk(`${get("section5_btnLink")}`)}`} 
+                               className="section5__btn" target="_blank">
                                 <span {...edit("section5_btnText")}></span>
-                            </A>
+                            </a>
                         </div>
                     </div>
                 </section>
                 <section className="section6">
                     <div className="section6__inner">
                         <div className="section6__head">
-                            <h2 className="section6__title">
+                            <h2 className="section6__title" 
+                                style={{color: get('commonInfo_colour')}}>
                                 <span {...edit("section6_title")}></span>
                             </h2>
                             <p className="section6__subtitle">
@@ -301,7 +326,8 @@ const Intro: React.FC<IProp> = ({
                             <p className="section6__desc">
                                 <span {...edit("section6_text")}></span>
                             </p>
-                            <p className="section6__deco" style={{backgroundColor: 'rgb(37, 37, 253)'}} />
+                            <p className="section6__deco" 
+                               style={{backgroundColor: get('commonInfo_colour')}} />
                         </div>
                         <div className="section6__content">
                             <Swiper className="section6__slide"
@@ -328,12 +354,13 @@ const Intro: React.FC<IProp> = ({
                                             {...editObjArr("section6_array", index, editModal_section6)}>
                                             <div className="section6__list">
                                                 <div className="section6__listimg" 
-                                                    style={{backgroundImage: `url(${item.img})`}} />
+                                                     style={{backgroundImage: `url(${item.img})`}} />
                                                 <div className="section6__listinfo">
                                                     <p className="section6__listtitle">
                                                         {item.title}
                                                     </p>
-                                                    <p className="section6__listdesc">
+                                                    <p className="section6__listdesc"
+                                                       style={{backgroundColor: get('commonInfo_colour')}}>
                                                         {item.text}
                                                     </p>
                                                 </div>
@@ -348,13 +375,16 @@ const Intro: React.FC<IProp> = ({
                 </section>
                 <section className="footersocial">
                     <div className="footersocial__inner">
-                        <a href={`${get("social_1_link")}`} className="footersocial__socialLink" target="_blank">
+                        <a href={`${rootPathChk(`${get("social_1_link")}`)}`}
+                           className="footersocial__socialLink" target="_blank">
                             <img src={`${get("social_1_img")}`} alt="social media" className="footersocial__socialImg" />
                         </a>
-                        <a href={`${get("social_2_link")}`} className="footersocial__socialLink" target="_blank">
+                        <a href={`${rootPathChk(`${get("social_2_link")}`)}`}
+                           className="footersocial__socialLink" target="_blank">
                             <img src={`${get("social_2_img")}`} alt="social media" className="footersocial__socialImg" />
                         </a>
-                        <a href={`${get("social_3_link")}`} className="footersocial__socialLink" target="_blank">
+                        <a href={`${rootPathChk(`${get("social_3_link")}`)}`}
+                           className="footersocial__socialLink" target="_blank">
                             <img src={`${get("social_3_img")}`} alt="social media" className="footersocial__socialImg" />
                         </a>
                     </div>

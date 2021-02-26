@@ -3,7 +3,7 @@ import { useModal } from '@janda-com/front';
 import SwiperCore, { Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { IViewContext } from '../../../page/View';
-import { CAFE_INFO } from '../../info/cafe';
+import { PUB_INFO } from '../../info/pub';
 import { Helmet } from 'react-helmet'
 import { ITempalte } from 'src/template/templates';
 import { BG, Img } from 'src/component/Img';
@@ -14,11 +14,12 @@ import { Content } from 'src/component/Content';
 import { TimeSpace } from 'src/component/TimeSpace';
 import { InfoSubmitModal } from 'src/component/InfoSubmitModal';
 import BookingIframe from 'src/component/BookingIframe';
+import { rootChkList, rootPathTransform } from 'src/utils/templates';
 import './scss/pub.scss';
 
 
 
-type INFO = typeof CAFE_INFO;
+type INFO = typeof PUB_INFO;
 interface IProp extends IViewContext<INFO> {
     template: ITempalte
 }
@@ -26,7 +27,7 @@ interface IProp extends IViewContext<INFO> {
 SwiperCore.use([Autoplay]);
 
 const Cafe: React.FC<IProp> = ({
-    get, 
+    get, pageKey,
     setLang, edit, linkEdit, template, arrAddKit, page, arrayEditModalKit, editObjArr, addArray, editArray, removeArray, editMode, bg, imgKit, src, originPage, lang, l
 }) => {
 
@@ -43,6 +44,18 @@ const Cafe: React.FC<IProp> = ({
 
     const handleMenuState = (menu:string) => {
         setMenuState(menu);
+    }
+
+    const rootPathChk = (url:string, option?:any) => {
+
+        const chkurl = url.trim();
+
+        if(rootChkList.includes(chkurl)) {
+            return rootPathTransform(pageKey);
+        }else{
+            return chkurl;
+        }
+       
     }
 
 
@@ -163,9 +176,16 @@ const Cafe: React.FC<IProp> = ({
                                 <span {...edit("section3_desc")}></span>
                             </p>
                             <div className="mainSe3__btnWrap">
+                                <a href={`${rootPathChk(`${get("section3_btnLink")}`)}`}
+                                   className="mainSe3__btn">
+                                    <span className="mainSe3__btnText">
+                                        {get('section3_btnText')}
+                                    </span>
+                                    <span className="mainSe3__btnBg"></span>
+                                </a>
                                 {
                                     reserBtn && 
-                                    <a href="#" className="mainSe3__btn"
+                                    <a href="/" className="mainSe3__btn"
                                         onClick={(e)=>{
                                             e.preventDefault();
                                             handelReservation(true);
@@ -548,20 +568,20 @@ const Cafe: React.FC<IProp> = ({
                         </div>
                         <div className="footerTop__block socialBlock">
                             <div className="footerTop__text1 social">
-                                <a href={get('footerTop_block4_icon1_link')} className="footerTop__icon" target="_blink">
+                                <a href={`${rootPathChk(`${get("footerTop_block4_icon1_link")}`)}`} className="footerTop__icon" target="_blink">
                                     <img src={get('footerTop_block4_icon1')}       
                                          alt="social media" />
                                 </a>
                                 {
                                 get("footerTop_block4_icon2_use") &&
-                                <a href={get('footerTop_block4_icon2_link')} className="footerTop__icon" target="_blink">
+                                <a href={`${rootPathChk(`${get("footerTop_block4_icon2_link")}`)}`} className="footerTop__icon" target="_blink">
                                     <img src={get('footerTop_block4_icon2')}       
                                          alt="social media" />
                                 </a>
                                 }
                                 {
                                 get("footerTop_block4_icon3_use") &&
-                                <a href={get('footerTop_block4_icon3_link')} className="footerTop__icon" target="_blink">
+                                <a href={`${rootPathChk(`${get("footerTop_block4_icon3_link")}`)}`} className="footerTop__icon" target="_blink">
                                     <img src={get('footerTop_block4_icon3')}       
                                         alt="social media" />
                                 </a>
@@ -597,7 +617,7 @@ const Cafe: React.FC<IProp> = ({
                             />
                         </div>
                         {/* <TimeSpace infoKey="bookingKey" /> */}
-                        <BookingIframe url={get('bookingKey')} />
+                        {/* <BookingIframe url={get('bookingKey')} /> */}
                     </div>
                 </div>
 

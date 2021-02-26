@@ -18,10 +18,16 @@ export const HOTEL_INFO = {
     //     value: false
     // },
 
-    bookingKey: {
-        description: "잔다 솔루션 링크 [ 준비중인 기능입니다 ]",
-        value: "준비중입니다"
-    },
+    // bookingBtnText: {
+    //     description: "솔루션" 버튼 텍스트",
+    //     KR: "Cafe JANDA",
+    //     GB: "Eng Cafe JANDA"
+    // },
+
+    // bookingKey: {
+    //     description: "잔다 솔루션 링크",
+    //     value: ""
+    // },
 
 
     /* :::::::::::: Common :::::::::::: */
@@ -484,13 +490,7 @@ export const HOTEL_INFO = {
         KR: "소중한 사람과 함께 할 수 있는 곳 <br> 자연이 살아 숨쉬는 공간, Janda Stay로 여러분을 초대합니다",
         GB: "Eng 소중한 사람과 함께 할 수 있는 곳 <br> 자연이 살아 숨쉬는 공간, Janda Stay로 여러분을 초대합니다"
     },
-
-    section5_btnText : {
-        description: "섹션 5 - 버튼 텍스트",
-        KR: "Detail",
-        GB: "Detail",
-    },
-
+    
     section5_block1_img : {
         type: JDinputType.img,
         description: "섹션 5 - 블록1 - 이미지",
@@ -518,6 +518,12 @@ export const HOTEL_INFO = {
     section5_block1_link : {
         description: "섹션 5 - 블록1 - 링크",
         value: "/",
+    },
+
+    section5_block1_linkText : {
+        description: "섹션 5 - 블록1 버튼 텍스트",
+        KR: "Detail",
+        GB: "Detail"
     },
 
     section5_block2_img : {
@@ -549,7 +555,11 @@ export const HOTEL_INFO = {
         value: "/",
     },
 
-    
+    section5_block2_linkText : {
+        description: "섹션 5 - 블록2 버튼 텍스트",
+        KR: "Detail",
+        GB: "Detail"
+    },
 
     /* :::::::::::: Section 6 :::::::::::: */
 
