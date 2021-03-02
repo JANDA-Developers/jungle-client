@@ -51,7 +51,12 @@ export const WebPageCard: React.FC<IProp> = ({ webPage, onEdit: handleEdit, onDe
 
 
     const template = TEMPLATES.find(temp => temp.key === webPage.templateKey)
-    if (!template) return <JDcard mb>지원이 종료된 페이지 템플릿 입니다.</JDcard>;
+    if (!template) return <JDcard mb foot={{
+        mode: "fit",
+        element: <div>
+            <JDbutton br="no" mr onClick={handleDelete} thema="error">삭제하기</JDbutton>
+        </div>
+    }}>지원이 종료된 페이지 템플릿 입니다.</JDcard>;
     return <JDcard foot={{
         mode: "fit",
         element: <div>
